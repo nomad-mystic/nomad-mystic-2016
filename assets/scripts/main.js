@@ -14,11 +14,12 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
-  var Sage = {
+  var Nomad = {
     // All pages
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -28,6 +29,7 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -38,7 +40,60 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
-    }
+    },
+      // This is going to be the works page holding all of my programs and submits to inventory.php Class
+      'works': {
+          init: function() {
+              $('#work1').on('click', function() {
+                  console.log('this');
+                  var currentWorkButton = $('#currentWork');
+                  currentWorkButton.submit(function(event) {
+                      console.log(event);
+                      console.log(event.target[0].value);
+                      event.preventDefault();
+                      var currentWork = event.target[0].value;
+                      callPosts(currentWork);
+                      return;
+                  });
+                  currentWorkButton.submit();
+
+              });
+
+              var callPosts = function(currentWork) {
+                  //var GETString = 'http://specialeducationsupportcenter.org/wp-content/themes/woo-child/processDisabilitiesPost.php';
+                  $.ajax({
+                      type: 'POST',
+                      url: 'http://localhost:8080/nomadmystic/wordpress/wp-content/themes/nomadmystic/extras/Inventory.php?currentWork="' + currentWork + '"',
+                      success: function (data, status, jqxhr) {
+                          console.log("Request data: ", data);
+                          console.log("Request status:", status);
+                          console.log("Request jqxhr:", jqxhr);
+                      }, error: function (jqxhr, status, error) {
+                          console.log("Something went wrong!");
+                          console.log("Something went wrong! jqxhr" + jqxhr);
+                          console.log("Something went wrong! status" + status);
+                          console.log("Something went wrong! error" + error);
+                      }
+                  });
+              }; // ENd callPosts-->
+
+          },
+          finish: function() {
+
+          }
+      },
+      'show_works': {
+          init: function() {
+
+          },
+          finish: function() {
+              $.get('../extras/Inventory.php', function(work) {
+                  console.log(work);
+              });
+
+          }
+      }
+
   };
 
   // The routing fires all common scripts, followed by the page specific scripts.
@@ -46,7 +101,7 @@
   var UTIL = {
     fire: function(func, funcname, args) {
       var fire;
-      var namespace = Sage;
+      var namespace = Nomad;
       funcname = (funcname === undefined) ? 'init' : funcname;
       fire = func !== '';
       fire = fire && namespace[func];
