@@ -44,21 +44,6 @@
       // This is going to be the works page holding all of my programs and submits to inventory.php Class
       'works': {
           init: function() {
-              $('#work1').on('click', function() {
-                  console.log('this');
-                  var currentWorkButton = $('#currentWork');
-                  currentWorkButton.submit(function(event) {
-                      console.log(event);
-                      console.log(event.target[0].value);
-                      event.preventDefault();
-                      var currentWork = event.target[0].value;
-                      callPosts(currentWork);
-                      return;
-                  });
-                  currentWorkButton.submit();
-
-              });
-
               var callPosts = function(currentWork) {
                   //var GETString = 'http://specialeducationsupportcenter.org/wp-content/themes/woo-child/processDisabilitiesPost.php';
                   $.ajax({
@@ -76,7 +61,20 @@
                       }
                   });
               }; // ENd callPosts-->
+              $('#work1').on('click', function() {
+                  console.log('this');
+                  var currentWorkButton = $('#currentWork');
+                  currentWorkButton.submit(function(event) {
+                      console.log(event);
+                      console.log(event.target[0].value);
+                      event.preventDefault();
+                      var currentWork = event.target[0].value;
+                      callPosts(currentWork);
+                      return;
+                  });
+                  currentWorkButton.submit();
 
+              });
           },
           finish: function() {
 

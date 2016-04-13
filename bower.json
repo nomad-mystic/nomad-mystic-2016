@@ -1,8 +1,8 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "Nomad Mystic Theme",
+  "homepage": "http://nomadmystic.com/",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Keith Murphy"
   ],
   "license": "MIT",
   "private": true,

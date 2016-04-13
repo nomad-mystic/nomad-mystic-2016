@@ -1,15 +1,15 @@
 {
-  "name": "sage",
-  "version": "8.4.2",
-  "author": "Ben Word <ben@benword.com>",
-  "homepage": "https://roots.io/sage/",
+  "name": "Nomad Mystic Theme",
+  "version": "0.0.1",
+  "author": "Keith Murphy",
+  "homepage": "http://nomadmystic.com",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
+    "url": "git://github.com/nomad-mystic/nomadmystic.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "https://github.com/nomad-mystic/nomadmystic/issues"
   },
   "licenses": [
     {
