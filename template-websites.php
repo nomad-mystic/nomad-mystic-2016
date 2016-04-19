@@ -1,6 +1,6 @@
-template-custom.phptemplate-custom.php<?php
+<?php
 /**
- * Template Name: Custom Template
+ * Template Name: Websites Template
  */
 ?>
 
