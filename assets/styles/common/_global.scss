@@ -1,1 +1,35 @@
 $RGBA90Black: rgba(0,0,0,.90);
+
+// fonts
+@font-face {
+  font-family: "Playfair Display";
+  src: url('fonts/PlayfairDisplay-Regular.otf');
+}
+
+//General
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+//Bootstrap Overrides
+.navbar-default .navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+.navbar-toggle {
+  margin-top: 12px;
+}
+
+

@@ -78,43 +78,43 @@ var revManifest = path.dist + 'assets.json';
 //   .pipe(gulp.dest(path.dist + 'styles'))
 // ```
 var cssTasks = function(filename) {
-  return lazypipe()
-    .pipe(function() {
-      return gulpif(!enabled.failStyleTask, plumber());
-    })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.init());
-    })
-    .pipe(function() {
-      return gulpif('*.less', less());
-    })
-    .pipe(function() {
-      return gulpif('*.scss', sass({
-        outputStyle: 'nested', // libsass doesn't support expanded yet
-        precision: 10,
-        includePaths: ['.'],
-        errLogToConsole: !enabled.failStyleTask
-      }));
-    })
-    .pipe(concat, filename)
-    .pipe(autoprefixer, {
-      browsers: [
-        'last 2 versions',
-        'android 4',
-        'opera 12'
-      ]
-    })
-    .pipe(cssNano, {
-      safe: true
-    })
-    .pipe(function() {
-      return gulpif(enabled.rev, rev());
-    })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: 'assets/styles/'
-      }));
-    })();
+    return lazypipe()
+        .pipe(function() {
+            return gulpif(!enabled.failStyleTask, plumber());
+        })
+        .pipe(function() {
+            return gulpif(enabled.maps, sourcemaps.init());
+        })
+        .pipe(function() {
+            return gulpif('*.less', less());
+        })
+        .pipe(function() {
+            return gulpif('*.scss', sass({
+              outputStyle: 'nested', // libsass doesn't support expanded yet
+              precision: 10,
+              includePaths: ['.'],
+              errLogToConsole: !enabled.failStyleTask
+            }));
+        })
+        .pipe(concat, filename)
+        .pipe(autoprefixer, {
+            browsers: [
+              'last 2 versions',
+              'android 4',
+              'opera 12'
+            ]
+        })
+        .pipe(cssNano, {
+            safe: true
+        })
+        .pipe(function() {
+            return gulpif(enabled.rev, rev());
+        })
+        .pipe(function() {
+            return gulpif(enabled.maps, sourcemaps.write('.', {
+              sourceRoot: 'assets/styles/'
+            }));
+      })();
 };
 
 // ### JS processing pipeline

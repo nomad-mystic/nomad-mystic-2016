@@ -1,6 +1,6 @@
 <header class="banner">
-    <div class="container-fuild">
-        <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -11,7 +11,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                        <?php bloginfo('name'); ?>
+                        <img src="wordpress/wp-content/themes/nomadmystic/dist/images/nav_logo_dark.png" alt="This is the navigation logo for nomadmystic.com" class="img-responsive">
                     </a>
                 </div>
 
@@ -30,7 +30,12 @@
                 ?>
             </div>
         </nav>
-    </div>
+        <div class="jumbotron home-jumbotron">
+        	<div class="container">
+        		<img src="wordpress/wp-content/themes/nomadmystic/dist/images/home_logo.png" class="img-responsive" alt="Header logo for nomadmystic.com">
+        	</div>
+        </div><!--jumbotron-->
+    </div> <!--container-fuild-->
 </header>
 
 

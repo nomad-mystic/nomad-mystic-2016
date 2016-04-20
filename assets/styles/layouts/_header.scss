@@ -1,3 +1,24 @@
+.container-fluid {
+    // NAV
+    .navbar-default {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    .navbar-brand {
+        padding: 2% 2% 10% 0;
+        margin-left: 20px;
+    }
+    .navbar-toggle {
+        margin-right: 40px;
+    }
+
+    // Home Header Area
+    .home-jumbotron {
+        background: url("../images/home_banner.jpg") no-repeat 0 0;
+        background-size: cover;
+        border-radius: 0;
+    }
+}
 
 
 

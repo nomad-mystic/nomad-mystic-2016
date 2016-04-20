@@ -1,0 +1,23 @@
+
+
+
+// Home Page
+
+.home .font-stack  {
+    font-size: 4em;
+    position: relative;
+    .fa-circle {
+      color: $main-teal;
+    }
+    span {
+      position: static;
+    }
+}
+.services-section {
+  margin: 2% auto;
+  background: $main-teal;
+  h2 {
+    font-family: $font-stack;
+    color: #fff;
+  }
+}

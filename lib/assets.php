@@ -5,10 +5,12 @@ namespace Roots\Sage\Assets;
 /**
  * Get paths for assets
  */
-class JsonManifest {
+class JsonManifest
+{
   private $manifest;
 
-  public function __construct($manifest_path) {
+  public function __construct($manifest_path)
+  {
       if (file_exists($manifest_path)) {
           $this->manifest = json_decode(file_get_contents($manifest_path), true);
       } else {
@@ -16,11 +18,13 @@ class JsonManifest {
       }
   }
 
-  public function get() {
+  public function get()
+  {
       return $this->manifest;
   }
 
-  public function getPath($key = '', $default = null) {
+  public function getPath($key = '', $default = null)
+  {
       $collection = $this->manifest;
       if (is_null($key)) {
           return $collection;
@@ -39,7 +43,8 @@ class JsonManifest {
     }
 }
 
-function asset_path($filename) {
+function asset_path($filename)
+{
     $dist_path = get_template_directory_uri() . '/dist/';
     $directory = dirname($filename) . '/';
     $file = basename($filename);
