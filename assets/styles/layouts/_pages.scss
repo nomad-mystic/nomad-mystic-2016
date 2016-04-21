@@ -20,4 +20,13 @@
     font-family: $font-stack;
     color: #fff;
   }
-}
+  .font-stack {
+    .fa-circle {
+      color: #fff;
+    }
+    &:nth-child(1) {
+      color: $main-teal;
+    }
+  }
+
+} // services-section

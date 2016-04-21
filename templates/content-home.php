@@ -1,5 +1,3 @@
-
-
 <section class="container">
     <article class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -15,7 +13,7 @@
             <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-modx fa-stack-1x fa-inverse"></i>
             </span>
             </div>
             <button class="squareButtonPrimaryColor">Featured</button>
@@ -24,7 +22,7 @@
             <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
             </span>
             </div>
             <button class="squareButtonPrimaryColor">Websites</button>
@@ -39,7 +37,7 @@
                 <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-institution fa-stack-1x"></i>
             </span>
                 </div>
                 <button class="squareButtonPrimaryColor">School</button>
@@ -48,7 +46,7 @@
                 <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-institution fa-stack-1x"></i>
             </span>
                 </div>
                 <button class="squareButtonPrimaryColor">Featured</button>
@@ -57,7 +55,7 @@
                 <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-institution fa-stack-1x"></i>
             </span>
                 </div>
                 <button class="squareButtonPrimaryColor">Websites</button>
@@ -66,7 +64,7 @@
                 <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-institution fa-stack-1x"></i>
             </span>
                 </div>
                 <button class="squareButtonPrimaryColor">Websites</button>

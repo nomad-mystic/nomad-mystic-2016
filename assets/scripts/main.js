@@ -19,7 +19,10 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-
+          // adding animation to mobile menu on click
+          $(".navbar-toggle").on("click", function () {
+              $(this).toggleClass("active");
+          });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
