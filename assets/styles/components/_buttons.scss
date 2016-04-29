@@ -3,7 +3,11 @@ button {
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-  padding: 1em;
+    padding: 1em;
+}
+button:hover, button:focus {
+  color: #fff;
+  outline: 0;
 }
 .squareButtonPrimaryColor{
   border: 3px solid $main-teal;

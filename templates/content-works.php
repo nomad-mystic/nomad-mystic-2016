@@ -13,6 +13,39 @@
     <button type="submit" class="btn btn-default" id="work1">
         Show Work 1
     </button>
+    <ul class="nav nav-tabs individual-tabs-ul" role="tablist">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                HTML<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                CSS<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" role="tabpanel" id="html">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aperiam, cumque, facere illum
+                iusto laboriosam mollitia nemo nesciunt officiis perspiciatis quo ratione sapiente voluptates
+                voluptatum. Adipisci aliquid odio saepe?</p>
+        </div>
+    </div>
     <?php
 
 
