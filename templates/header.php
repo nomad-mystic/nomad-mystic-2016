@@ -1,5 +1,5 @@
 <header class="banner">
-    <div class="container-fuild">
+    <div class="container-fluid">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,7 +16,7 @@
                 </div>
 
                 <?php
-                    wp_nav_menu( array(
+                wp_nav_menu( array(
                         'menu'              => 'primary',
                         'theme_location'    => 'primary',
                         'depth'             => 2,
@@ -26,7 +26,7 @@
                         'menu_class'        => 'nav navbar-nav navbar-right',
                         'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                         'walker'            => new wp_bootstrap_navwalker())
-                    );
+                );
                 ?>
             </div>
         </nav>

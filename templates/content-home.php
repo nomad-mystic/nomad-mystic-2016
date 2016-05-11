@@ -1,31 +1,40 @@
-<section class="container">
+<section class="container-fluid">
     <article class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<!--        School Projects-->
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
             </span>
             </div>
-            <button class="squareButtonPrimaryColor">School</button>
+            <div class="squareButtonPrimaryColor">
+                <a href="" title="">School Projects</a>
+            </div>
         </div><!--end col-->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<!--        Freelance Websites-->
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-modx fa-stack-1x fa-inverse"></i>
             </span>
             </div>
-            <button class="squareButtonPrimaryColor">Featured</button>
+            <div class="squareButtonPrimaryColor">
+                <a href="" title="">Freelance Websites</a>
+            </div>
         </div><!--end col-->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<!--        Feature Projects-->
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="font-stack">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
             </span>
             </div>
-            <button class="squareButtonPrimaryColor">Websites</button>
+            <div class="squareButtonPrimaryColor">
+                <a href="" title="">Feature Projects</a>
+            </div>
         </div><!--end col-->
     </article><!--end row-->
 </section>
@@ -67,11 +76,15 @@
                 <i class="fa fa-institution fa-stack-1x"></i>
             </span>
                 </div>
-                <button class="squareButtonPrimaryColor">Websites</button>
+                <div class="squareButtonPrimaryColor">
+                    <a href="http://www.dribbble.com/chrisota" title="Chris Ota Dribbble"><i class="fa fa-dribbble"></i> Dribbble</a>
+                </div>
+<!--                <button class="squareButtonPrimaryColor">Websites</button>-->
             </div><!--end col-->
-        </article><!--end row-->
+        </article><!--end row-->    
     </div><!--end container-->
 </section>
+<img src="wordpress/wp-content/themes/nomadmystic/dist/images/dividerBanner_1.jpg" class="img-responsive" alt="Image">
 <section class="container">
     <div class="row">
         <h2 class="text-center">About</h2>

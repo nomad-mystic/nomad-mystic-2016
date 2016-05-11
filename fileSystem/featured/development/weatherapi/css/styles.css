@@ -1,0 +1,31 @@
+@import url(reset.css);
+body {
+  font-size: 16px;
+  background: #3f51b5;
+  color: #fff; }
+
+h1 {
+  margin: 0 0 4% 0;
+  font-size: 2em; }
+
+h2 {
+  line-height: 1.5em; }
+
+button.city_search_submit {
+  border-bottom-left-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  margin: 2%; }
+
+.container {
+  margin: 5% auto 0;
+  background: #283593;
+  padding: 1em;
+  border-radius: 5px; }
+
+.degrees {
+  font-size: 3em; }
+
+.error {
+  display: inline-block; }
+
+/*# sourceMappingURL=styles.css.map */

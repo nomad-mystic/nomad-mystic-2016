@@ -1,5 +1,5 @@
 {
-  "name": "Nomad Mystic Theme",
+  "name": "nomadMysticCustomTheme",
   "version": "0.0.1",
   "author": "Keith Murphy",
   "homepage": "http://nomadmystic.com",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "asset-builder": "^1.1.0",
     "browser-sync": "^2.8.2",
+    "color-themes-for-google-code-prettify": "^2.0.4",
     "del": "^1.2.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",

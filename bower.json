@@ -8,8 +8,8 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "3.3.6",
-    "font-awesome": "4.4.0",
-    "bootstrap": "^3.3.6"
+    "components-font-awesome": "^4.6.1",
+    "google-code-prettify": "^1.0.4"
   },
   "overrides": {
     "bootstrap-sass": {

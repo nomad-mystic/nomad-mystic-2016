@@ -1,10 +1,9 @@
 <header class="banner">
-    <div class="container-fluid">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
+            <div>
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationNavbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -22,7 +21,7 @@
                         'depth'             => 2,
                         'container'         => 'div',
                         'container_class'   => 'collapse navbar-collapse',
-                        'container_id'      => 'bs-example-navbar-collapse-1',
+                        'container_id'      => 'navigationNavbar',
                         'menu_class'        => 'nav navbar-nav navbar-right',
                         'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                         'walker'            => new wp_bootstrap_navwalker())
@@ -35,7 +34,6 @@
         		<img src="wordpress/wp-content/themes/nomadmystic/dist/images/home_logo.png" class="img-responsive" alt="Header logo for nomadmystic.com">
         	</div>
         </div><!--jumbotron-->
-    </div> <!--container-fuild-->
 </header>
 
 

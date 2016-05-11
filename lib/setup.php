@@ -90,6 +90,8 @@ function display_sidebar() {
         is_404(),
         is_front_page(),
         is_page_template('template-custom.php'),
+          // added by nomad 
+        is_page_template('template-project-categories.php'),
       ]);
 
       return apply_filters('sage/display_sidebar', $display);
@@ -107,9 +109,11 @@ function assets() {
       }
       
       wp_enqueue_script('nomad-js', Assets\asset_path('scripts/main.js'), ['jquery'], null, false);
-     
+      wp_enqueue_script('nomad-prettify', 'https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;');
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
 
 
 

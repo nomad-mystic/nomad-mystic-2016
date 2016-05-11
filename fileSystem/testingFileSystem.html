@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="testingFolder/includes/lib/prettify.min.css">
+    <script src="testingFolder/includes/lib/jquery/jquery.min.js"></script>
+    <script src="testingFolder/includes/lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="testingFolder/includes/lib/prettify.min.js"></script>
+    <script src="testingFolder/includes/lib/run_prettify.min.js"></script>
+    <!--<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>-->
+
+    <script>
+        $(function() {
+            var folder = $('.folder');
+            //
+            folder.on('click', function() {
+                // get the contents of one folder
+                $.get('testingFilesSystem.php?folder=testingFolder', function(data) {
+                    console.log(data);
+                    var parsedData = $.parseJSON(data);
+                    console.log(parsedData[0]);
+                    var childFolderContents = JSON.stringify(parsedData[0], null, 4);
+                    $('.childFolder').text(childFolderContents);
+                }); // get folder contents
+
+//                second function
+                // gets the contents of one HTML file
+                $.get('testingFileSystem.html', function(html) {
+                    // adding html file to DOM
+                    for (var i = 2; i < html.length; i++){
+
+                    }
+                    $('.html').text(html);
+
+                    // remove class to activate again with prettyPrint() function
+                    $('.prettyprint').removeClass("prettyprinted");
+                    prettyPrint();
+                });
+
+                // gets the contents of one HTML file
+                $.get('testingFilesSystem.php', function(php) {
+                    // adding html file to DOM
+                    $('.php').text(php);
+
+                    // remove class to activate again with prettyPrint() function
+                    $('.prettyprint').removeClass("prettyprinted");
+                    prettyPrint();
+
+                });
+            }); // get HTML
+        }); // jQuery
+    </script>
+</head>
+<body>
+
+
+
+
+
+<button class="folder">
+    Files Value Testing
+</button>
+<pre class="prettyprint">
+    <code>
+        <div class="parentFolder"></div>
+        <div class="childFolder"></div>
+        <div class="html"></div>
+        <div class="php">
+            <!--need to change all greater/less then symbols into ASEII-->
+            &lt;?php echo $this->mClass; ?>
+        </div>
+    </code>
+</pre>
+
+</body>
+</html>

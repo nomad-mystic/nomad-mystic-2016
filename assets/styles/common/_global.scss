@@ -20,6 +20,17 @@ a:active {
   text-decoration: none;
 }
 
+// Helper clases
+.displayNone {
+  display: none;
+}
+.floatRight {
+  float: right;
+}
+.floatLeft {
+  float: left;
+}
+
 //Bootstrap Overrides
 .navbar-default .navbar-toggle {
   border: none;
