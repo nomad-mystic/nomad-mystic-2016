@@ -1,17 +1,21 @@
-<?php global $wp_query; ?>
+<?php
+
+global $wp_query;
+
+// URI now: '/nomadmystic/project-category/'
+$location_pathname = $_SERVER['REQUEST_URI'];
+$sliced_location_pathname = substr($location_pathname, 13, -1);
+//    var_dump($location_pathname);
+//    var_dump($sliced_location_pathname);
+?>
 
 <?php
     wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']);
 ?>
 
-<section>
+<section class="<?php echo $sliced_location_pathname;?>">
     <article <?php post_class(); ?>>
         <?php
-        // URI now: '/nomadmystic/project-category/'
-        $location_pathname = $_SERVER['REQUEST_URI'];
-        $sliced_location_pathname = substr($location_pathname, 13, -1);
-        //    var_dump($location_pathname);
-        //    var_dump($sliced_location_pathname);
         // WP_Query arguments for querying slug by url name, ordering by ascending,
         $project_category = array(
             'category_name'          => "$sliced_location_pathname",
@@ -43,10 +47,9 @@
 
                 // build DOM for each individual post
                 echo '<div class="entry-content container">';
-                echo '    <h2 class="text-center">' . get_the_title() . '</h2>';
                 echo '<div class="row">';
-                echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">';
-
+                echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">';
+                echo '    <figure>';
                 if (has_post_thumbnail()) {
                     // getting full size featured image and adding responsive class
                     the_post_thumbnail(
@@ -56,9 +59,11 @@
                         )
                     );
                 } // end if
+                echo '    </figure>';
                 echo '  </div><!--end col-->';
                 echo '  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">';
                 // getting the content of the post by category
+                echo '    <h2>' . get_the_title() . '</h2>';
                 the_content();
                 echo '    <div class="row">';
                 echo '        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">';

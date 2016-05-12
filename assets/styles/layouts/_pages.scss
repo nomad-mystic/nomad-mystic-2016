@@ -30,3 +30,23 @@
   }
 
 } // services-section
+// featured
+.featured {
+  h2 {
+    text-align: left;
+  }
+  .entry-content {
+    border: solid 1px rgba(233, 233, 233, 0.9);
+    display: table;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 80%;
+  }
+  .postContent {
+    //padding-left: 15px;
+  }
+  .postThumb {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

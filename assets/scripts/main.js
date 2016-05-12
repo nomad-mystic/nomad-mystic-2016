@@ -89,17 +89,15 @@
                 var titleOfIndividualHidden = $('.titleOfIndividualHidden');
                 var getFolderValue = titleOfFolderHidden.text();
                 var getIndividualValue = titleOfIndividualHidden.text();
-
+                console.log(getIndividualValue);
                 var closure = {
                     createFileContentTab: function (filesArray, parsedData, name) {
                         var individualTabs = $('.individualTabs');
+                        console.log(filesArray);
                         // if folder not empty
                         if (filesArray !== undefined) {
-                            // this removes the first two files '.' and '..' from data loop
-                            //  var cleanedFileArray = filesArray.splice(0, 2);
-                            
-                            console.log(filesArray.length);
-                            console.log(filesArray);
+                            // console.log(filesArray.length);
+                            // console.log(filesArray);
                             var output = '';
 
                             // creating DOM pieces
@@ -110,44 +108,74 @@
                             // looping through each file in the folder and populating the DOM with Tab dropdown
                             // Starting at 2 to remove the first two files '.' and '..' from data loop
                             for (var files = 2; files < filesArray.length; files++) {
-                                output += '         <li><a href="#' + filesArray[files] + '" role="tab" data-toggle="tab">' + filesArray[files] + '</a></li>';
-                                console.log(filesArray[files]);
+                                output += '         <li><a href="#' + filesArray[files] + '" ' +
+                                    'role="tab" ' +
+                                    'data-toggle="tab"' +
+                                    'class="individual">' + filesArray[files] + '</a></li>';
+                                // console.log(filesArray[files]);
                             }
-
                             output += '     </ul>';
                             output += '</li>';
+
                             // populate DOM with Tab
                             individualTabs.prepend(output);
 
                         } else {
                             console.log('This folder is undefined');
                         }
-                    } // end createFileContent();
+                    }, // end createFileContent();
+                    getTabContent: function(evnt) {
+                        // console.log(evnt);
+
+                        // var targetIndividual = evnt.target.classList[0];
+                        // var fileText = targetFile.innerText;
+                        // console.log(fileText);
+                        // grab the value for tab hit by user
+                        if (evnt.target.classList[0] === 'dropdown-toggle') {
+                            console.log('Tab value of file');
+                            // find the Tab value of file clicked
+                            var targetFolder = evnt.target.innerText;
+                            console.log(targetFolder);
+                        }
+                        // get individual file in tab
+                        if (evnt.target.classList[0] !== 'dropdown-toggle') {
+                            console.log('Individual file');
+                            // individual file selected
+                            var targetFile = evnt.target.innerText;
+                            console.log(getFolderValue);
+                            // call to populate code in pre tags
+                            $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/featured/development/internationalcoalconsumption/php/coal.js.php', function(data) {
+                                var entrySummary = $('.entry-summary');
+                                entrySummary.text(data);
+                            });
+                        }
+                    }
                 };
+                // var closure = {
+                //     getTabContent: function(evnt) {
+                //
+                //     }
+                // };
+                $('.individual').on('click', function(evnt) {
+
+                    closure.getTabContent(evnt);
+                });
+
 
                 $.get(
                     'http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/' +
-                    'fileSystem/setFiles.php?title_of_individual=' + getIndividualValue + '&title_of_folder=' + getFolderValue + '',
+                    'fileSystem/getFiles.php?title_of_individual=' + getIndividualValue + '&title_of_folder=' + getFolderValue + '',
                     function(data) {
                         // console.log(data);
                         var parsedData = $.parseJSON(data);
                         // console.log(parsedData);
 
                         // get the section from the returned file object
-                        var PHPArray = parsedData.PHP;
-                        var HTMLArray = parsedData.HTML;
-                        var CSSArray = parsedData.CSS;
-                        var JSArray = parsedData.JS;
-                        var imagesArray = parsedData.images;
-
-                        // calling each file type for population of the DOM
-                        closure.createFileContentTab(imagesArray, parsedData, 'Images');
-                        closure.createFileContentTab(PHPArray, parsedData, 'PHP');
-                        closure.createFileContentTab(CSSArray, parsedData, 'CSS');
-                        closure.createFileContentTab(JSArray, parsedData, 'JS');
-                        closure.createFileContentTab(HTMLArray, parsedData, 'HTML');
-
-
+                        for (var key in parsedData) {
+                            var arrayKey = parsedData[key];
+                            // calling each file type for population of the DOM
+                            closure.createFileContentTab(arrayKey, parsedData, key);
+                        }
                     }
                 ); // end get
 
@@ -163,6 +191,7 @@
                 // document.on('load', function() {
                 //
                 // });
+
 
             }
         },
@@ -216,3 +245,17 @@
 $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+// // create tab content
+// output += '<div class="tab-content">';
+// for (var files = 2; files < filesArray.length; files++) {
+//     output += ' <div class="tab-pane active" role="tabpanel" id="' + filesArray[files] + '">';
+//     output += '     <pre class="prettyprint">';
+//     output += '         <xmp >';
+//     output += '             <div id="snippetOutputOne"> Testing text</div>';
+//     output += '         </xmp>';
+//     output += '     </pre>';
+//     output += ' </div><!--tab-pane-->';
+// }
+// output += '</div><!--tab-content-->';

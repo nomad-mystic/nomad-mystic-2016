@@ -14,10 +14,11 @@
 
     // Home Header Area
     .home-jumbotron {
-        background: url("../images/home_banner.jpg") no-repeat 0 0;
+        background: no-repeat 0 0;
         background-size: cover;
         border-radius: 0;
         padding: 10% 0 5%;
+        height: 50vh;
     }
 }
 

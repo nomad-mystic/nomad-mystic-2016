@@ -32,9 +32,28 @@
             ?>
         </div>
     </nav>
-    <div class="jumbotron home-jumbotron">
-        <div class="container">
-            <img src="/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/home_logo.png" class="img-responsive" alt="Header logo for nomadmystic.com">
-        </div>
-    </div><!--jumbotron-->
+    <?php
+        // dynamic header image
+        // URI now: '/nomadmystic/project-category/'
+        $location_pathname = $_SERVER['REQUEST_URI'];
+    // need to
+    if ($location_pathname  === '/nomadmystic/') {
+
+        $lower_header_image_path = 'nomadmystic_header.jpg';
+    } else {
+        $sliced_location_pathname = substr($location_pathname, 13, -1);
+        $lower_location_pathname = strtolower($sliced_location_pathname);
+        $lower_header_image_path = $lower_location_pathname . '_header.jpg';
+    }
+
+    ?>
+    <div class="jumbotron home-jumbotron" style="background-image: url('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/<?php echo $lower_header_image_path;?>')">
+            <div class="container">
+<!--                    <img src='http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/$lower_header_image_path' -->
+<!--                         class='img-responsive' -->
+<!--                         alt='Header logo for nomadmystic.com'>-->
+                </div><!--end container-->
+        </div><!--jumbotron-->
+
+
 </header>
