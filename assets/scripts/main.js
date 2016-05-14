@@ -125,26 +125,35 @@
                         }
                     }, // end createFileContent();
                     getTabContent: function(evnt) {
-                        // console.log(evnt);
-
+                        var targetDropdownText =[];
                         // var targetIndividual = evnt.target.classList[0];
+                        // console.log(evnt);
+                        // console.log(evnt.target.parentElement.parentElement.parentElement.innerText);
                         // var fileText = targetFile.innerText;
                         // console.log(fileText);
                         // grab the value for tab hit by user
-                        if (evnt.target.classList[0] === 'dropdown-toggle') {
-                            console.log('Tab value of file');
-                            // find the Tab value of file clicked
-                            var targetFolder = evnt.target.innerText;
-                            console.log(targetFolder);
-                        }
+                        // if (evnt.target.classList[0] === 'dropdown-toggle') {
+                        //     console.log('Tab value of file');
+                        //     // find the Tab value of file clicked
+                        //     var targetFolder = evnt.target.innerText;
+                        //     var lowercaseTargetFolder = targetFolder.toLowerCase();
+                        //     targetDropdownText.push(lowercaseTargetFolder);
+                        //     console.log(targetDropdownText);
+                        //
+                        // }
                         // get individual file in tab
                         if (evnt.target.classList[0] !== 'dropdown-toggle') {
                             console.log('Individual file');
                             // individual file selected
                             var targetFile = evnt.target.innerText;
-                            console.log(getFolderValue);
+                            var findDotInFileName = targetFile.lastIndexOf('.');
+                            var targetFolder = targetFile.slice(findDotInFileName + 1);
+                            console.log(targetFolder);
+                            console.log('find the DOT ' + findDotInFileName);
+                            // var tabContent = evnt.target.parentElement.parentElement.parentElement.innerText;
+                            console.log(getFolderValue + ' getFolderValue');
                             // call to populate code in pre tags
-                            $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/featured/development/internationalcoalconsumption/php/coal.js.php', function(data) {
+                            $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/featured/development/' + getIndividualValue + '/' + targetFolder + '/' + targetFile + '', function(data) {
                                 var entrySummary = $('.entry-summary');
                                 entrySummary.text(data);
                             });

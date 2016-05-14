@@ -14,36 +14,36 @@ $title_of_individual = $_POST['title_of_individual'];
 <!--        <button class="testingButton">Testing Get Calls</button>-->
         <?php the_content(); ?>
     </div>
-    <form action="http://localhost:8080/nomadmystic/wordpress/wp-content/themes/nomadmystic/extras/Inventory.php" id="currentWork" method="get">
-        <input type="hidden" name="currentWork" value="work1">
-    </form>
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                HTML<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#html_0" role="tab" data-toggle="tab">HTML 0</a></li>
-                <li><a href="#html_1" role="tab" data-toggle="tab">HTML 1</a></li>
-                <li><a href="#html_1" role="tab" data-toggle="tab">HTML 2</a></li>
-                <li><a href="#html_1" role="tab" data-toggle="tab">HTML 3</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                CSS<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </li>
-    </ul>
+<!--    <form action="http://localhost:8080/nomadmystic/wordpress/wp-content/themes/nomadmystic/extras/Inventory.php" id="currentWork" method="get">-->
+<!--        <input type="hidden" name="currentWork" value="work1">-->
+<!--    </form>-->
+<!--    <ul class="nav nav-tabs" role="tablist">-->
+<!--        <li class="dropdown">-->
+<!--            <a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
+<!--                HTML<span class="caret"></span>-->
+<!--            </a>-->
+<!--            <ul class="dropdown-menu" role="menu">-->
+<!--                <li><a href="#html_0" role="tab" data-toggle="tab">HTML 0</a></li>-->
+<!--                <li><a href="#html_1" role="tab" data-toggle="tab">HTML 1</a></li>-->
+<!--                <li><a href="#html_1" role="tab" data-toggle="tab">HTML 2</a></li>-->
+<!--                <li><a href="#html_1" role="tab" data-toggle="tab">HTML 3</a></li>-->
+<!--                <li class="divider"></li>-->
+<!--                <li><a href="#">Separated link</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--        <li class="dropdown">-->
+<!--            <a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
+<!--                CSS<span class="caret"></span>-->
+<!--            </a>-->
+<!--            <ul class="dropdown-menu" role="menu">-->
+<!--                <li><a href="#">Action</a></li>-->
+<!--                <li><a href="#">Another action</a></li>-->
+<!--                <li><a href="#">Something else here</a></li>-->
+<!--                <li class="divider"></li>-->
+<!--                <li><a href="#">Separated link</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--    </ul>-->
 <!--    <div class="tab-content">-->
 <!--        <div class="tab-pane active" role="tabpanel" id="html_0">-->
 <!--            <div>-->
