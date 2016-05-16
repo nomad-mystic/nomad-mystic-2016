@@ -91,7 +91,7 @@ function createFileSystem($filesArray)
     // Images
     if (!is_dir_empty($development_images_path)) {
         $images_files = scandir($development_images_path);
-        $all_files_in_development['images'] = $images_files;
+        $all_files_in_development['Images'] = $images_files;
     }
     // JS
     if (!is_dir_empty($development_JS_path)) {

@@ -95,7 +95,7 @@ function show_user_info()
      echo '        <a href="' . LOGOUT_PAGE . '">LOGOUT</a>' . "\n"  . '    </div>'. "\n";
      echo '</div>' . "\n";
 }
-
+?>
 
 
 

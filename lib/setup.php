@@ -70,7 +70,7 @@ function widgets_init() {
       register_sidebar([
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer',
-        'before_widget' => '<section class="widget %1$s %2$s">',
+        'before_widget' => '<section class="widget %1$s %2$s col-xs-12 col-sm-4 col-md-4 col-lg-4">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
@@ -110,7 +110,7 @@ function assets() {
       }
       
       wp_enqueue_script('nomad-js', Assets\asset_path('scripts/main.js'), ['jquery'], null, false);
-      wp_enqueue_script('nomad-prettify', 'https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;');
+//      wp_enqueue_script('nomad-prettify', 'https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;');
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 

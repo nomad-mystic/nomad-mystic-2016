@@ -4,7 +4,10 @@ global $wp_query;
 
 // URI now: '/nomadmystic/project-category/'
 $location_pathname = $_SERVER['REQUEST_URI'];
+// this removes / and nomadmystic from the string
 $sliced_location_pathname = substr($location_pathname, 13, -1);
+
+$capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 //    var_dump($location_pathname);
 //    var_dump($sliced_location_pathname);
 ?>
@@ -14,6 +17,7 @@ $sliced_location_pathname = substr($location_pathname, 13, -1);
 ?>
 
 <section class="<?php echo $sliced_location_pathname;?>">
+    <h1><?php echo $capitalize_sliced_location_pathname; ?></h1>
     <article <?php post_class(); ?>>
         <?php
         // WP_Query arguments for querying slug by url name, ordering by ascending,

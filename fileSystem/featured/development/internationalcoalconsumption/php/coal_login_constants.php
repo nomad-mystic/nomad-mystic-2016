@@ -40,3 +40,4 @@ const E_CONFIRM_MISMATCH = 'Password must match';
 const E_ACCOUNT_EXISTS = 'Username already exists. Please try a different one';
 const E_USERNAME_NOT_FOUND = 'Username not found';
 const E_PASSWORD_INCORRECT = 'Incorrect Password';
+?>

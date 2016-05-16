@@ -21,7 +21,7 @@
             </span>
             </div>
             <div class="squareButtonPrimaryColor">
-                <a href="" title="">Freelance Websites</a>
+                <a href="http://localhost:3000/" title="">Freelance Websites</a>
             </div>
         </div><!--end col-->
 <!--        Feature Projects-->
@@ -33,7 +33,7 @@
             </span>
             </div>
             <div class="squareButtonPrimaryColor">
-                <a href="" title="">Feature Projects</a>
+                <a href="http://localhost:3000/nomadmystic/featured/" title="">Featured Projects</a>
             </div>
         </div><!--end col-->
     </article><!--end row-->

@@ -1,7 +1,7 @@
 <?php
 
-var_dump($_POST['title_of_folder']);
-var_dump($_POST['title_of_individual']);
+//var_dump($_POST['title_of_folder']);
+//var_dump($_POST['title_of_individual']);
 
 $title_of_folder = $_POST['title_of_folder'];
 $title_of_individual = $_POST['title_of_individual'];
@@ -84,10 +84,14 @@ $title_of_individual = $_POST['title_of_individual'];
 <!--                voluptatum. Adipisci aliquid odio saepe?</p>-->
 <!--        </div>-->
 <!--    </div>-->
-    <!--testing tabs dynamic-->
-    <ul class="nav nav-tabs individualTabs" role="tablist">
-        
-    </ul>
+    
+    <!--testing tabs dynamic from main.js individual.init.closure.createFileContentTab-->
+    <ul class="nav nav-tabs individualTabs" role="tablist"></ul>
+    <div id="tabCodeContent">
+        <h1>Nomad Mystic Code Viewer</h1>
+        <p>Click on the tabs for viewing code for this project.</p>
+    </div>
+    
 </article>
 
 

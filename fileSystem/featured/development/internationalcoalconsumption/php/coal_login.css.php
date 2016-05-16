@@ -6,13 +6,13 @@
  * Time: 10:01 PM
  */
 
-header('Content-Type: text/css');
-require_once('constants.php');
+//header('Content-Type: text/css');
+//require_once('constants.php');
 
 ?>
 
 #login_content {
-     background: <?php echo BLUE_BACKGROUND; ?>;
+     background: blue;
      width: 75%;
      margin: 5% auto;
      border: <?php echo BORDER; ?>;

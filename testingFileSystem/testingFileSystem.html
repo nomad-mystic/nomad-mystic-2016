@@ -36,11 +36,10 @@
                     $('.html').text(html);
 
                     // remove class to activate again with prettyPrint() function
-                    $('.prettyprint').removeClass("prettyprinted");
-                    prettyPrint();
+
                 });
 
-                // gets the contents of one HTML file
+                // gets the contents of one PHP file
                 $.get('testingFilesSystem.php', function(php) {
                     // adding html file to DOM
                     $('.php').text(php);

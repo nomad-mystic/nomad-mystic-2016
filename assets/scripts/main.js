@@ -91,13 +91,32 @@
                 var getIndividualValue = titleOfIndividualHidden.text();
                 console.log(getIndividualValue);
                 var closure = {
+                    getFolderContents: function() {
+                        $.get(
+                            'http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/' +
+                            'fileSystem/getFiles.php?title_of_individual=' + getIndividualValue + '&title_of_folder=' + getFolderValue + '',
+                            function(data) {
+                                // console.log(data);
+                                var parsedData = $.parseJSON(data);
+                                // console.log(parsedData);
+
+                                // get the section from the returned file object
+                                for (var key in parsedData) {
+                                    var arrayKey = parsedData[key];
+                                    // calling each file type for population of the DOM
+                                    closure.createFileContentTab(arrayKey, parsedData, key);
+                                }
+                            }
+                        ); // end get
+
+                    },
                     createFileContentTab: function (filesArray, parsedData, name) {
                         var individualTabs = $('.individualTabs');
                         console.log(filesArray);
                         // if folder not empty
                         if (filesArray !== undefined) {
                             // console.log(filesArray.length);
-                            // console.log(filesArray);
+                            console.log(filesArray);
                             var output = '';
 
                             // creating DOM pieces
@@ -123,71 +142,103 @@
                         } else {
                             console.log('This folder is undefined');
                         }
+
                     }, // end createFileContent();
                     getTabContent: function(evnt) {
-                        var targetDropdownText =[];
+                        // var targetDropdownText =[];
                         // var targetIndividual = evnt.target.classList[0];
-                        // console.log(evnt);
-                        // console.log(evnt.target.parentElement.parentElement.parentElement.innerText);
-                        // var fileText = targetFile.innerText;
-                        // console.log(fileText);
-                        // grab the value for tab hit by user
-                        // if (evnt.target.classList[0] === 'dropdown-toggle') {
-                        //     console.log('Tab value of file');
-                        //     // find the Tab value of file clicked
-                        //     var targetFolder = evnt.target.innerText;
-                        //     var lowercaseTargetFolder = targetFolder.toLowerCase();
-                        //     targetDropdownText.push(lowercaseTargetFolder);
-                        //     console.log(targetDropdownText);
-                        //
-                        // }
+
                         // get individual file in tab
-                        if (evnt.target.classList[0] !== 'dropdown-toggle') {
+                        if (evnt.target.classList[0] === 'individual') {
+                            console.log(evnt);
                             console.log('Individual file');
                             // individual file selected
                             var targetFile = evnt.target.innerText;
-                            var findDotInFileName = targetFile.lastIndexOf('.');
-                            var targetFolder = targetFile.slice(findDotInFileName + 1);
-                            console.log(targetFolder);
-                            console.log('find the DOT ' + findDotInFileName);
-                            // var tabContent = evnt.target.parentElement.parentElement.parentElement.innerText;
-                            console.log(getFolderValue + ' getFolderValue');
+
+                            var tabContent = $('ul.individualTabs .open');
+
+                            // find the individual folder clicked
+                            var tabContentString = tabContent.find('a.dropdown-toggle');
+
+                            var tabContentText = tabContentString.text();
+                            var lowerTabContent = tabContentText.toLowerCase();
+                            // console.log(getFolderValue + ' getFolderValue');
+                            // console.log(lowerTabContent + ' tabContent');
+
                             // call to populate code in pre tags
-                            $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/featured/development/' + getIndividualValue + '/' + targetFolder + '/' + targetFile + '', function(data) {
-                                var entrySummary = $('.entry-summary');
-                                entrySummary.text(data);
-                            });
+                            // $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/' + lowerTabContent + '/' + targetFile + '', function(data) {
+
+                            var activeListItem = tabContent.find('li.active');
+                            // check for the active class
+                            // if (targetFile === '') {
+                                // this grabs the individual file content using PHP file_get_contents() function and echos that
+                                // value to the page for retrieval
+                                $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/getIndividualFileContent.php?targetPostFolderType=' + getFolderValue  + '&getIndividualProjectValue=' + getIndividualValue + '&tabSelected=' + lowerTabContent + '&individualTargetFile=' + targetFile + '', function(individualFileContents) {
+                                    // console.log(individualFileContents);
+                                    closure.buildTabContent(individualFileContents);
+
+                                });
+                            // }
                         }
-                    }
+                    }, // end getTabContent()
+                    buildTabContent: function(individualFileContents) {
+                        // checking to find the active tab
+                        var tabContent = $('.individualTabs .active');
+                        var tabContentString = tabContent.find('a.dropdown-toggle').text();
+
+                        // get file clicked on by user
+                        var getActiveFile = $('ul.dropdown-menu li.active');
+                        var activeFileText = getActiveFile.text();
+                        console.log('activeFileText ' + activeFileText);
+                        // grabbing and clearing tab content
+                        var tabCodeContent = $('#tabCodeContent');
+                        // tabCodeContent.html(individualFileContents);
+                        var output = '';
+
+                        // Adding default tab-content text
+                        tabCodeContent.html('Welcome String');
+                        // check to see if active tab is images
+                        if (tabContentString === 'Images') {
+                            // clear tab content text
+                            tabCodeContent.html('');
+                            tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive">');
+                        } else {
+                            // clear tab content text
+                            tabCodeContent.html('');
+                            // console.log('Parent tabContent ' + tabContentString);
+                            // creating each individual tabs content with the code clicked on by user
+                            // create tab content
+                            output += '<div class="tab-content">';
+                            // for (var files = 2; files < filesArray.length; files++) {
+                            output += ' <div class="tab-pane active" role="tabpanel">';
+                            output += '     <pre class="prettyprint">';
+                            output += '         <code class="tabCodeContent">' + individualFileContents;
+                            output += '         </code>';
+                            output += '     </pre>';
+                            output += ' </div><!--tab-pane-->';
+                            // }
+                            output += '</div><!--tab-content-->';
+                            tabCodeContent.append(output);
+
+                            $('.prettyprint').removeClass("prettyprinted");
+                            prettyPrint();
+                        }
+
+                    } // end buildTabContent
                 };
-                // var closure = {
-                //     getTabContent: function(evnt) {
-                //
-                //     }
-                // };
+
+
+
+                // get folder contents init function
+                var filesArray = closure.getFolderContents();
+                var saveFilesArray = [];
+                saveFilesArray.push(filesArray);
+                // click event to get the content of individual tabs
                 $('.individual').on('click', function(evnt) {
-
+                    var tabContent = $('ul.individualTabs .open');
                     closure.getTabContent(evnt);
+
                 });
-
-
-                $.get(
-                    'http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/' +
-                    'fileSystem/getFiles.php?title_of_individual=' + getIndividualValue + '&title_of_folder=' + getFolderValue + '',
-                    function(data) {
-                        // console.log(data);
-                        var parsedData = $.parseJSON(data);
-                        // console.log(parsedData);
-
-                        // get the section from the returned file object
-                        for (var key in parsedData) {
-                            var arrayKey = parsedData[key];
-                            // calling each file type for population of the DOM
-                            closure.createFileContentTab(arrayKey, parsedData, key);
-                        }
-                    }
-                ); // end get
-
             },
             finish: function() {
                 var folder = $('.folder');
@@ -195,13 +246,6 @@
                 // in that folder define by file type
                 // file types: path fileSystem/
                 // html, css, development,
-
-                // var document = $(document);
-                // document.on('load', function() {
-                //
-                // });
-
-
             }
         },
         'featured': {
