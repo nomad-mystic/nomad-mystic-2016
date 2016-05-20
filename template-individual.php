@@ -3,8 +3,6 @@
  * Template Name: Individual Template
  */
 
-
-require_once('extras/Inventory.php');
 ?>
 
 

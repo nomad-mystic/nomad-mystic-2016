@@ -92,7 +92,9 @@ function display_sidebar() {
         is_page_template('template-custom.php'),
           // added by nomad 
         is_page_template('template-project-categories.php'),
-        is_page_template('template-individual.php')
+        is_page_template('template-individual.php'),
+        is_page_template('template-about.php'),
+        is_page_template('template-school.php')
       ]);
 
       return apply_filters('sage/display_sidebar', $display);

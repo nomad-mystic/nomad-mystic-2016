@@ -9,7 +9,7 @@
             </span>
             </div>
             <div class="squareButtonPrimaryColor">
-                <a href="" title="">School Projects</a>
+                <a href="http://localhost:3000/nomadmystic/school/" title="">School Projects</a>
             </div>
         </div><!--end col-->
 <!--        Freelance Websites-->
@@ -40,48 +40,48 @@
 </section>
 <section class="services-section">
     <div class="container">
-        <article class="row">
-            <h2 class="text-center">Services</h2>
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x"></i>
-            </span>
-                </div>
-                <button class="squareButtonPrimaryColor">School</button>
-            </div><!--end col-->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x"></i>
-            </span>
-                </div>
-                <button class="squareButtonPrimaryColor">Featured</button>
-            </div><!--end col-->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x"></i>
-            </span>
-                </div>
-                <button class="squareButtonPrimaryColor">Websites</button>
-            </div><!--end col-->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x"></i>
-            </span>
-                </div>
-                <div class="squareButtonPrimaryColor">
-                    <a href="http://www.dribbble.com/chrisota" title="Chris Ota Dribbble"><i class="fa fa-dribbble"></i> Dribbble</a>
-                </div>
-<!--                <button class="squareButtonPrimaryColor">Websites</button>-->
-            </div><!--end col-->
-        </article><!--end row-->    
+        <article>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 1200 800" style="enable-background:new 0 0 1200 800;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{display:none;}
+                            .st1{display:inline;fill:#FFA500;stroke:#055555;stroke-width:10;stroke-miterlimit:10;}
+                            .st2{fill:none;stroke:#055555;stroke-width:10;stroke-miterlimit:10;}
+                            .st3{fill:none;stroke:#555555;stroke-width:10;stroke-miterlimit:10;}
+                            .st4{fill:#055555;}
+                            .st5{font-family:'PlayfairDisplay-Regular';}
+                            .st6{font-size:50px;}
+                            .st7{font-size:80px;}
+                        </style>
+                        <g id="Layer_1" class="st0">
+                            <rect class="st1" width="1200" height="800"/>
+                        </g>
+                        <g id="Layer_2">
+                            <polygon class="st2" points="39,119.3 158.5,50.5 278,119.3 278,257 158.5,325.8 39,257 	"/>
+                            <polygon class="st3" points="317,188.1 195.6,256.9 74.1,325.6 74.1,188.1 74.1,50.7 195.6,119.4 	"/>
+                            <polygon class="st2" points="435,211.3 395,234.5 355,211.3 355,164.7 395,141.5 435,164.7 	"/>
+                            <line class="st3" x1="395" y1="330" x2="395" y2="690"/>
+                            <line class="st3" x1="393" y1="335" x2="433" y2="335"/>
+                            <line class="st3" x1="393" y1="511" x2="433" y2="511"/>
+                            <line class="st3" x1="391" y1="686" x2="431" y2="686"/>
+                            <polygon class="st2" points="453,319.9 479,304.8 505,319.9 505,350.1 479,365.2 453,350.1 	"/>
+                            <polygon class="st2" points="453,495.9 479,480.8 505,495.9 505,526.1 479,541.2 453,526.1 	"/>
+                            <polygon class="st2" points="453,670.9 479,655.8 505,670.9 505,701.1 479,716.2 453,701.1 	"/>
+                        </g>
+                        <g id="Layer_3">
+                            <text transform="matrix(1 0 0 1 537 704)" class="st4 st5 st6">WordPress Development</text>
+                            <text transform="matrix(1 0 0 1 466 220)" class="st4 st5 st7">Dream Not of Today </text>
+                            <text transform="matrix(1 0 0 1 538 348)" class="st4 st5 st6">Web Delevopment</text>
+                            <text transform="matrix(1 0 0 1 538 525)" class="st4 st5 st6">UI Development </text>
+                        </g>
+</svg>
+
+
+                </div><!--end col-->
+            </div><!--end row-->
+        </article>
     </div><!--end container-->
 </section>
 <img src="wordpress/wp-content/themes/nomadmystic/dist/images/dividerBanner_1.jpg" class="img-responsive" alt="Image">

@@ -6,8 +6,8 @@
  * Time: 10:01 PM
  */
 
-//header('Content-Type: text/css');
-//require_once('constants.php');
+header('Content-Type: text/css');
+require_once('constants.php');
 
 ?>
 
@@ -82,23 +82,3 @@
      -moz-box-shadow: 0 2px  1px rgba(0,0,0,.10);
      box-shadow: 0 2px  1px rgba(0,0,0,.10);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -11,9 +11,6 @@ require_once('constants.php');
 
  ?>
 
-
-
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -201,31 +198,3 @@ input[type="text"] {
      border-radius: <?php echo BORDER_RADIUS; ?>;
      border: <?php echo BORDER; ?>;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

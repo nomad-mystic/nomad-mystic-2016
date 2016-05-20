@@ -9,7 +9,8 @@
   "dependencies": {
     "bootstrap-sass": "3.3.6",
     "components-font-awesome": "^4.6.1",
-    "google-code-prettify": "^1.0.4"
+    "google-code-prettify": "^1.0.4",
+    "share-button": "^1.0.3"
   },
   "overrides": {
     "bootstrap-sass": {

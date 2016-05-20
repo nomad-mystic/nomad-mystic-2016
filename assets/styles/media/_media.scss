@@ -1,14 +1,33 @@
 
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-sm-min) {
-
-}
+// iHone 6 and Galaxy 5-6 landscape
+@media screen and (min-width: 639px) {
+  .main {
+    header {
+      .home-jumbotron {
+        margin: 0 0 0 0;
+      }
+    }
+  } // end main
+  .postContent {
+    .productionButtonDiv,
+    .codeButtonDiv {
+      width: 48%;
+    }
+  } // end postContent
+} // end Small devices
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 768px) {
-
-}
+  .main {
+    header {
+      .home-jumbotron {
+        margin: 0 0 0 0;
+      }
+    }
+  } // end main
+} // end media medium
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

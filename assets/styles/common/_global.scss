@@ -3,7 +3,7 @@ $RGBA90Black: rgba(0,0,0,.90);
 // fonts
 @font-face {
   font-family: "Playfair Display";
-  src: url('fonts/PlayfairDisplay-Regular.otf');
+  src: url('../fonts/PlayfairDisplay-Regular.otf');
 }
 
 //General
@@ -19,6 +19,18 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+body {
+  font-size: 16px;
+}
+h1 {
+  font-family: $font-stack;
+  font-size: 3em;
+}
+h2 {
+  font-family: $font-stack;
+  font-size: 2em;
+}
+
 
 // Helper clases
 .displayNone {

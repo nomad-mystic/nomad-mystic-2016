@@ -1,0 +1,134 @@
+
+/*General Styles---*/
+.displayBlock {
+    display: block;
+}
+.accordion {
+    margin: 0 auto;
+}
+.accordion h3 {
+    border: solid #000 1px;
+
+}
+.accordion h4 {
+    font-size: 1em;
+    margin: 2%;
+}
+.textWrapper {
+    text-align: center;
+}
+.textWrapper h1 {
+    font-size: 3em;
+    margin: 2% 2% 1%;
+    background-color: #6F003A;
+    color: #fff;
+    padding: .5em;
+    border-radius: 2px;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,.5);
+}
+.textWrapper h2 {
+    font-size: 2em;
+    background-color: rgba(0,0,0,.10);
+    padding: .5em;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,.15);
+}
+.textWrapper h5 {
+    font-size: 1.5em;
+    color: #000;
+    background-color: rgba(15, 112, 0, 0.45);
+    padding: .5em;
+    width: 50%;
+    margin: 2% auto;
+    border-radius: 2px;
+}
+.textWrapper p {
+    width: 50%;
+    margin: 2% auto;
+    font-size: 1.25em;
+    background-color: rgba(0,0,0,.10);
+    padding: 2%;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px 0px rgba(0,0,0,.2);
+}
+
+.dataWrapper {
+    width: 75%;
+    margin: 2% auto;
+
+}
+.dataWrapper h2 {
+    text-align: center;
+}
+.dataWrapper span.paddingLeft {
+    padding-left: 5%;
+}
+.murderRate2012 {
+    float: left;
+    width: 40%;
+    margin: 2%;
+}
+.murderRate2011 {
+    float: left;
+    width: 40%;
+    margin: 2%;
+}
+/*Progress Bar Styles----*/
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 75%;
+    height: 25px;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+    background-image:
+    -webkit-linear-gradient(
+            -45deg,
+            transparent 33%,
+            rgba(0, 0, 0, .1) 33%,
+        rgba(0,0, 0, .1) 66%, transparent 66%
+    ),
+    -webkit-linear-gradient(
+            top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .25)
+    ),
+    -webkit-linear-gradient(
+            left,
+            #09c,
+            #f44
+    );
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+progress[value]::-moz-progress-bar {
+    background-image:
+    -moz-linear-gradient(
+            135deg,
+            transparent 33%,
+            rgba(0, 0, 0, 0.1) 33%,
+            rgba(0, 0, 0, 0.1) 66%,
+            transparent 66%
+    ),
+    -moz-linear-gradient(
+            top,
+            rgba(255, 255, 255, 0.25),
+            rgba(0, 0, 0, 0.25)
+    ),
+    -moz-linear-gradient(
+            left,
+            #09c,
+            #f44
+    );
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
