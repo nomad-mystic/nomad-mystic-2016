@@ -90,7 +90,6 @@
 
                         // populate DOM with Tab
                         individualTabs.prepend(output);
-
                     } else {
                         console.log('This folder is undefined');
                     }
@@ -146,6 +145,7 @@
 
                     }
                 }, // end getTabContent()
+                
                 buildTabContent: function(individualFileContents) {
                     // DOM handlers to grab POST data from project-categories.php form post
                     var titleOfFolderHidden = $('.titleOfFolderHidden');
@@ -286,7 +286,7 @@
             init: function() {
                 // click code to submit hidden form to build content Refactor!!!
                 var codeButton = $('.code_button a');
-                codeButton.on('hover', function(evnt) {
+                codeButton.on('click', function(evnt) {
                     console.log(evnt);
                     var findClassOfEvent = evnt.target.classList[0];
                     $('form#' + findClassOfEvent).submit();

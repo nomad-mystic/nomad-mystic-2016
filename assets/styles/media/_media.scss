@@ -6,7 +6,7 @@
   .main {
     header {
       .home-jumbotron {
-        margin: 0 0 0 0;
+        margin: 7% 0 0 0;
       }
     }
   } // end main
@@ -23,7 +23,7 @@
   .main {
     header {
       .home-jumbotron {
-        margin: 0 0 0 0;
+        margin: 4% 0 0 0;
       }
     }
   } // end main
@@ -31,5 +31,11 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  .main {
+    header {
+      .home-jumbotron {
+        margin: 1% 0 0 0;
+      }
+    }
+  } // end main
 }

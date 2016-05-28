@@ -1,10 +1,14 @@
 
+// Pages general
+//.postThumb {
+//  @include aspect-ratio(16, 9);
+//}
 
 
 // Home Page
-
-.home .font-stack  {
-    font-size: 4em;
+.home {
+  .font-stack  {
+    font-size: 3em;
     position: relative;
     .fa-circle {
       color: $main-teal;
@@ -12,24 +16,56 @@
     span {
       position: static;
     }
-}
-.services-section {
-  margin: 2% auto;
-  background: $main-teal;
-  h2 {
-    font-family: $font-stack;
-    color: #fff;
   }
-  .font-stack {
-    .fa-circle {
+  .services-section {
+    margin: 0 auto;
+    background: $main-teal;
+    h2 {
+      font-family: $font-stack;
       color: #fff;
     }
-    &:nth-child(1) {
-      color: $main-teal;
+    .font-stack {
+      .fa-circle {
+        color: #fff;
+      }
+      &:nth-child(1) {
+        color: $main-teal;
+      }
+    }
+    .hexagon {
+      fill: none;
+      stroke: #41FFFF;
+      stroke-width: 10;
+      stroke-miterlimit: 10;
+    }
+    .line {
+      fill:none;
+      stroke:#fff;
+      stroke-width:10;
+      stroke-miterlimit:10;
+    }
+    .st4{
+      fill:#fff;
+    }
+    .st5{
+      font-family:'PlayfairDisplay-Regular';
+    }
+    .st6{
+      font-size:50px;
+    }
+    .st7{
+      font-size:80px;
+    }
+  } // services-section
+
+  .homeAboutThisSite {
+    P {
+      text-align: center;
+      font-size: 1.25em;
     }
   }
+} // end homePage
 
-} // services-section
 // featured post page
 .featured {
   h2 {
@@ -69,5 +105,12 @@
   .postThumb {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+// individual Page
+#tabCodeContent {
+  .tab-content {
+    background: #000;
   }
 }

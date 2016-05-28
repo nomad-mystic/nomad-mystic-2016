@@ -33,7 +33,7 @@ function createFileSystem($filesArray)
 // parent folder class
 //    $parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/";
 
-
+    // if school project
     if (!empty($filesArray[2])) {
 //        $development_parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]";
         $development_HTML_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/html";
@@ -42,6 +42,7 @@ function createFileSystem($filesArray)
         $development_images_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/images";
         $development_JS_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/js";
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/development";
+        $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/data";
 
     } else {
 //        $development_parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[2]";
@@ -60,17 +61,7 @@ function createFileSystem($filesArray)
 
     // taken from: http://stackoverflow.com/questions/7497733/how-can-use-php-to-check-if-a-directory-is-empty
     // checking to see if folders have files in them
-    // HTML
-//    for ($files = 0; $files < count($development_folder_path); $files++) {
-////        if (!is_dir_empty("/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]")) {
-//            $file = scandir("/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]");
-//            $file_name = (string) "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$files";
-//
-//            $all_files_in_development[] = $file;
-////        }
-////        $development_HTML_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/html";
-//    }
-
+    
     function buildFilesInFolder($path, $all_files_in_development)
     {
 //        if (!is_dir_empty($path)) {
@@ -80,17 +71,16 @@ function createFileSystem($filesArray)
 //        }
     }
 //    buildFilesInFolder($development_HTML_path, $all_files_in_development);
-
-    // HTML
-    if (!is_dir_empty($development_HTML_path) && file_exists($development_HTML_path)) {
-        $HTML_files = scandir($development_HTML_path);
-        $all_files_in_development['HTML'] = $HTML_files;
+    // Data
+    if (!is_dir_empty($data_files_path) && file_exists($data_files_path)) {
+        $data_files = scandir($data_files_path);
+        $all_files_in_development['Data'] = $data_files;
     }
 
-    // PHP
-    if (!is_dir_empty($development_PHP_path) && file_exists($development_PHP_path)) {
-        $PHP_files = scandir($development_PHP_path);
-        $all_files_in_development['PHP'] = $PHP_files;
+    // Development
+    if (!is_dir_empty($development_files_path) && file_exists($development_files_path)) {
+        $development_files = scandir($development_files_path);
+        $all_files_in_development['Development'] = $development_files;
     }
 
     // CSS
@@ -110,12 +100,17 @@ function createFileSystem($filesArray)
         $all_files_in_development['JS'] = $JS_files;
     }
 
-    // Development
-    if (!is_dir_empty($development_files_path) && file_exists($development_files_path)) {
-        $development_files = scandir($development_files_path);
-        $all_files_in_development['Development'] = $development_files;
+    // PHP
+    if (!is_dir_empty($development_PHP_path) && file_exists($development_PHP_path)) {
+        $PHP_files = scandir($development_PHP_path);
+        $all_files_in_development['PHP'] = $PHP_files;
     }
-    
+    // HTML
+    if (!is_dir_empty($development_HTML_path) && file_exists($development_HTML_path)) {
+        $HTML_files = scandir($development_HTML_path);
+        $all_files_in_development['HTML'] = $HTML_files;
+    }
+
     // send all files in array back to individual page 
     echo json_encode($all_files_in_development);
 

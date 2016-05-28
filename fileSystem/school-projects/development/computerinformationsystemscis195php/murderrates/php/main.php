@@ -104,8 +104,8 @@
           </div> <!-- End murderRate2011-->
      </div>
 </div>
-<script src="../js/jquery-2.1.4.min.js"></script>
-<script src="../js/jquery-ui.min.js"></script>
+<script src="../development/jquery-2.1.4.min.js"></script>
+<script src="../development/jquery-ui.min.js"></script>
 <script src="../js/scripts.js"></script>
 </body>
 </html>

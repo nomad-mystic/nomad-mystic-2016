@@ -51,16 +51,13 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 
 
                 if ($sliced_location_pathname === 'featured') {
-                    require('featured-include.php');
-
+                    include('featured-include.php');
                 } else if ($sliced_location_pathname === 'websites') {
                     require('websites-include.php');
 
                 } else if ($sliced_location_pathname === 'school') {
                     require('school-include.php');
                 }
-
-
             } // end while for $query->the_post()
         } // end if
         ?>

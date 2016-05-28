@@ -28,9 +28,11 @@ h1 {
 }
 h2 {
   font-family: $font-stack;
-  font-size: 2em;
+  font-size: 2.5em;
 }
-
+li {
+  list-style-type: none;
+}
 
 // Helper clases
 .displayNone {
@@ -55,6 +57,9 @@ h2 {
   margin-top: 12px;
 }
 
+// font-awesome overrides
+
+
 // for the code snippets
 /* Pretty printing styles. Used with prettify.js. */
 /* Vim sunburst theme by David Leibovic */
@@ -73,17 +78,12 @@ pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 
 pre.prettyprint, code.prettyprint {
   background-color: #000;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -o-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -khtml-border-radius: 8px;
-  border-radius: 8px;
+  border: none;
 }
 
 pre.prettyprint {
   width: 95%;
-  margin: 1em auto;
+  margin: 0 auto 1em;
   padding: 1em;
   white-space: pre-wrap;
 }
@@ -106,5 +106,24 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   pre .tag, code .tag { color: #006; font-weight: bold; }
   pre .atn, code .atn { color: #404; }
   pre .atv, code .atv { color: #060; }
+}
+
+/*---mixins--*/
+// taken from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 

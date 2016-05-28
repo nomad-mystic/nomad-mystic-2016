@@ -1,5 +1,40 @@
 
 footer {
-  border: 2px solid $RGBA90Black;
+  border-top: 1px solid $main-teal;
+  font-family: $font-stack;
+  text-align: center;
+  margin: 2% 0 0 0;
+  // site map
+  .widget_nav_menu {
+    ul#menu-footer-site-map {
+      padding: 0;
+      li {
 
-}
+        a {
+          color: $main-teal;
+        }
+      }
+    }
+  } // end .widget_nav_menu
+  .footerSocialIcons {
+    font-size: 2.25em;
+    ul {
+      display: block;
+      margin: 0 auto;
+      li {
+        float: left;
+        margin: 0 2%;
+        i {
+
+        }
+      }
+    }
+    .fa-stack-2x {
+      color: $main-teal;
+      transition: all .25s;
+      &:hover {
+        color: $main-teal-light;
+      }
+    }
+  } // end .footerSocialIcons
+} // end footer

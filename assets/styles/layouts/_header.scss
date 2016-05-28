@@ -1,9 +1,29 @@
 .container-fluid {
-    // NAV
+    //////////////////////// NAV
     .navbar-default {
         margin-bottom: 0;
         border-radius: 0;
-    }
+        background-color: #ffffff;
+        color: #000;
+        font-family: $font-stack;
+        .navbar-nav {
+            margin: 0 -15px;
+            li {
+                a {
+                    color: #000;
+                    transition: all .25s;
+                    &:hover {
+                        background: $main-teal;
+                        color: #fff;
+                    }
+                }
+            } // end li
+            .active a {
+                background: $secondary-purple !important;
+                color: #fff;
+            }
+        } // end navbar-nav
+    }// end navbar-default
     .navbar-brand {
         padding: 2% 2% 5% 0;
         margin-left: 20px;
@@ -11,15 +31,18 @@
     .navbar-toggle {
         margin-right: 40px;
     }
+    .navbar-fixed-top {
+        border-width: 0 0 0;
+    }
 
-    // Home Header Area
+    /////////////////// Home Header Area
     .home-jumbotron {
         background: no-repeat 0 0;
         background-size: cover;
         border-radius: 0;
-        margin: 0 0 0 0;
+        margin: 10% 0 0 0;
     }
-}
+} // end container-fluid
 
 
 
