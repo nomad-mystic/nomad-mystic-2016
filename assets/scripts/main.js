@@ -50,26 +50,83 @@
                         function(data) {
                             // console.log(data);
                             // var parsedData = $.parseJSON(data);
-                            console.log(data + ' data from PHP');
 
                             // get the section from the returned file object
                             // loop over each folder returned from getFiles.php and create tabContent for each
-                            for (var key in data) {
-                                var arrayKey = data[key];
+                            for (var nameOfFolder in data) {
+                                var arrayKey = data[nameOfFolder];
+                                console.log(JSON.stringify(data[nameOfFolder]));
                                 // calling each file type for population of the DOM
-                                Nomad.common.buildContent.createFileContentTab(arrayKey, data, key);
+                                Nomad.common.buildContent.createFileContentTab(arrayKey, data, nameOfFolder);
                             }
+                            // create default tab content
+                            Nomad.common.buildContent.createDefaultTabContentOnLoad();
+
                         }
                     ); // end get
+                    // populate the DOM with current project on load
+                    Nomad.common.buildContent.getCurrentProjectForViewing(getIndividualValue);
+                },
+                createDefaultTabContentOnLoad: function() {
+                    $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/wellcomeToCodeViewer.html', function(html) {
+                        var tabCodeContent = $('#tabCodeContent');
+                        tabCodeContent.html(html);
+                    }); // end get() default content
+                    // console.log('Inside createDefaultTabContentOnLoad');
+                },
+                getCurrentProjectForViewing: function(getIndividualValue) {
+                    // Populate description with the title of the project selected
+                    $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/meta/individualMetaData.json', function(metaData) {
+                        var activeIndividualProjectInView = $('#activeIndividualProjectInView');
+                        // var parsedMetaData = $.parseJSON(metaData);
+                        console.log('Meta data ' + JSON.stringify(metaData.metaData));
+                        // loop through metaData for each project type school-projects or featured
+                        for (var projectType in metaData.metaData) {
+                            if (metaData.metaData.hasOwnProperty(projectType)) {
+                                // if this a a featured project
+                                if (projectType === 'featured') {
+                                    // loop through metaData object to find current featured project
+                                    for (var featuredProjectName in metaData.metaData.featured) {
+                                        if (metaData.metaData.featured.hasOwnProperty(featuredProjectName)) {
+                                            if (featuredProjectName === getIndividualValue) {
+                                                console.log('Project Type A: featured ' + featuredProjectName);
+                                                console.log('Project Type A: featured ' + metaData.metaData.featured[featuredProjectName]);
+                                                activeIndividualProjectInView.text(metaData.metaData.featured[featuredProjectName]);
+                                            }
+                                        }
+                                    }
+                                } else if (projectType === 'schoolProjects') {
+                                    // loop through metaData object to find current schoolProject
+                                    for (var schoolProjectName in metaData.metaData.schoolProjects) {
+                                        if (metaData.metaData.schoolProjects.hasOwnProperty(schoolProjectName)) {
+                                            if (schoolProjectName === getIndividualValue) {
+                                                console.log('Project Type A: featured ' + schoolProjectName);
+                                                console.log('Project Type A: featured ' + metaData.metaData.schoolProjects[schoolProjectName]);
+                                                activeIndividualProjectInView.text(metaData.metaData.schoolProjects[schoolProjectName]);
+                                            }
+                                        }
+                                    }
+                                    console.log('Project Type B: school project');
+                                }
+                            }
+                        }
+                    });
                 },
                 createFileContentTab: function (filesArray, parsedData, name) {
+                    // This is part of a loop which creates the tab content for each folder type
                     var individualTabs = $('.individualTabs');
                     // if folder not empty
                     if (filesArray !== undefined) {
                         // console.log(filesArray.length);
-                        console.log(filesArray + ' filesArray');
+                        console.log(filesArray + ' :filesArray');
+                        console.log(name + ' :name');
                         var output = '';
 
+                        // adding text to lib folder dynamically
+                        // if (name === 'Lib') {
+                        //     console.log('This is to checking to see if the name is the lib folder');
+                        //     name = 'Libraries';
+                        // }
                         // creating DOM pieces
                         output += '<li class="dropdown">';
                         output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
@@ -82,7 +139,7 @@
                                 'role="tab" ' +
                                 'data-toggle="tab"' +
                                 'class="individual">' + filesArray[files] + '</a></li>';
-                            // console.log(filesArray[files]);
+                            // console.log(filesArray[files] + ' :files array in loop');
                         }
                         output += '     </ul>';
                         output += '</li>';
@@ -144,7 +201,6 @@
 
                     }
                 }, // end getTabContent()
-                
                 buildTabContent: function(individualFileContents) {
                     // DOM handlers to grab POST data from project-categories.php form post
                     var titleOfFolderHidden = $('.titleOfFolderHidden');
@@ -152,7 +208,7 @@
                     var getFolderValue = titleOfFolderHidden.text();
                     var getIndividualValue = titleOfIndividualHidden.text();
                     
-                    // checking to find the active tab
+                    // checking to find the active tab text
                     var tabContent = $('.individualTabs .active');
                     var tabContentString = tabContent.find('a.dropdown-toggle').text();
 
@@ -160,11 +216,16 @@
                     var getActiveFile = $('ul.dropdown-menu li.active');
                     var activeFileText = getActiveFile.text();
                     console.log('activeFileText ' + activeFileText);
-                    // grabbing and clearing tab content
+
+                    // this div which holds the selected code content
                     var tabCodeContent = $('#tabCodeContent');
+
+                    // This adds the active text for the viewer to know what file they are looking at
+                    var activeIndividualFileInView = $('#activeIndividualFileInView');
+                    activeIndividualFileInView.text(activeFileText);
+
                     // tabCodeContent.html(individualFileContents);
                     var output = '';
-
                     // Adding default tab-content text
                     tabCodeContent.html('Welcome String');
                     // check to see if active tab is images

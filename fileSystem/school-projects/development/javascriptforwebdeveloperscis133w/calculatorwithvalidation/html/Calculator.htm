@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+<!-- reading/writing to text boxes with validation -->
+
+<link href="master.css" rel="stylesheet" type="text/css" />
+<script src="main.js"></script><!-- linking to the external JavaScript file -->
+/*
+This web application demonstrates simple event handling and the use of the IF statement.
+*/
+
+</head>
+
+<body>
+<form id="frmMain">
+
+<h1 id="h1Header">Calculator</h1>
+
+<table>
+	<tr>
+		<th>First Number: </th>
+		<td> <input type="text" id="txtNumber1" /></td>
+	</tr>
+	<tr>
+		<th>Second Number: </th>
+		<td><input type="text" id="txtNumber2" /></td>
+	</tr>
+	<tr>
+		<th>Result: </th>
+		<td><input type="text" id="txtResult" /></td>
+	</tr>
+</table>
+
+
+<input type="button" id="btnAdd" value="Add" onclick="Add();"><!-- Notice the onclick event handler. When the user click this button, the JavaScript Add() function will execute -->
+<input type="button" id="btnSubtract" value="Subtract" onclick="Subtract();">
+<input type="button" id="btnMultiply" value="Multiply" onclick="Multiply();">
+<input type="button" id="btnDivide" value="Divide" onclick="Divide();">
+
+<div id="divOutput">&nbsp;</div>
+
+</form>
+</body>
+</html>

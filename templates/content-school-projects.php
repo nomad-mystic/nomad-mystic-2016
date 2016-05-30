@@ -6,16 +6,18 @@
  * Time: 1:51 AM
  */
 
-// URI now: '/nomadmystic/projects/'
+global $wp_query;
+
+// URI now: '/nomadmystic/school-projects/'
 $location_pathname = $_SERVER['REQUEST_URI'];
 // this removes / and nomadmystic from the string
 $sliced_location_pathname = substr($location_pathname, 13, -1);
 
-//var_dump($sliced_location_pathname . ' pathname');
+var_dump($sliced_location_pathname . ' pathname');
 //$title_of_folder = $_POST['title_of_folder'];
 
 $title_of_school_class_selected = $_POST['title_of_school_class'];
-//var_dump($title_of_school_class_selected . ' Title of class selected');
+var_dump($title_of_school_class_selected . ' Title of class selected');
 
 ?>
 
@@ -46,7 +48,7 @@ $title_of_school_class_selected = $_POST['title_of_school_class'];
             $remove_space_in_title = preg_replace('/\s+/', '', $title);
             $lower_modified_title = strtolower($remove_space_in_title);
 
-//            var_dump($lower_modified_title . ' Individual school project');
+            var_dump($lower_modified_title . ' Individual school project');
             $production_link = "http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/" . $sliced_location_pathname . "/production/" . $title_of_school_class_selected . "/" . $lower_modified_title . "";
 
             // build DOM for each individual post

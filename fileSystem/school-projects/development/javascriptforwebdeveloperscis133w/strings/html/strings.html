@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Strings</title>
+
+<style type="text/css">
+body {
+	background: #ddf;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.85em;
+}
+
+#divWrapper {
+	background-color: #ded;
+	max-width: 900px;
+	border: 3px double black;
+	padding: 20px;
+}
+
+#divStdInput {
+	background: #efe;
+	border: 1px solid black;
+	padding: 10px;
+	min-width: 250px;
+	min-height: 80px;
+	float: right;
+}
+
+h2 {
+	margin-bottom: 0.3em;
+}
+
+h2.method {
+	display: inline;
+}
+
+p.split {
+	color: #309;
+	font-weight: bold;
+	margin: 0;
+}
+
+</style>
+
+<script src="main.js"></script>
+
+</head>
+
+<body>
+
+<div id="divWrapper">
+	<form>
+
+	<div id="divStdInput">
+		<p>Start Position: <input type="text" id="txtStartPos" size="2">&nbsp;&nbsp; End Position: <input type="text" id="txtEndPos" size="2">&nbsp;&nbsp; Number of chars: <input type="text" id="txtChars" size="2"></p>
+		<p>Result:  <input type="text" id="txtResult" size="60"></p>
+	</div><!-- divStdInput -->
+
+
+	<h1>Working with Strings</h1>
+
+	Enter a string: <input type="text" id="txtString" size="60">
+	<br><br><br>
+
+	<h2 class="method">length</h2>
+	<input type="button" id="btnLength" value="length">
+	<br><br><br>
+
+	<h2>indexOf(), lastIndexOf()</h2>
+	Find: <input type="text" id="txtFind"> <input type="button" id="btnIndexOf" value="indexOf()"> <input type="button" id="btnLastIndexOf" value="lastIndexOf()">&nbsp;&nbsp;
+
+	<br><br><br>
+
+	<h2 class="method">substr()</h2>
+	<input type="button" id="btnSubstr" value="substr()">
+
+	<br><br><br>
+
+	<h2 class="method">charAt()</h2>
+	<input type="button" id="btnCharAt" value="charAt()">
+
+	<br><br><br>
+
+	<h2 class="method">toLowerCase()</h2>
+	<input type="button" id="btnToLowerCase" value="toLowerCase()">
+
+	<br><br><br>
+
+	<h2 class="method">toUpperCase()</h2>
+	<input type="button" id="btnToUpperCase" value="toUpperCase()">
+
+	<br><br><br>
+
+	<h2 class="method">split()</h2>
+	<input type="button" id="btnSplit" value="split()">&nbsp; Delimiter: <input type="text" id="txtDelimiter" size="1">
+	<br><br>
+	<h3>Pieces:</h3>
+	<div id="divPieces"></div>
+
+	<br><br>
+	<input type="reset" value="Reset" />
+
+	</form>
+
+</div><!-- divWrapper -->
+</body>
+</html>

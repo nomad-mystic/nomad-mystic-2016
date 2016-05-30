@@ -12,7 +12,7 @@
 <head>
      <meta charset="UTF-8">
      <title>Document</title>
-     <link rel="stylesheet" href="../css/jquery-ui.css">
+     <link rel="stylesheet" href="../lib/jquery-ui.css">
      <link rel="stylesheet" href="../css/styles.css">
 
 </head>
@@ -104,8 +104,8 @@
           </div> <!-- End murderRate2011-->
      </div>
 </div>
-<script src="../development/jquery-2.1.4.min.js"></script>
-<script src="../development/jquery-ui.min.js"></script>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery-ui.min.js"></script>
 <script src="../js/scripts.js"></script>
 </body>
 </html>

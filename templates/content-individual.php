@@ -1,8 +1,8 @@
 <?php
 
-//var_dump($_POST['title_of_folder']);
-//var_dump($_POST['title_of_individual']);
-//var_dump($_POST['title_of_school_class_selected']);
+var_dump($_POST['title_of_folder']);
+var_dump($_POST['title_of_individual']);
+var_dump($_POST['title_of_school_class_selected']);
 
 $title_of_folder = $_POST['title_of_folder'];
 $title_of_individual = $_POST['title_of_individual'];
@@ -21,7 +21,8 @@ $title_of_school_class_selected = $_POST['title_of_school_class_selected'];
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <h1>Nomad Mystic Code Viewer</h1>
-                            <p>Click on the tabs for viewing code for this project.</p>
+                            <p>The project you are viewing is: <span id="activeIndividualProjectInView" class="text-success"></span></p>
+                            <p>The individual file you are viewing is: <span id="activeIndividualFileInView">None Selected</span></p>
                         </div><!-- end col-->
                     </div><!-- end row-->
                 </article>

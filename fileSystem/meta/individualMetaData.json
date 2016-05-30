@@ -1,0 +1,13 @@
+{
+  "metaData": {
+    "schoolProjects": {
+      "murderrates": "Murder Rates",
+      "calculatorwithvalidation": "Calculator With Validation"
+    },
+    "featured": {
+      "internationalcoalconsumption": "International Coal Consumption Graph Maker",
+      "udocumentary": "U Documentary",
+      "weatherapi": "Underground Weather API - Weather Checker"
+    }
+  }
+}

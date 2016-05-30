@@ -34,7 +34,7 @@ function createFileSystem($filesArray)
 //    $parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/";
 
     // if school project
-    if (!empty($filesArray[2])) {
+    if ($filesArray[0] === 'school-projects') {
 //        $development_parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]";
         $development_HTML_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/html";
         $development_PHP_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/php";
@@ -43,9 +43,10 @@ function createFileSystem($filesArray)
         $development_JS_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/js";
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/development";
         $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/data";
-        $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/lib";
+        $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/libraries";
 
     } else {
+        // featured
 //        $development_parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[2]";
         $development_HTML_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/html";
         $development_PHP_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/php";
@@ -54,7 +55,7 @@ function createFileSystem($filesArray)
         $development_JS_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/js";
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/development";
         $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/data";
-        $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/lib";
+        $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/libraries";
     }
     $production_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/production";
 
@@ -77,7 +78,7 @@ function createFileSystem($filesArray)
     // lib
     if (!is_dir_empty($lib_files_path) && file_exists($lib_files_path)) {
         $lib_files = scandir($lib_files_path);
-        $all_files_in_development['Lib'] = $lib_files;
+        $all_files_in_development['Libraries'] = $lib_files;
     }
 
     // Data
@@ -133,7 +134,7 @@ function createFileSystem($filesArray)
 
 $filesArray = [];
 // check to see if selected code section is school projects
-if (isset($_GET['title_of_school_class_selected'])) {
+if (!empty($_GET['title_of_school_class_selected'])) {
     $title_of_individual = $_GET['title_of_individual'];
     $title_of_folder = $_GET['title_of_folder'];
     $title_of_school_class_selected = $_GET['title_of_school_class_selected'];
