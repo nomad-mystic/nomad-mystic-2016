@@ -7,7 +7,7 @@
  */
 
 header('Access-Control-Allow-Origin: * ');
-
+header('Content-Type: application/json');
 // $filesArray
 // fileArray[0] = type of folder/project
 // filesArray[1] = individual project
@@ -16,7 +16,7 @@ header('Access-Control-Allow-Origin: * ');
 function createFileSystem($filesArray)
 {
 //    var_dump($filesArray);
-    // help function
+    // helper function
     function is_dir_empty($dir)
     {
         if (!is_readable($dir)) {
@@ -43,6 +43,7 @@ function createFileSystem($filesArray)
         $development_JS_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/js";
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/development";
         $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/data";
+        $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/lib";
 
     } else {
 //        $development_parent_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[2]";
@@ -52,6 +53,8 @@ function createFileSystem($filesArray)
         $development_images_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/images";
         $development_JS_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/js";
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/development";
+        $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/data";
+        $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/lib";
     }
     $production_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/production";
 
@@ -71,6 +74,12 @@ function createFileSystem($filesArray)
 //        }
     }
 //    buildFilesInFolder($development_HTML_path, $all_files_in_development);
+    // lib
+    if (!is_dir_empty($lib_files_path) && file_exists($lib_files_path)) {
+        $lib_files = scandir($lib_files_path);
+        $all_files_in_development['Lib'] = $lib_files;
+    }
+
     // Data
     if (!is_dir_empty($data_files_path) && file_exists($data_files_path)) {
         $data_files = scandir($data_files_path);
@@ -83,17 +92,18 @@ function createFileSystem($filesArray)
         $all_files_in_development['Development'] = $development_files;
     }
 
+    // Images
+    if (!is_dir_empty($development_images_path) && file_exists($development_images_path)) {
+        $images_files = scandir($development_images_path);
+        $all_files_in_development['Images'] = $images_files;
+    }
+
     // CSS
     if (!is_dir_empty($development_CSS_path) && file_exists($development_CSS_path)) {
         $CSS_files = scandir($development_CSS_path);
         $all_files_in_development['CSS'] = $CSS_files;
     }
 
-    // Images
-    if (!is_dir_empty($development_images_path) && file_exists($development_images_path)) {
-        $images_files = scandir($development_images_path);
-        $all_files_in_development['Images'] = $images_files;
-    }
     // JS
     if (!is_dir_empty($development_JS_path) && file_exists($development_JS_path)) {
         $JS_files = scandir($development_JS_path);
@@ -114,38 +124,7 @@ function createFileSystem($filesArray)
     // send all files in array back to individual page 
     echo json_encode($all_files_in_development);
 
-    // parent
-//    $parent_folder_contents = scandir($parent_folder_path);
-//    echo json_encode($parent_folder_contents);
-
-    // development folder contents
-//    $development_folder_contents = scandir($development_folder_path);
-//    echo json_encode($development_folder_contents);
-
-    // production folder contents
-//    $production_folder_contents = scandir($production_folder_path);
-//    echo json_encode($production_folder_contents);
-
-//    $css_files = scandir($css_files);
-//    $development_files = scandir($development_files);
-
-
-// Create array of files in folder chosen by user click
-// Child
-//    $folder_in_files = [];
-//    $folder_in_files[] = $html_files;
-//    $folder_in_files[] = $css_files;
-//    $folder_in_files[] = $development_files;
-
-
-//parent
-//    $parent_folder = [];
-//    $parent_folder[] = $parent_contents;
-
-//    echo json_encode($folder_in_files);
-//
-//    echo json_encode($parent_folder);
-} // end createFileSystem 
+} // end createFileSystem
 
 // $filesArray
 // fileArray[0] = type of folder/project
@@ -174,3 +153,35 @@ if (isset($_GET['title_of_school_class_selected'])) {
 
 createFileSystem($filesArray);
 
+// old none DRY methods for experimentation
+// parent
+//    $parent_folder_contents = scandir($parent_folder_path);
+//    echo json_encode($parent_folder_contents);
+
+// development folder contents
+//    $development_folder_contents = scandir($development_folder_path);
+//    echo json_encode($development_folder_contents);
+
+// production folder contents
+//    $production_folder_contents = scandir($production_folder_path);
+//    echo json_encode($production_folder_contents);
+
+//    $css_files = scandir($css_files);
+//    $development_files = scandir($development_files);
+
+
+// Create array of files in folder chosen by user click
+// Child
+//    $folder_in_files = [];
+//    $folder_in_files[] = $html_files;
+//    $folder_in_files[] = $css_files;
+//    $folder_in_files[] = $development_files;
+
+
+//parent
+//    $parent_folder = [];
+//    $parent_folder[] = $parent_contents;
+
+//    echo json_encode($folder_in_files);
+//
+//    echo json_encode($parent_folder);

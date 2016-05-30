@@ -1,0 +1,333 @@
+[{
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/gwFQYtCNNU7ZjSfICTIoJxabKc9.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 14002,
+      "original_language": "en",
+      "original_title": "Baraka",
+      "overview": "This is a paralyzingly beautiful documentary with a global vision: an odyssey through landscape and time, that is an attempt to capture the essence of life.",
+      "release_date": "1992-09-15",
+      "poster_path": "/5ZNf6N5rtLYotZKi03QXqJ3FuvD.jpg",
+      "popularity": 1.700453,
+      "title": "Baraka",
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 67
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/p6OMLvr5lAvmu1Xboe659MfT3Qx.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 152113,
+      "original_language": "fr",
+      "original_title": "Planète Océan",
+      "overview": "Dive into our planet's greatest mysteries with a team of international underwater cinematographers as they explore the breathtaking bond between humanity and the ocean.",
+      "release_date": "2012-06-18",
+      "poster_path": "/ivTFmRUesma9MxEReRqs555NCew.jpg",
+      "popularity": 0.732825,
+      "title": "Planet Ocean",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 15
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ycyJiG1aRY0eGsbvDYc2DWiTGYF.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 191720,
+      "original_language": "en",
+      "original_title": "Jodorowsky's Dune",
+      "overview": "Shot in France, England, Switzerland and the United States, this documentary covers director Alejandro Jodorowsky (El Topo, Holy Mountain, Santa Sangre) and his 1974 Quixotic attempt to adapt the seminal sci-fi novel Dune into a feature film. After spending 2 years and millions of dollars, the massive undertaking eventually fell apart, but the artists Jodorowsky assembled for the legendary project continued to work together. This group of artists, or his “warriors” as Jodorowsky named them, went on to define modern sci-fi cinema with such films as Alien, Blade Runner, Star Wars and Total Recall.",
+      "release_date": "2013-08-30",
+      "poster_path": "/a5nWHsTZ4uL7RXpk8njh7WpBHhW.jpg",
+      "popularity": 0.697025,
+      "title": "Jodorowsky's Dune",
+      "video": false,
+      "vote_average": 8.1,
+      "vote_count": 81
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/p1oLR3peF4cfP3YKKyZIMibNf2B.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 207021,
+      "original_language": "en",
+      "original_title": "Generation Iron",
+      "overview": "Generation Iron - examines the professional sport of bodybuilding today and gives the audience front row access to the lives of the top 7 bodybuilders in the sport as they train to compete in the world's most premiere bodybuilding stage - Mr. Olympia.",
+      "release_date": "2013-09-20",
+      "poster_path": "/p6LSfvclXCmgTvOaIclzqPlXbZh.jpg",
+      "popularity": 0.686217,
+      "title": "Generation Iron",
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 19
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/makxBsTwQIMpkNJfgcWezdU58TS.jpg",
+      "genre_ids": [
+        99,
+        10402
+      ],
+      "id": 319075,
+      "original_language": "en",
+      "original_title": "Cobain: Montage of Heck",
+      "overview": "The authorized documentary on late Guitar/lead singer Kurt Cobain from his early days in Aberdeen Washington to his success and downfall with Grunge band Nirvana.",
+      "release_date": "2015-03-23",
+      "poster_path": "/htA9NuFvrcCSycAlaxGY3uvnAlQ.jpg",
+      "popularity": 0.50627,
+      "title": "Cobain: Montage of Heck",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 143
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vH1UVnI75h5XQNIg7fdDIq6mlDW.jpg",
+      "genre_ids": [
+        35,
+        99
+      ],
+      "id": 36566,
+      "original_language": "en",
+      "original_title": "Cheech & Chong's Hey Watch This",
+      "overview": "A documentary based on Cheech and Chong's \"Light Up America\" reunion tour.",
+      "release_date": "2010-04-20",
+      "poster_path": "/sDTToHlXDZMnY8k7VZCIaK3gR6v.jpg",
+      "popularity": 0.680497,
+      "title": "Cheech & Chong's Hey Watch This",
+      "video": false,
+      "vote_average": 6.3,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9V0FlMiE8nikSTRjQ6Oh9sWCQvw.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 1777,
+      "original_language": "en",
+      "original_title": "Fahrenheit 9/11",
+      "overview": "Michael Moore's view on what happened to the United States after September 11; and how the Bush Administration allegedly used the tragic event to push forward its agenda for unjust wars in Afghanistan and Iraq.",
+      "release_date": "2004-06-22",
+      "poster_path": "/vZYGLqVV4qnAknyxnFrhDQNl1SS.jpg",
+      "popularity": 0.677321,
+      "title": "Fahrenheit 9/11",
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 141
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/npq6sSmWFWulvKNdQaTkpxbSWW4.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 18570,
+      "original_language": "en",
+      "original_title": "Food, Inc.",
+      "overview": "Documentary filmmaker Robert Kenner examines how mammoth corporations have taken over all aspects of the food chain in the United States, from the farms where our food is grown to the chain restaurants and supermarkets where it's sold. Narrated by author and activist Eric Schlosser, the film features interviews with average Americans about their dietary habits, commentary from food experts like Michael Pollan and unsettling footage shot inside large-scale animal processing plants.",
+      "release_date": "2008-09-07",
+      "poster_path": "/gWYCM3YVYwZQcpfye6biAlPy9Xt.jpg",
+      "popularity": 0.669914,
+      "title": "Food, Inc.",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 105
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/63P0zGcdnEy4H4x7t25Un0r0YBZ.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 13794,
+      "original_language": "en",
+      "original_title": "Africa: The Serengeti",
+      "overview": "Africa the Serengeti takes you on an extraordinary journey to view a spectacle few humans have ever witnessed: The Great Migration. Journey with more than two million wildebeests, zebras and antelopes as in their annual 500 mile trek across the Serengeti plains.",
+      "release_date": "1994-03-31",
+      "poster_path": "/dohfWilm9uGQ1ojfGio842odcHT.jpg",
+      "popularity": 1.881521,
+      "title": "Africa: The Serengeti",
+      "video": false,
+      "vote_average": 5,
+      "vote_count": 5
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/juNCLl0ckuhHKsZqgtXqikDPUDI.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 70808,
+      "original_language": "de",
+      "original_title": "Klitschko",
+      "overview": "Klitschko tells the captivating story of the boxing worlds most famous brothers: Vitali and Wladimir Klitschko. From the socialist drill of their childhood in the Ukraine, and their first successes as amateurs, to their move to Germany and subsequent rise as international stars on the verge of holding the championship titles of all five boxing federations (Wladimir secured this with his unanimous World Boxing Association win against David Haye on July 2nd, 2011). Along the way they experience defeats and setbacks, low points and triumphant comebacks as well as conflicts with each other. Exciting conversations with companions and opponents, including the very first with the Klitschkos parents, give insight into their personal lives, plus never-before-seen footage of the draining preparations for a fight, and the spectacular boxing matches. Director Sebastian Dehnhardt composes an intimate and fascinating portrait of two exceptional athletes who are, before all else, brothers.",
+      "release_date": "2011-06-15",
+      "poster_path": "/wr1rUL3xg8DgFxWPp9RpPPgIqne.jpg",
+      "popularity": 1.66734,
+      "title": "Klitschko",
+      "video": false,
+      "vote_average": 5.4,
+      "vote_count": 8
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4JxLbmijJiCQPS6Yjs0Po5SPXrI.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 209416,
+      "original_language": "en",
+      "original_title": "Supermensch: The Legend of Shep Gordon",
+      "overview": "In 1991, music manager Shep Gordon held Mike Myers over a barrel a few weeks before shooting Wayne’s World regarding an Alice Cooper song Myers wanted to use in the film. They have been close friends ever since. Twenty-two years later, the story of Gordon’s legendary life in the über-fast lane is now told in Myers’ directorial debut. And this time it’s Myers who has Gordon over a barrel. Shep Gordon: capitalist, protector, hedonist, pioneer, showman, shaman… Supermensch!",
+      "release_date": "2014-06-06",
+      "poster_path": "/1spRBeofv0knLliedyqOI8DS7sz.jpg",
+      "popularity": 1.667149,
+      "title": "Supermensch: The Legend of Shep Gordon",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 17
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8eJi4M8SEpKhay77FEHdAXjBpSr.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 384845,
+      "original_language": "en",
+      "original_title": "Fittest On Earth (The Story Of The 2015 Reebok CrossFit Games)",
+      "overview": "The fittest athletes on Earth take on the CrossFit Games, the ultimate test of fitness to prove that they are the fittest on Earth.",
+      "release_date": "2016-02-27",
+      "poster_path": "/brN4GMFYotFFNIpDLfIX4qi605E.jpg",
+      "popularity": 1.663441,
+      "title": "Fittest On Earth (The Story Of The 2015 Reebok CrossFit Games)",
+      "video": false,
+      "vote_average": 10,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rzEJQ4pBzJdqjzExmaZ5nhkirG6.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 34673,
+      "original_language": "en",
+      "original_title": "Kärlekens språk 2000",
+      "overview": "Kärlekens språk is a 2004 Swedish sex educational film directed by Anders Lennberg. “Language of Love” is ​​a show for night owls, which gives details of sex, problems with impotence, venereal diseases, etc, with detailed demonstrations.  The title is a reference to the 1969 sex educational film \"Ur kärlekens språk\".",
+      "release_date": "2004-01-01",
+      "poster_path": "/hMRA01LlHafzcW4qkqVHsNsFoCE.jpg",
+      "popularity": 1.555491,
+      "title": "Language of Love",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        99
+      ],
+      "id": 381049,
+      "original_language": "en",
+      "original_title": "The Slippers",
+      "overview": "THE SLIPPERS pulls back the Wizard’s curtain on the unbelievable story and cultural impact of Dorothy's Ruby Slippers from The Wizard of Oz.   Through first-hand accounts and archival interviews, THE SLIPPERS will detail the life of the Ruby Slippers after their sale at the famed 1970 MGM auction. Discovered by costumer Kent Warner, it is unclear how many pairs were found and how many pairs exist. That mystery has only helped to propel the shoes to the forefront of the Hollywood memorabilia market.  They have been bought, stolen, and coveted by many. They are considered the most important piece of Hollywood memorabilia and the catalyst for the creation of Hollywood memorabilia collecting.",
+      "release_date": "2016-03-11",
+      "poster_path": "/6HGQNcBScolnY2yWMwGbQZsT0wZ.jpg",
+      "popularity": 0.652605,
+      "title": "The Slippers",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        99
+      ],
+      "id": 381930,
+      "original_language": "en",
+      "original_title": "I Am Yup'ik",
+      "overview": "Every year they gather from tiny subsistence villages on Alaska’s Bering Sea Coast, traveling hundreds of miles on bush planes to compete on the biggest stage they will ever know — the All-Native District Basketball Tournament. The hope of Toksook Bay is Byron Nicholai, a 16-year-old Yup’ik eskimo who is determined to lead his village to the championship. Byron’s father abandoned him when he was 14 and never taught him how to hunt in the traditional Yupik way. For Byron, this tournament isn’t just about basketball—it’s a way to bring pride to his family and community.",
+      "release_date": "2016-03-01",
+      "poster_path": "/qTfnsP0BUA4S3fppXOH4GdgdfMO.jpg",
+      "popularity": 0.644696,
+      "title": "I Am Yup'ik",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yX6a8hWyyAhqOVJYlAHSR4goFCN.jpg",
+      "genre_ids": [
+        99,
+        10402
+      ],
+      "id": 22492,
+      "original_language": "en",
+      "original_title": "It Might Get Loud",
+      "overview": "A documentary on the electric guitar from the point of view of three significant rock musicians: the Edge, Jimmy Page and Jack White.",
+      "release_date": "2009-08-14",
+      "poster_path": "/2MrmUDJys9S7nwoc29o9wOvJANy.jpg",
+      "popularity": 0.637507,
+      "title": "It Might Get Loud",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 23
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kMoDDqBQdb1nOnQUZA5NQRDhRyr.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 318224,
+      "original_language": "en",
+      "original_title": "Going Clear: Scientology and the Prison of Belief",
+      "overview": "Going Clear intimately profiles eight former members of the Church of Scientology, shining a light on how they attract true believers and the things they do in the name of religion.",
+      "release_date": "2015-01-25",
+      "poster_path": "/jSPtAWXKd4NFJInCiA653bxdf8L.jpg",
+      "popularity": 0.62836,
+      "title": "Going Clear: Scientology and the Prison of Belief",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 133
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wY7goQmGfKUJAiXMEnGg0QC38JG.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 305091,
+      "original_language": "en",
+      "original_title": "That Sugar Film",
+      "overview": "One man's journey to discover the bitter truth about sugar. Damon Gameau embarks on a unique experiment to document the effects of a high sugar diet on a healthy body, consuming only foods that are commonly perceived as 'healthy'. Through this entertaining and informative journey, Damon highlights some of the issues that plague the sugar industry, and where sugar lurks on supermarket shelves.",
+      "release_date": "2014-07-31",
+      "poster_path": "/rKWEHxj9NtYOpZv7awO5s764JCq.jpg",
+      "popularity": 1.668434,
+      "title": "That Sugar Film",
+      "video": false,
+      "vote_average": 5.8,
+      "vote_count": 23
+    }
+  ],
+  "total_pages": 1071,
+  "total_results": 21403
+}]

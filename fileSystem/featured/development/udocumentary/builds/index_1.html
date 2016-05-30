@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="movieApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentary Movies Online</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--Google Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+
+    <!--styles from Lib-->
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/owl.carousel.css">
+    <link rel="stylesheet" href="lib/owl.theme.css">
+    <link rel="stylesheet" href="lib/angular/angular-ui.min.css">
+
+    <!--my styles-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--jQuery-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/owl.carousel.min.js"></script>
+
+    <!--Angular-->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-ui.min.js"></script>
+    <script src="lib/angular/angular-animate.min.js"></script>
+    <script src="js/controllers/AppController.js"></script>
+
+</head>
+<body data-ng-controller="AppController">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"></a>
+	</div>
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+			<li role="presentation" class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Categories <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu dropdownCol">
+					<li>Art</li>
+					<li>Biography</li>
+					<li>Conspiracy</li>
+					<li>Crime</li>
+					<li>Culture</li>
+					<li>Drugs</li>
+					<li>Environment</li>
+					<li>Health</li>
+					<li>History</li>
+					<li>Indie Films</li>
+					<li>Lifestyle</li>
+					<li>Money</li>
+					<li>Mystery</li>
+					<li>Nature</li>
+					<li>Politics</li>
+					<li>Psychology</li>
+					<li>Religion</li>
+					<li>Science</li>
+					<li>Sexuality</li>
+					<li>Society</li>
+				</ul>
+			</li>
+			<li role="presentation" class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Explore <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+                    <li>Explore 1</li>
+                    <li>Explore 2</li>
+                    <li>Explore 3</li>
+                    <li>Explore 4</li>
+				</ul>
+			</li>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</nav>
+<header>
+    <div id="owlCarousel" class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="jumbotron">
+                <div class="featured-background"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 center-block">
+                            <a href="">
+                                <img src="images/testingHeaderFeatured.jpg" alt="" class="center-block">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 headerCarouselText">
+                            <h1 ><a href="">El Chapo: CEO of Crime</a></h1>
+                            <p class="headerCarouselPara">Joaquin Guzman Loera, better known as ‘El Chapo,’ which is
+                                slang for Shorty, is officially the world’s most powerful drug trafficker. His Mexican
+                                drug cartel controls hundreds of distribution cells throughout Mexico, The United States,
+                                Brazil, Europe and even Australia.</p>
+                            <a href="" class="btn btn-primary btn-lg" role="button">Watch Now</a>
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-fluid-->
+            </div><!--end jumbotron-->
+        </div><!--end item-->
+        <div class="item">
+            <div class="jumbotron">
+                <div class="featured-background"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 center-block">
+                            <a href="">
+                                <img src="images/testingHeaderFeatured.jpg" alt="" class="center-block">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 headerCarouselText">
+                            <h1 ><a href="">El Chapo: CEO of Crime</a></h1>
+                            <p class="headerCarouselPara">Joaquin Guzman Loera, better known as ‘El Chapo,’ which is slang for Shorty, is officially the world’s most powerful drug trafficker. His Mexican drug cartel controls hundreds of distribution cells throughout Mexico, The United States, Brazil, Europe and even Australia.</p>
+                            <a href="" class="btn btn-primary btn-lg" role="button">Watch Now</a>
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-fluid-->
+            </div><!--end jumbotron-->
+        </div><!--end item-->
+    </div><!--end owlCarousel-->
+</header><!--data-ng-controller="newArrivals"-->
+<section class="newArrivals movieCarouselSection">
+    <h2>New Arrivals</h2>
+    <hr>
+    <div id="newArrivalsCarousel">
+        <div class="item" data-ng-repeat="movie in newArrivals[0].results" on-finish-render>
+            <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
+            <div class="box-cover-overlay">
+                <i class="fa fa-play play-button"></i>
+            </div>
+        </div>
+    </div><!--newArrivalsCarousel-->
+</section>
+<section class="topRated movieCarouselSection">
+    <h2>Top Rated</h2>
+    <hr>
+    <div id="historyCarousel">
+        <div class="item" data-ng-repeat="movie in topRated[0].results" on-finish-render>
+            <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
+            <div class="box-cover-overlay">
+                <i class="fa fa-play play-button"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Popover With Template</button>
+<script type="text/ng-template" id="myPopoverTemplate.html">
+    <div>{{dynamicPopover.content}}</div>
+    <div class="form-group">
+        <label>Popup Title:</label>
+    </div>
+</script>
+
+<footer class="container-fluid">
+    <section>
+        <h2 class="text-center">Stay Connected</h2>
+        <article class="row">
+            <div class="col-xs-6 col-sm-7 col-md-7 col-lg-7 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="#">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                        </span>
+                        </a>
+                    </div><!--end Col-->
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="#">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                        </span>
+                        </a>
+                    </div><!--end Col-->
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                            </span>
+                        </a>
+                    </div><!--end Col-->
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                            </span>
+                        </a>
+                    </div><!--end Col-->
+                </div><!--end row-->
+            </div><!--end Col-->
+        </article><!--end row-->
+    </section>
+</footer>
+<script src="lib/bootstrap.min.js"></script>
+<script src="js/jQueryScripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "burritoMasala",
+  "version": "1.0.0",
+  "description": "A repository for an upcoming Responsive Single Page Layout for CAS242",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.1.1",
+    "cssnano": "^3.3.2",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1",
+    "install": "^0.4.0",
+    "jshint": "^2.9.1",
+    "mq4-hover-shim": "^0.3.0",
+    "npm": "^3.5.0",
+    "postcss-animation": "0.0.6",
+    "postcss-color-function": "^2.0.0",
+    "precss": "^1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomad-mystic/CAS242.git"
+  },
+  "author": "Keith Murphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomad-mystic/"
+  },
+  "homepage": "https://www.nomadmystic.com"
+}

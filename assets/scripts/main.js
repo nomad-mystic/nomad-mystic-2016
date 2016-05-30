@@ -49,26 +49,25 @@
                         'fileSystem/getFiles.php?title_of_individual=' + getIndividualValue + '&title_of_folder=' + getFolderValue + '&title_of_school_class_selected=' + getSchoolClassSelectedValue + '',
                         function(data) {
                             // console.log(data);
-                            var parsedData = $.parseJSON(data);
-                            // console.log(parsedData);
+                            // var parsedData = $.parseJSON(data);
+                            console.log(data + ' data from PHP');
 
                             // get the section from the returned file object
                             // loop over each folder returned from getFiles.php and create tabContent for each
-                            for (var key in parsedData) {
-                                var arrayKey = parsedData[key];
+                            for (var key in data) {
+                                var arrayKey = data[key];
                                 // calling each file type for population of the DOM
-                                Nomad.common.buildContent.createFileContentTab(arrayKey, parsedData, key);
+                                Nomad.common.buildContent.createFileContentTab(arrayKey, data, key);
                             }
                         }
                     ); // end get
                 },
                 createFileContentTab: function (filesArray, parsedData, name) {
                     var individualTabs = $('.individualTabs');
-                    console.log(filesArray);
                     // if folder not empty
                     if (filesArray !== undefined) {
                         // console.log(filesArray.length);
-                        console.log(filesArray);
+                        console.log(filesArray + ' filesArray');
                         var output = '';
 
                         // creating DOM pieces

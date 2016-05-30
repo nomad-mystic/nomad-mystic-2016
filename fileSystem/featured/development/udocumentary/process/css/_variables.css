@@ -1,0 +1,18 @@
+/*---Mobile Variables*/
+$mHeaderSize1: 2em;
+$mHeaderSize2: 1.5em;
+$mHeaderSize3: 1.25em;
+$mHeaderSize4: 1.25em;
+$mParagraphSize: 1em;
+$mSocialSize: 2em;
+
+
+/*colors*/
+$baseDarkColor: #222;
+
+/*fonts*/
+$menuFont: 'Roboto', Arial, Helvitica, sans-serif;
+$headerFont: 'Oswald', 'Arial', 'Helvitica', 'sans-serif';
+$menuColor: #C8C8C8;
+
+/*Structure*/

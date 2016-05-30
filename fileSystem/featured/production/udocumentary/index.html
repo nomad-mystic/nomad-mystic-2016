@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="movieApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentary Movies Online</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--Google Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+
+    <!--styles from Lib-->
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/owl.carousel.css">
+    <link rel="stylesheet" href="lib/owl.theme.css">
+    <link rel="stylesheet" href="lib/angular/angular-ui.min.css">
+
+    <!--my styles-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'>
+
+    <!--jQuery-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/owl.carousel.min.js"></script>
+
+    <!--Angular-->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-ui.min.js"></script>
+    <script src="lib/angular/angular-animate.min.js"></script>
+    <script src="js/controllers/AppController.js"></script>
+
+</head>
+<body data-ng-controller="AppController">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"></a>
+    </div><!--end navbar-header-->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+			<li role="presentation" class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Categories <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu dropdownCol">
+					<li>Art</li>
+					<li>Biography</li>
+					<li>Conspiracy</li>
+					<li>Crime</li>
+					<li>Culture</li>
+					<li>Drugs</li>
+					<li>Environment</li>
+					<li>Health</li>
+					<li>History</li>
+					<li>Indie Films</li>
+					<li>Lifestyle</li>
+					<li>Money</li>
+					<li>Mystery</li>
+					<li>Nature</li>
+					<li>Politics</li>
+					<li>Psychology</li>
+					<li>Religion</li>
+					<li>Science</li>
+					<li>Sexuality</li>
+					<li>Society</li>
+				</ul>
+			</li><!--end Categories-->
+			<li role="presentation" class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Explore <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+                    <li>Explore 1</li>
+                    <li>Explore 2</li>
+                    <li>Explore 3</li>
+                    <li>Explore 4</li>
+				</ul>
+			</li><!--end Explore--*/
+		</ul><!--end  navbar-nav--*/
+	</div><!-- /.navbar-collapse -->
+</nav>
+<header>
+    <div id="owlCarousel" class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="jumbotron">
+                <div class="featured-background"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 center-block">
+                            <a href="">
+                                <img src="images/testingHeaderFeatured.jpg" alt="" class="center-block">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 headerCarouselText">
+                            <h1 ><a href="">El Chapo: CEO of Crime</a></h1>
+                            <p class="headerCarouselPara">Joaquin Guzman Loera, better known as ‘El Chapo,’ which is
+                                slang for Shorty, is officially the world’s most powerful drug trafficker.
+                                His Mexican drug cartel controls hundreds of distribution cells throughout Mexico,
+                                The United States, Brazil, Europe and even Australia.</p>
+                            <a href="" class="btn btn-primary btn-lg" role="button">Watch Now</a>
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-fluid-->
+            </div><!--end jumbotron-->
+        </div><!--end item-->
+        <div class="item">
+            <div class="jumbotron">
+                <div class="featured-background"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 center-block">
+                            <a href="">
+                                <img src="images/testingHeaderFeatured.jpg" alt="" class="center-block">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 headerCarouselText">
+                            <h1 ><a href="">El Chapo: CEO of Crime</a></h1>
+                            <p class="headerCarouselPara">Joaquin Guzman Loera, better known as ‘El Chapo,’ which is
+                                slang for Shorty, is officially the world’s most powerful drug trafficker.
+                                His Mexican drug cartel controls hundreds of distribution cells throughout Mexico,
+                                The United States, Brazil, Europe and even Australia.</p>
+                            <a href="" class="btn btn-primary btn-lg" role="button">Watch Now</a>
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-fluid-->
+            </div><!--end jumbotron-->
+        </div><!--end item-->
+    </div><!--end owlCarousel-->
+</header><!--data-ng-controller="newArrivals"-->
+<section class="newArrivals movieCarouselSection">
+    <h2>New Arrivals</h2>
+    <hr>
+    <div id="newArrivalsCarousel">
+        <div class="item positionRelative" data-ng-repeat="movie in newArrivals[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="{{ movie.title }}"
+                data-content=
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
+                class="tooltipAnchor"
+                data-placement="right"
+            ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block" alt="{{ movie.title}}">
+                <div class="box-cover-overlay"></div>
+                <i class="fa fa-play play-button"></i>
+            </a>
+        </div>
+    </div><!--newArrivalsCarousel-->
+</section>
+<section class="topRated movieCarouselSection">
+    <h2>Top Rated</h2>
+    <hr>
+    <div id="historyCarousel">
+        <div class="item positionRelative" data-ng-repeat="movie in topRated[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="{{ movie.title }}"
+                data-content=
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
+                class="tooltipAnchor"
+                data-placement="right"
+                ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block" alt="{{ movie.title}}">
+                <div class="box-cover-overlay"></div>
+                <i class="fa fa-play play-button"></i>
+            </a>
+        </div>
+    </div><!--end historyCarousel-->
+</section>
+<section class="trending movieCarouselSection">
+    <h2>Trending</h2>
+    <hr>
+    <div id="trendingCarousel">
+        <div class="item positionRelative" data-ng-repeat="movie in trending[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="<h3>{{ movie.title }}</h3>"
+                data-content=
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
+                class="tooltipAnchor"
+                data-placement="right"
+            ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block" alt="{{ movie.title}}">
+                <div class="box-cover-overlay"></div>
+                <i class="fa fa-play play-button"></i>
+            </a>
+        </div>
+    </div><!--end historyCarousel-->
+</section>
+<section class="random movieCarouselSection">
+    <h2>Random Pick</h2>
+    <hr>
+    <div id="randomCarousel">
+        <div class="item positionRelative" data-ng-repeat="movie in random[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="<h3>{{ movie.title }}</h3>"
+                data-content=
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
+                class="tooltipAnchor"
+                data-placement="right"
+            ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block" alt="{{ movie.title}}">
+                <div class="box-cover-overlay"></div>
+                <i class="fa fa-play play-button"></i>
+            </a>
+        </div>
+    </div><!--end historyCarousel-->
+</section>
+<footer class="container-fluid">
+    <section>
+        <article class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sitemap text-center">
+                <h2 class="text-center">Site Map</h2>
+                <a href="#">About Us</a>
+                <a href="#">Partners</a>
+                <a href="#">Our Policies</a>
+                <a href="#">Contact</a>
+                <br>
+                <a href="http:///nomadmystic.com" target="_blank">&copy;2016 Nomad Mystic Development </a>
+            </div><!--end Col-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <h2 class="text-center">Connect</h2>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-facebook fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-google-plus fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-youtube fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+            </div><!--end Col-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center-block">
+                <form action="" class="form-inline">
+                    <h2 class="text-center">Sign-up for News</h2>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        <button type="submit" class="btn btn-default">Sign-up</button>
+                    </div>
+                </form>
+            </div><!--end Col-->
+        </article><!--end row-->
+    </section>
+</footer>
+<script src="lib/bootstrap.min.js"></script>
+<script src="js/jQueryScripts.js"></script>
+</body>
+</html>
