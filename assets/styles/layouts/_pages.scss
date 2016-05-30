@@ -109,8 +109,10 @@
 }
 
 // individual Page
-#tabCodeContent {
-  .tab-content {
-    background: #000;
+body.individual {
+  #tabCodeContent {
+    .tab-content {
+      background: #000;
+    }
   }
 }

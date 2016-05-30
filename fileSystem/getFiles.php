@@ -44,6 +44,7 @@ function createFileSystem($filesArray)
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/development";
         $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/data";
         $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/libraries";
+        $python_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/python";
 
     } else {
         // featured
@@ -75,6 +76,7 @@ function createFileSystem($filesArray)
 //        }
     }
 //    buildFilesInFolder($development_HTML_path, $all_files_in_development);
+
     // lib
     if (!is_dir_empty($lib_files_path) && file_exists($lib_files_path)) {
         $lib_files = scandir($lib_files_path);
@@ -97,6 +99,12 @@ function createFileSystem($filesArray)
     if (!is_dir_empty($development_images_path) && file_exists($development_images_path)) {
         $images_files = scandir($development_images_path);
         $all_files_in_development['Images'] = $images_files;
+    }
+
+    // Python
+    if (!is_dir_empty($python_files_path) && file_exists($python_files_path)) {
+        $python_files = scandir($python_files_path);
+        $all_files_in_development['Python'] = $python_files;
     }
 
     // CSS

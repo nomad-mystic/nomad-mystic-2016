@@ -9,7 +9,13 @@
       "faqwithjqueryaccordion": "FAQ With jQuery Accordion",
       "faqwithajax": "FAQ With Ajax",
       "simplephotogallery": "Simple Photo Gallery",
-      "strings": "Strings"
+      "strings": "Strings",
+
+      "cis122lab2": "Software Design and Computer Logic Lab 2 with Marc Goodman",
+      "cis122lab3": "Software Design and Computer Logic Lab 3 with Marc Goodman",
+      "cis122lab4": "Software Design and Computer Logic Lab 4 with Marc Goodman",
+      "cis122lab5": "Software Design and Computer Logic Lab 5 with Marc Goodman",
+      "cis122lab6": "Software Design and Computer Logic Lab 6 with Marc Goodman"
     },
     "featured": {
       "internationalcoalconsumption": "International Coal Consumption Graph Maker",

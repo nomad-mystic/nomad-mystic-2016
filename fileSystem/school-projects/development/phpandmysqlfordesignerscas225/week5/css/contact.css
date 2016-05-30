@@ -1,0 +1,84 @@
+/*
+File Name: contact.css
+Date: 10/5/15
+Programmer: Ron Bekey
+*/
+
+body {
+    font: 100% Verdana, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link, a:visited {
+     color: #00f;
+     text-decoration: none;
+}
+ 
+a:hover {
+     color: #fff;
+     background-color: #00f;
+     text-decoration: underline;
+}
+ 
+a:active {
+     color: #00f;
+     text-decoration: none;
+}
+
+form, .blockquote {
+     text-align: left;
+     margin: 10px 30% 0 30%;
+}
+     
+tr.addRecord {
+     height: 40px;
+}
+
+td.col1 {
+     width: 120px;
+     vertical-align: center;
+     border: none;
+}
+
+td.col2 {
+     width: 470px;
+     text-align: left;
+     vertical-align: center;
+     border: none;
+}
+
+table {
+     margin-left: auto; 
+     margin-right: auto;
+     border-collapse: collapse;
+}
+
+td, th {
+     border: 1px solid #000;
+}
+
+.blockquote2 {
+     margin-left: 40%;
+     margin-right: 40%;
+}
+
+.shade {
+     text-align: center;
+     margin: 10px;
+     background-color: #cccccc;
+     border: 1px solid #000;
+}
+
+.viewTable {
+     border: 2px solid black;
+     border-collapse: collapse;
+     background-color: #cccccc;
+}
+
+
+
+

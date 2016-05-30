@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FAQ Page with AJAX</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+/*
+This is a fabulous example of how jQuery (using AJAX) easily allows us to populate a webpage with data from a second webpage.  This is an incredibly valuable technique, and one I use on my Syllabi for every course I teach so I don't have to repeat the same content for each course syllabus.  I just "link" to the data I want to insert.
+*/
+$(document).ready(function() {
+	$('#main h2').click(
+		function() {
+			$("#main #questions h2").removeClass("selected"); // init all the questions first
+			$(this).addClass("selected");
+			
+			$("#answer").load("answers.htm div#divAnswers div:eq(" + $(this).index() + ")");
+		}
+	);
+	
+}); // jQuery
+</script>
+
+</head>
+
+<body>
+<div id="main">
+	<h1>Frequently Asked Questions</h1>
+
+	<div id="answer"><strong>Your Answer</strong></div>
+
+	<div id="questions">
+		<h2>What's your philosophy of teaching?</h2>
+		<h2>Are you easy or hard?</h2>
+		<h2>Are you a good witch or a bad witch?</h2>
+		<h2>How do I get a good grade in your class?</h2>
+		<h2>So what made you decide to start teaching?</h2>
+	</div>
+
+</div>
+</body>
+</html>

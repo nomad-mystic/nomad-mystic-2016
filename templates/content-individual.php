@@ -15,8 +15,14 @@ $title_of_school_class_selected = $_POST['title_of_school_class_selected'];
 <article <?php post_class(); ?>>
     <div class="entry-summary">
         <?php the_content(); ?>
+<!--        <section>-->
+<!--            <div class="container">-->
+<!--                -->
+<!--            </div><!-- end container-->
+<!--        </section>-->
+        <!--testing tabs dynamic from main.js individual.init.closure.createFileContentTab-->
         <section>
-            <div class="container">
+            <div class="container whiteCard">
                 <article>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -26,11 +32,6 @@ $title_of_school_class_selected = $_POST['title_of_school_class_selected'];
                         </div><!-- end col-->
                     </div><!-- end row-->
                 </article>
-            </div><!-- end container-->
-        </section>
-        <!--testing tabs dynamic from main.js individual.init.closure.createFileContentTab-->
-        <section>
-            <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ul class="nav nav-tabs individualTabs" role="tablist"></ul>
