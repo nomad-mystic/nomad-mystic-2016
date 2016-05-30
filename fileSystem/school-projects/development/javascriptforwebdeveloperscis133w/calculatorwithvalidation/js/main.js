@@ -1,8 +1,4 @@
-/*jsl:option explicit*/
-/*jsl:declare addEventListener*//*jsl:declare alert*//*jsl:declare blur*//*jsl:declare clearInterval*//*jsl:declare clearTimeout*//*jsl:declare close*//*jsl:declare closed*//*jsl:declare confirm*//*jsl:declare console*//*jsl:declare Debug*//*jsl:declare defaultStatus*//*jsl:declare document*//*jsl:declare event*//*jsl:declare focus*//*jsl:declare frames*//*jsl:declare getComputedStyle*//*jsl:declare history*//*jsl:declare Image*//*jsl:declare length*//*jsl:declare location*//*jsl:declare moveBy*//*jsl:declare moveTo*//*jsl:declare navigator*//*jsl:declare open*//*jsl:declare opener*//*jsl:declare opera*//*jsl:declare Option*//*jsl:declare parent*//*jsl:declare Number*//*jsl:declare parseInt*//*jsl:declare print*//*jsl:declare prompt*//*jsl:declare resizeBy*//*jsl:declare resizeTo*//*jsl:declare screen*//*jsl:declare scroll*//*jsl:declare scrollBy*//*jsl:declare scrollTo*//*jsl:declare setInterval*//*jsl:declare setTimeout*//*jsl:declare status*//*jsl:declare top*//*jsl:declare window*//*jsl:declare XMLHttpRequest*/
-
 // Calculator
-
 // when the page is finished loading into the browser, run the Init() function
 window.onload = Init;
 
@@ -25,7 +21,6 @@ function Add() {
 	txtNumber2 = document.getElementById("txtNumber2");
 	txtResult =  document.getElementById("txtResult");
 	divOutput = document.getElementById("divOutput");
-
 
 	if (txtNumber1.value === "") { // First, see if the first textbox is empty
 		divOutput.innerHTML = "Enter a value for the first number";

@@ -205,8 +205,10 @@
                     // DOM handlers to grab POST data from project-categories.php form post
                     var titleOfFolderHidden = $('.titleOfFolderHidden');
                     var titleOfIndividualHidden = $('.titleOfIndividualHidden');
+                    var titleOfSchoolClassSelectedHidden = $('.titleOfSchoolClassSelectedHidden');
                     var getFolderValue = titleOfFolderHidden.text();
                     var getIndividualValue = titleOfIndividualHidden.text();
+                    var getSchoolClassSelectedValue = titleOfSchoolClassSelectedHidden.text();
                     
                     // checking to find the active tab text
                     var tabContent = $('.individualTabs .active');
@@ -230,10 +232,18 @@
                     tabCodeContent.html('Welcome String');
                     // check to see if active tab is images
                     if (tabContentString === 'Images') {
-                        // clear tab content text
-                        tabCodeContent.html('');
-                        tabCodeContent.css('background', '#000');
-                        tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
+                        // check to see if the folder was images and school-projects
+                        if (getFolderValue === 'school-projects') {
+                            // clear tab content text
+                            tabCodeContent.html('');
+                            tabCodeContent.css('background', '#000');
+                            tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getSchoolClassSelectedValue + '/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
+                        } else if (getFolderValue === 'featured') {
+                            // clear tab content text
+                            tabCodeContent.html('');
+                            tabCodeContent.css('background', '#000');
+                            tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
+                        }
                     } else {
                         // clear tab content text
                         tabCodeContent.html('');

@@ -2,7 +2,14 @@
   "metaData": {
     "schoolProjects": {
       "murderrates": "Murder Rates",
-      "calculatorwithvalidation": "Calculator With Validation"
+      "calculatorwithvalidation": "Calculator With Validation",
+      "pizzatime1": "Pizza Time 1.0",
+      "pizzatime2": "Pizza Time 2.0",
+      "pizzatime3": "Pizza Time 3.0",
+      "faqwithjqueryaccordion": "FAQ With jQuery Accordion",
+      "faqwithajax": "FAQ With Ajax",
+      "simplephotogallery": "Simple Photo Gallery",
+      "strings": "Strings"
     },
     "featured": {
       "internationalcoalconsumption": "International Coal Consumption Graph Maker",

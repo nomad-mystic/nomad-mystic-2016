@@ -86,6 +86,12 @@ pre.prettyprint {
   margin: 0 auto 1em;
   padding: 1em;
   white-space: pre-wrap;
+
+}
+// removes the first and last span for which aligns with the top left of the page Nomad
+#tabCodeContent > div > div > pre > span.pln,
+#tabCodeContent > div > div > pre > span.com {
+  display: none;
 }
 
 
