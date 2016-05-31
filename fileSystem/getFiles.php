@@ -45,6 +45,8 @@ function createFileSystem($filesArray)
         $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/data";
         $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/libraries";
         $python_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/python";
+        $java_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/java";
+        $xml_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/$filesArray[2]/xml";
 
     } else {
         // featured
@@ -76,7 +78,7 @@ function createFileSystem($filesArray)
 //        }
     }
 //    buildFilesInFolder($development_HTML_path, $all_files_in_development);
-
+    
     // lib
     if (!is_dir_empty($lib_files_path) && file_exists($lib_files_path)) {
         $lib_files = scandir($lib_files_path);
@@ -100,12 +102,24 @@ function createFileSystem($filesArray)
         $images_files = scandir($development_images_path);
         $all_files_in_development['Images'] = $images_files;
     }
+    /*---Uncommon before images--*/
+    // xml
+    if (!is_dir_empty($xml_files_path) && file_exists($xml_files_path)) {
+        $xml_files = scandir($xml_files_path);
+        $all_files_in_development['XML'] = $xml_files;
+    }
 
+    // java
+    if (!is_dir_empty($java_files_path) && file_exists($java_files_path)) {
+        $java_files = scandir($java_files_path);
+        $all_files_in_development['Java'] = $java_files;
+    }
     // Python
     if (!is_dir_empty($python_files_path) && file_exists($python_files_path)) {
         $python_files = scandir($python_files_path);
         $all_files_in_development['Python'] = $python_files;
     }
+    /*---End Uncommon before images--*/
 
     // CSS
     if (!is_dir_empty($development_CSS_path) && file_exists($development_CSS_path)) {

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cute Animals</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="kittie">Kittie</string>
+    <string name="doggie">Doggie</string>
+    <string name="chick">Chick</string>
+    <string name="goat">Goat</string>
+    <string name="cute_animals">Cute Animals</string>
+    <string name="hello">"Hello "</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tom_and_jerry">http://spot.pcc.edu/~mgoodman/Videos/135M/tomandjerry.3gp</string>
+    <string name="goat_video">http://spot.pcc.edu/~mgoodman/Videos/135M/goat.3gp</string>
+
+</resources>

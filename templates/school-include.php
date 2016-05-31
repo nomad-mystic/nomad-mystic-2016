@@ -5,9 +5,13 @@
  * Date: 5/16/2016
  * Time: 1:13 AM
  */
-
+?>
+<!--<section class="--><?php //echo $sliced_location_pathname;?><!--">-->
+<!--    <h1>--><?php //echo $capitalize_sliced_location_pathname; ?><!--</h1>-->
+<!--<article --><?php //post_class(); ?><!-->
+<?php
 // build DOM for each school post
-echo '<div class="entry-content container">';
+echo '<div class="entry-content container whiteCard">';
 echo '<div class="row">';
 echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">';
 echo '    <figure>';
@@ -47,3 +51,6 @@ echo '<form action="http://localhost:3000/nomadmystic/school-projects/"
 echo '    <input type="hidden" value="' . $lower_modified_title . '" name="title_of_school_class">';
 echo '</form>';
 echo '</div><!--end entry-content-->';
+?>
+<!--    </article>-->
+<!--</section>-->

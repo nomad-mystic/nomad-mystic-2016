@@ -6,7 +6,7 @@
  * Time: 1:13 AM
  */
 // build DOM for each individual post
-echo '<div class="entry-content container">';
+echo '<div class="entry-content container whiteCard">';
 echo '<div class="row">';
 echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">';
 echo '    <figure>';

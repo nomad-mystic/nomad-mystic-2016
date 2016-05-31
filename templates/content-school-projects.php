@@ -48,11 +48,11 @@ var_dump($title_of_school_class_selected . ' Title of class selected');
             $remove_space_in_title = preg_replace('/\s+/', '', $title);
             $lower_modified_title = strtolower($remove_space_in_title);
 
-            var_dump($lower_modified_title . ' Individual school project');
+//            var_dump($lower_modified_title . ' Individual school project');
             $production_link = "http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/" . $sliced_location_pathname . "/production/" . $title_of_school_class_selected . "/" . $lower_modified_title . "";
 
             // build DOM for each individual post
-            echo '<div class="entry-content container">';
+            echo '<div class="entry-content container whiteCard">';
             echo '<div class="row">';
             echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">';
             echo '    <figure>';

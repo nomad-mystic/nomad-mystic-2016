@@ -18,7 +18,7 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 
 <section class="<?php echo $sliced_location_pathname;?>">
     <h1><?php echo $capitalize_sliced_location_pathname; ?></h1>
-    <article <?php post_class(); ?>>
+    <article <?php post_class(); ?>
         <?php
         // WP_Query arguments for querying slug by url name, ordering by ascending,
         $project_category = array(
@@ -57,8 +57,12 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 
                 } else if ($sliced_location_pathname === 'school') {
                     include('school-include.php');
+//                    get_template_part('templates/school', 'include');
                 }
             } // end while for $query->the_post()
+
+            /* Restore original Post Data */
+            wp_reset_postdata();
         } // end if
         ?>
     </article>

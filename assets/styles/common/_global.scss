@@ -134,10 +134,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   }
 }
 // adding card like look for posts and code viewer
-@mixin whiteCard($padding) {
+@mixin whiteCard($padding, $margin) {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .25);
   padding: $padding;
+  margin: $margin;
 }
 .whiteCard {
-  @include whiteCard(0 2%);
+  @include whiteCard(.5% 2%, 2% auto);
 }

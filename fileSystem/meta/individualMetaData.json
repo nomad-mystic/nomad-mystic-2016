@@ -11,11 +11,18 @@
       "simplephotogallery": "Simple Photo Gallery",
       "strings": "Strings",
 
+      "cis122lab1": "Software Design and Computer Logic Lab 1 with Marc Goodman",
       "cis122lab2": "Software Design and Computer Logic Lab 2 with Marc Goodman",
       "cis122lab3": "Software Design and Computer Logic Lab 3 with Marc Goodman",
       "cis122lab4": "Software Design and Computer Logic Lab 4 with Marc Goodman",
       "cis122lab5": "Software Design and Computer Logic Lab 5 with Marc Goodman",
-      "cis122lab6": "Software Design and Computer Logic Lab 6 with Marc Goodman"
+      "cis122lab6": "Software Design and Computer Logic Lab 6 with Marc Goodman",
+
+      "cas225week2": "PHP and MySQL for Designers Week 2",
+      "cas225week3": "PHP and MySQL for Designers Week 3",
+      "cas225week4": "PHP and MySQL for Designers Week 4",
+      "cas225week5": "PHP and MySQL for Designers Week 5",
+      "cas225week6": "PHP and MySQL for Designers Week 6"
     },
     "featured": {
       "internationalcoalconsumption": "International Coal Consumption Graph Maker",
