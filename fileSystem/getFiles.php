@@ -59,6 +59,10 @@ function createFileSystem($filesArray)
         $development_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/development";
         $data_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/data";
         $lib_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/libraries";
+        $python_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/python";
+        $java_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/java";
+        $xml_files_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/development/$filesArray[1]/xml";
+
     }
     $production_folder_path = "/xampp/htdocs/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/$filesArray[0]/production";
 
@@ -102,7 +106,7 @@ function createFileSystem($filesArray)
         $images_files = scandir($development_images_path);
         $all_files_in_development['Images'] = $images_files;
     }
-    /*---Uncommon before images--*/
+    // Uncommon before images
     // xml
     if (!is_dir_empty($xml_files_path) && file_exists($xml_files_path)) {
         $xml_files = scandir($xml_files_path);

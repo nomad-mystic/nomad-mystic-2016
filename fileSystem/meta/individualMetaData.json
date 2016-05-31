@@ -2,6 +2,7 @@
   "metaData": {
     "schoolProjects": {
       "murderrates": "Murder Rates",
+
       "calculatorwithvalidation": "Calculator With Validation",
       "pizzatime1": "Pizza Time 1.0",
       "pizzatime2": "Pizza Time 2.0",
@@ -18,11 +19,28 @@
       "cis122lab5": "Software Design and Computer Logic Lab 5 with Marc Goodman",
       "cis122lab6": "Software Design and Computer Logic Lab 6 with Marc Goodman",
 
+      "cis135mlab2": "Mobile Application Programming 2 with Marc Goodman",
+      "cis135mlab3": "Mobile Application Programming 3 with Marc Goodman",
+      "cis135mlab4": "Mobile Application Programming 4 with Marc Goodman",
+      "cis135mlab5": "Mobile Application Programming 5 with Marc Goodman",
+      "cis135mlab6": "Mobile Application Programming 6 with Marc Goodman",
+      "cis135mlab7": "Mobile Application Programming 7 with Marc Goodman",
+      "cis135mlab8": "Mobile Application Programming 8 with Marc Goodman",
+      "cis135mlab9": "Mobile Application Programming 9 with Marc Goodman",
+
       "cas225week2": "PHP and MySQL for Designers Week 2",
       "cas225week3": "PHP and MySQL for Designers Week 3",
       "cas225week4": "PHP and MySQL for Designers Week 4",
       "cas225week5": "PHP and MySQL for Designers Week 5",
-      "cas225week6": "PHP and MySQL for Designers Week 6"
+      "cas225week6": "PHP and MySQL for Designers Week 6",
+
+      "cas213week1": "jQuery for Designers Week 1",
+      "cas213week2": "jQuery for Designers Week 2",
+      "cas213week3": "jQuery for Designers Week 3",
+      "cas213week4": "jQuery for Designers Week 4",
+      "cas213week6": "jQuery for Designers Week 6",
+      "cas213week7": "jQuery for Designers Week 7",
+      "cas213week8": "jQuery for Designers Week 8"
     },
     "featured": {
       "internationalcoalconsumption": "International Coal Consumption Graph Maker",

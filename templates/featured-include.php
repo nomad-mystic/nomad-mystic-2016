@@ -6,6 +6,10 @@
  * Time: 1:13 AM
  */
 // build DOM for each individual post
+?>
+
+<!--<article --><?php //post_class(); ?>
+<?php
 echo '<div class="entry-content container whiteCard">';
 echo '<div class="row">';
 echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">';
@@ -52,3 +56,5 @@ echo '    <input type="hidden" value="' . $lower_modified_title . '" name="title
 echo '    <input type="hidden" value="' . $sliced_location_pathname . '" name="title_of_folder">';
 echo '</form>';
 echo '</div><!--end entry-content-->';
+?>
+<!--</article>-->

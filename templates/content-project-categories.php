@@ -18,7 +18,7 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 
 <section class="<?php echo $sliced_location_pathname;?>">
     <h1><?php echo $capitalize_sliced_location_pathname; ?></h1>
-    <article <?php post_class(); ?>
+    <article <?php post_class(); ?>>
         <?php
         // WP_Query arguments for querying slug by url name, ordering by ascending,
         $project_category = array(
@@ -48,13 +48,11 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 //                var_dump($lower_modified_title);
                 // production links
                 $production_link = "http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/" . $sliced_location_pathname . "/production/" . $lower_modified_title . "";
-
-
+                
                 if ($sliced_location_pathname === 'featured') {
                     include('featured-include.php');
                 } else if ($sliced_location_pathname === 'websites') {
                     include('websites-include.php');
-
                 } else if ($sliced_location_pathname === 'school') {
                     include('school-include.php');
 //                    get_template_part('templates/school', 'include');
