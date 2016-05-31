@@ -1,0 +1,49 @@
+/*
+	file name = style.css
+	programmer = Keith Murphy
+*/
+h1{
+	font-size: 2.5em;
+	background: #00352E;
+	padding: 2%;
+	margin: 0 0 2% 4%;
+	width: 75%;
+	border-radius: 30px 0;
+	color: white;
+}
+ul {
+	list-style-type: none;
+}
+ul  li   {
+	display: inline;
+	margin: 0 0 0 4%;
+	font-size: 1.25em;
+}
+
+
+.ui-tooltip-purple .ui-tooltip-titlebar, 
+.ui-tooltip-purple .ui-tooltip-content {
+	border: #c1c3e6 solid 2px;
+	border-radius: 15px 0;
+	color: #545aba;
+	font-size: 2em;
+	padding: 5%;
+	line-height: 1.25em;
+	margin-left: 3%;
+}
+.ui-tooltip-purple .ui-tooltip-content {
+    background-color: #f1f2fa;
+}
+.ui-tooltip-purple .ui-tooltip-titlebar {
+	background-color: #d9daf0;
+}
+.ui-tooltip-purple .ui-state-default .ui-tooltip-icon {
+    background-position: -102px 0;
+}
+.ui-tooltip-purple .ui-tooltip-icon {
+    border-color: #c1c3e6;
+}
+.ui-tooltip-purple .ui-tooltip-titlebar .ui-state-hover {
+    border-color: #c1c3e6;
+}
+

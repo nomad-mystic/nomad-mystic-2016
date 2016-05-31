@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!--
+File Name: assign4.0.html
+Date: 10-8-2014
+Programmer: Keith Murphy
+-->
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Simple FQA Page</title>
+
+<link href="styles/assign3.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<div id="container">
+	<dl>
+	    <dt>What is jQuery?</dt>
+		<dd>
+		    <p>jQuery is an awesome JavaScript Library</p>
+		</dd>
+		
+		<dt>Why should I use jQuey?</dt>
+		<dd> 
+		   <p>Because it's awesome and it makes writting JavaScript easier.</p>
+		</dd>
+		
+		<dt>Why would I want to hide the answers to my auestions?</dt>
+		<dd>
+		    <p>To make it easier to preuse the list of available questions - then you simply click to see the answer you're interested in reading.</p>
+		</dd>
+		
+		<dt>What if my answer were a lot longer and more complicated than theses examples?</dt>
+		<dd>
+		    <p>The great thing about the &lt;dd&gt; element a block level element that can contain llots of other elements.</p>
+		
+			<p>That your answers could contain:</p>
+		
+			<ul>
+				  <li>Unordered</li>
+				  <li>Lists</li>
+				  <li>with lots</li>
+				  <li>of items</li>
+				  <li>(or ordered list or even another definition list)</li>
+			</ul>
+	        
+			<p>Or it might contain text with lots <strong>special</strong> <em>formatting</em></p>
+			
+			<h2>Other things</h2>
+			
+			<p>It can even contain headinga. Your answer could even take up an entire screen or more all on their own - it doesn't matter since the anwser will be hidden until the user wants to see it.</p>
+			
+	    </dd>
+		
+		<dt>What if the user doesn't have JavaScript enabled?</dt>
+		<dd>
+		     <p>You have two options for users with JavaScript disabled - which you might choose depend on the content of you page.</p>
+		     <p>You might just leave the page as it is - and make sure the &lt;dt&gt; tags are styled in a way that makes them stand out and easy to pick up when you're scanning down through the page. This would be great solution if you anwsers are relatively short.</p>
+			 <p>If your FQA page has long answers, it might be helpful to put a table of contents  list to individual questions at the top of the page so users can click to jump directly to the question and answer they're interested in. This is similar to what we did in the tabbed example, but in this case, we would use jQuery to hide the table of contents when the page loaded since users with JavaScript wouldn't need to see table of content.</p>
+		</dd>
+		
+	</dl>
+</div><!---for the container-->
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/assign3.js"></script>
+
+</body>
+
+</html>

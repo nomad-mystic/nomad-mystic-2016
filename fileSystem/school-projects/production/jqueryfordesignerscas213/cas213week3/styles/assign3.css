@@ -1,0 +1,60 @@
+/*
+File Name: assign3.css
+Date: 10-8-2014
+Programmer: Keith Murphy
+*/
+h1 {
+    background: black;
+	color: white;
+	font-size: 2.5em;
+	padding: 2% 0 3% 2%;
+	margin: 2% 0 0 0;
+	width: 75%;
+	border-radius: 25px 0;
+	border: solid white 2px;
+}
+p {
+    font-size: 1.5em;
+	margin: 2%;
+}
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+#tabs {
+    overflow: hidden;
+	background: aquamarine;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+	padding: 2%;
+	width: 75%;
+	border-radius: 0 15px;
+}
+#tabs li {
+    display: block;
+	list-style: none;
+	margin: 0;
+	padding: 2px;
+	float: left;
+}
+#tabs li a {
+    display: block;
+	padding: 2px 5px;
+    border: 2px solid #ccc;
+	border-bottom: 0 none;
+	text-align: center;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+	font-size: 1.5em;
+}
+#tabs li a.current {
+    background: #fff;
+	color: #000;
+}
+.tab-section {
+    padding: 2%;
+	border: 2px solid #ccc;
+	background: aquamarine;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+	width: 80%;
+	border-radius: 25px 0;
+}

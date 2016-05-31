@@ -1,0 +1,60 @@
+/*
+File Name: assign3.css
+Date: 10-8-2014
+Programmer: Keith Murphy
+*/
+h1 {
+    background: black;
+	color: white;
+	font-size: 2.5em;
+	padding: 2% 0 3% 2%;
+	margin: 0 0 2% 4%;
+	width: 75%;
+	border-radius: 25px 0 25px 0 ;
+}
+p {
+    
+	margin: 2%;
+}
+dl {
+	padding: 4% 0 10% 3%;
+}
+dt {
+    color: #268bd2;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 0 0 1em 0;
+	padding: 0 0 0 20px;
+	background: url(../images/arrow-sprite.png) 0 0 no-repeat;
+    line-height: 16px;
+    color: black;
+    font-size: 1.75em;
+}
+dt:hover {
+    color: black;
+    font-size: 1.75em;
+	background-position: 0 -16px;
+}
+dt.open {
+    background-position: 0 -32px;
+}
+dt.open:hover {
+    background-position: 0 -48px;
+}
+#container {
+	width: 90%;
+	margin: 0 auto;
+	background: #999;
+	border-radius: 0 25px;
+	border: solid black 10px;
+
+}
+dd {
+	font-size: 1.50em;
+}
+/*==========chapter 4 ==============*/
+#scrolling {
+    width: 500px;
+	height: 300px;
+	overflow: auto;
+}

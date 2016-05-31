@@ -1,0 +1,73 @@
+/*
+    File Name = week7.css
+    Programmer = Keith Murphy
+    Date = 11-7-2014
+*/
+h2 {
+    width: 60%;
+    background: #256E5D;
+    border: 3px solid #A13646;
+    -webkit-border-radius: 25px 0;
+    -moz-border-radius: 25px 0;
+    border-radius: 25px 0;
+    margin: 2% 0 2% 5%;
+    padding: 2%;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+h3 {
+    width: 50%;
+    background: #A13646;
+    border: 3px solid black;
+    -webkit-border-radius: 25px 0;
+    -moz-border-radius: 25px 0;
+    border-radius: 25px 0;
+    padding: 1% 2%;
+    margin: 0 0 2% 5%;
+    color: white;
+}
+h4 {
+    width: 70%;
+    background: #6EA498;
+    color: black;
+    padding: 1%;
+    margin:  0 0 0 5%;
+    font-size: 1em;
+    border: 2px solid black;
+    -webkit-border-radius: 5px  0;
+    -moz-border-radius: 5px  0;
+    border-radius: 5px  0;
+}
+#content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+ul.thumb-list {
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+ul.thumb-list li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+ul.thumb-list li {
+    background: #0E5243; 
+    margin: 1%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px 0;
+
+}
+#cboxWrapper {
+    background: #86A136;
+    border-radius: 25px 0 ;
+}
