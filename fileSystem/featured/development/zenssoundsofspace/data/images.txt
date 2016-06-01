@@ -1,0 +1,10 @@
+{
+    "images": [
+        {
+            "image_1": "images/imgJSON_1.jpg",
+            "image_2": "images/imgJSON_2.jpg",
+            "image_3": "images/imgJSON_3.jpg",
+            "image_4": "images/imgJSON_4.jpg"
+        }
+    ]
+}
