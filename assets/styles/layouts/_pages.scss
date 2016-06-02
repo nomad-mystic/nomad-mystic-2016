@@ -6,7 +6,7 @@
 
 
 // Home Page
-.home {
+body.home {
   .font-stack  {
     font-size: 3em;
     position: relative;
@@ -72,7 +72,7 @@
     a {
       @include underlineText();
       &:after {
-        @include underlineTextAfter();
+        @include underlineTextAfter(.5s);
       }
       &:hover:after {
         @include underlineTextHoverAfter();
@@ -83,7 +83,7 @@
 } // end homePage
 
 // featured post page
-.featured {
+body.featured {
   h2 {
     font-size: 2em;
     padding: .25em;
@@ -110,7 +110,7 @@
 }
 
 // school-projects project post page
-.school {
+body.school {
   h2 {
     font-size: 2em;
     padding: .25em;
@@ -121,11 +121,11 @@
     padding: .25em;
   }
   .entry-content {
-    border: solid 1px rgba(233, 233, 233, 0.9);
-    display: table;
-    margin-bottom: 30px;
-    overflow: hidden;
-    width: 80%;
+    //border: solid 1px rgba(233, 233, 233, 0.9);
+    //display: table;
+    //margin-bottom: 30px;
+    //overflow: hidden;
+    //width: 80%;
   }
   .postContent {
     //padding-left: 15px;
@@ -136,6 +136,18 @@
   }
 }
 
+// Freelance Websites
+body.websites {
+  h2 {
+    font-size: 2em;
+    padding: .25em;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    padding: .25em;
+  }
+}
 // individual Page
 body.individual {
   #tabCodeContent {
@@ -143,10 +155,13 @@ body.individual {
       background: #000;
     }
   }
+  #activeIndividualFileInView {
+    color: indigo;
+  }
 }
 
 // Contact the nomad
-.about {
+body.about {
   #contactPageSocialIcons {
     font-size: 1.5em;
     margin: 2% 0;

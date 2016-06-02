@@ -35,7 +35,7 @@
             </span>
                     </div>
                     <div class="squareButtonPrimaryColor">
-                        <a href="http://localhost:3000/" title="">Freelance Websites</a>
+                        <a href="http://localhost:3000/nomadmystic/websites" title="">Freelance Websites</a>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

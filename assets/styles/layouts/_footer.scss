@@ -12,8 +12,16 @@ footer {
 
         a {
           color: $main-teal;
+          @include underlineText();
+          &:after {
+            @include underlineTextAfter(.5s);
+          }
+          &:hover:after {
+            @include underlineTextHoverAfter();
+          }
         }
       }
+
     }
   } // end .widget_nav_menu
   section.text-2 {

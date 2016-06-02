@@ -156,14 +156,14 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   text-align: center;
   margin: 0 auto;
 }
-@mixin underlineTextAfter() {
+@mixin underlineTextAfter($speed) {
   content: '';
   display: block;
   margin: auto;
   height: 3px;
   width: 0px;
   background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+  transition: width $speed ease, background-color $speed ease;
 }
 @mixin underlineTextHoverAfter() {
   width: 100%;

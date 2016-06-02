@@ -34,7 +34,9 @@
     }
   } // end postContent
 
-  body.school {
+  body.school,
+  body.featured,
+  body.websites {
     h2 {
       font-size: 1.25em;
       padding: .25em;
@@ -44,18 +46,8 @@
       text-align: left;
       padding: .25em;
     }
-  } // end school
-  body.featured {
-    h2 {
-      font-size: 1.25em;
-      padding: .25em;
-      text-align: left;
-    }
-    p {
-      text-align: left;
-      padding: .25em;
-    }
-  }
+  } // end school / featured / websites
+
 } // end Small devices
 
 /* Medium devices (desktops, 992px and up) */
@@ -89,15 +81,12 @@
     }
   } // end main
 
-  body.school {
+  body.school,
+  body.featured,
+  body.websites {
     h2 {
       font-size: 1.75em;
     }
-  } // end school
+  } // end school / featured / websites
 
-  body.featured {
-    h2 {
-      font-size: 1.75em !important;
-    }
-  }
 } // end large
