@@ -61,7 +61,7 @@ var_dump($title_of_school_class_selected . ' Title of class selected');
                 the_post_thumbnail(
                     'full',
                     array(
-                        'class' => 'img-responsive'
+                        'class' => 'img-responsive center-block'
                     )
                 );
             } // end if
@@ -81,7 +81,7 @@ var_dump($title_of_school_class_selected . ' Title of class selected');
             echo '            </div><!--squareButtonPrimaryColor-->';
             echo '        </div><!--end col-->';
             echo '        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">';
-            echo '            <div class="squareButtonPrimaryColor center-block">';
+            echo '            <div class="squareButtonPrimaryColor center-block production_button displayNone">';
             echo '                <a href="' . $production_link . '">Production</a>';
             echo '            </div><!--squareButtonPrimaryColor-->';
             echo '        </div><!--end col-->';
@@ -93,10 +93,14 @@ var_dump($title_of_school_class_selected . ' Title of class selected');
 // hidden for to pass on to individual page for file system
             echo '<form action="http://localhost:3000/nomadmystic/individual/" 
                             method="post" 
-                            id="' . $lower_modified_title .'">';
+                            id="' . $lower_modified_title .'"
+                            class="school_projects">';
             echo '    <input type="hidden" value="' . $lower_modified_title . '" name="title_of_individual">';
             echo '    <input type="hidden" value="' . $sliced_location_pathname . '" name="title_of_folder">';
-            echo '    <input type="hidden" value="' . $title_of_school_class_selected . '" name="title_of_school_class_selected">';
+            echo '    <input type="hidden" 
+                            value="' . $title_of_school_class_selected
+                            . '" name="title_of_school_class_selected"
+                            class="title_of_school_class_selected">';
             echo '</form>';
             echo '</div><!--end entry-content-->';
 

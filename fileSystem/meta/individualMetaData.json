@@ -44,8 +44,10 @@
     },
     "featured": {
       "internationalcoalconsumption": "International Coal Consumption Graph Maker",
-      "udocumentary": "U Documentary",
-      "weatherapi": "Underground Weather API - Weather Checker"
+      "udocumentary": "U Documentary - Angular",
+      "weatherapi": "Underground Weather API - Weather Checker",
+      "thehistoryofspaceexplorationbyhumans": "The History of Space Exploration by Humans - CAS222 Midterm",
+      "zenssoundsofspace": "Zen's Sounds of Space - Sound Cloud API"
     }
   }
 }

@@ -299,7 +299,7 @@
 
                 });
             },
-            finish: function() {
+            finalize: function() {
                 // this is testing AJAX call to get JSON for individual project and return files
                 // in that folder define by file type
                 // file types: path fileSystem/
@@ -325,7 +325,7 @@
                     }
                 });
             },
-            finish: function() {
+            finalize: function() {
 
             }
         }, // end featured
@@ -348,25 +348,55 @@
                     evnt.preventDefault();
                 }); // end codeButton Click
             },
-            finished: function() {
+            finalize: function() {
                 
             }
         },
         'school_projects': {
-            init: function() {
+            init: function () {
                 // click code to submit hidden form to build content Refactor!!!
                 var codeButton = $('.code_button a');
-                codeButton.on('click', function(evnt) {
+                codeButton.on('click', function (evnt) {
                     console.log(evnt);
                     var findClassOfEvent = evnt.target.classList[0];
                     $('form#' + findClassOfEvent).submit();
                     evnt.preventDefault();
                 }); // end codeButton Click
             },
-            finished: function() {
+            finalize: function () {
 
+                var addProductionButtons = function() {
+
+                    // add "Production" links on school-project that compile to the web
+                    var productionButton = $('.production_button');
+                    //get form
+                    var schoolProjectsPostsForm = $('form.school_projects');
+                    var forInputValuesForClassSelected = $('.title_of_school_class_selected').attr('value');
+
+                    // get individual projects titles
+                    var CIS133WString = 'computerinformationsystemscis195php';
+                    var CIS195PString = 'javascriptforwebdeveloperscis133w';
+                    var CAS213String = 'jqueryfordesignerscas213';
+                    var CAS225String = 'phpandmysqlfordesignerscas225';
+
+                    // check if it is a school project page
+                    if (schoolProjectsPostsForm) {
+                        // show .production_buttons for classes that compile
+                        if (forInputValuesForClassSelected === CIS133WString) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CIS195PString) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CAS213String) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CAS225String) {
+                            productionButton.removeClass('displayNone');
+                        }
+                    } // end schoolProjectsPostsForm checker
+                }; // end addProductionButtons
+                // add production_buttons to school projects that have compilable projects
+                addProductionButtons();
             }
-        }
+        } // end school_projects
     }; // end Nomad object
 
   // The routing fires all common scripts, followed by the page specific scripts.
@@ -387,13 +417,11 @@
     loadEvents: function() {
         // Fire common init JS
         UTIL.fire('common');
-
         // Fire page-specific init JS, and then finalize JS
         $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
             UTIL.fire(classnm);
             UTIL.fire(classnm, 'finalize');
         });
-
         // Fire common finalize JS
         UTIL.fire('common', 'finalize');
     }

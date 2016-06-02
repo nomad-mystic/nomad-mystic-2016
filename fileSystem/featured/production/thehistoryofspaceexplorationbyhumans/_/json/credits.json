@@ -1,0 +1,22 @@
+[
+	{
+		"video": "Video: Discovery Channel",
+		"videoPicture": "_/assets/discover.jpg",
+		"music": "Music: LOCI records: <br> D.V.S* - Comfort Zone - Elbow From The Sky",
+		"musicPicture": "_/assets/musicPic.jpg",
+		"nasaLogo": "_/assets/nasaLogo.jpg",
+		"codePenPicture": "_/assets/codePen.jpg",
+		"codePen": "Canvas: Jack Rugile", 
+		"inspirePicture": "_/assets/inspirePicture.jpg",
+		"inspire": "Inspiration: Kurokawa Wonderland",
+		"wikiPicture": "_/assets/wikiLogo.jpg",
+		"wiki": "Images and Copy: <br> Wikipedia.org",
+
+		"picture1": "Mir-  http://upload.wikimedia.org/wikipedia/commons/2/22/Mir_on_12_June_1998edit1.jpg",
+		"picture2": "Keplur - http://www.nasa.gov/sites/default/files/images/742541main_Kepler-62MorningStar-1_full.jpg",
+		"picture3": "Salyut - http://www.isprs.org/data/moms/examples/momsonmi.jpg",
+		"picture4": "International - http://pictures.4ever.eu/technology/international-space-station-iss-181125"
+
+	}
+
+]

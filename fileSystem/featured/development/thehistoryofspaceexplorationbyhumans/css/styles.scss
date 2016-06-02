@@ -1,0 +1,591 @@
+/*  Prgrammer = Keith Murphy 
+	File = styles.scss
+	Date Created = 4-2-2015
+	Last Mod = 4-29-2015
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*------Variables----*/
+$font-stack: 'Changa One', Arial, sans-sarif;
+
+
+/*---------Reset---------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------------------End Reset---------*/
+/*---------------------------------General Styles----------*/
+* {
+	border-sizing: border-box;
+}
+.addFixed { 
+	position: fixed;
+}
+body {
+	background: black;
+}
+
+a:link { 
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	color: blue;
+	text-decoration: none;
+}
+/*-----JS classes ---------------*/
+.current {
+	text-decoration: underline;
+}
+/*-----;------------changing up bootstrap Section ----------------*/
+.btn-default {
+	background: black;
+	color: white;
+	border: none
+}
+/*
+* Uses Font Awesome and Bootstrap 3
+* Both aren't required for this demo
+*/
+#site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+  height: 100vh; /* Temp: Simulates a tall page. */
+}
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+ 
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  padding: 5% 0; /* Temp: Just spacing. */
+}
+.show-nav #site-canvas {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+
+// /////////////////////////////Start The Canvas Work 
+canvas {
+	display: block;
+	z-index: 1000;
+	margin: 0 auto 0;
+}
+
+//////////////////////////////////Start the SVG work 
+#starDiv {
+	display: block;      
+    margin: 0 auto 0;
+    #starSVG {
+		display: block;
+		margin: 0 auto -10%;
+		position: absolute;
+		top: 0;
+		left: 0;
+    }
+
+}
+// ///////////////////////////////Star the video styles 
+video {
+	// position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background-size: cover;
+}
+// //////////////////////////////////Opening page 
+#openSplash {
+	z-index: 99;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background: url('../_/assets/openImage.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	.openLayer {
+		background: rgba(0,0,0,.5);
+		background-size: cover;
+		z-index: 0;
+  		width: 100%;
+  		height: 100%;
+	}
+	#openLinkShape {
+		display: flex;
+		flex-direction: column;
+		padding-top: 20%;
+		z-index: 110;
+		#openShape {
+			// z-index: 110;
+			margin: 0 auto;
+			#openTriangle {
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 1000;
+				animation: dash 4s linear forwards;
+
+			} // End openTriangle 
+		} // ENd openShape 
+		ul.openUl {
+			// z-index: 110;
+			margin: 0 auto;
+			padding: 0;
+			li {
+				border: 3px solid white;
+				padding: 1em;
+				text-align: center;
+				font-size: 2em;
+				font-family: $font-stack;
+				margin: 0 auto;
+				width: 25%;
+				cursor: pointer;
+				a {
+					color: white;
+					text-decoration: none;
+				} // End openUl a 
+			} // LI 
+		} // End UL 
+	} // ENd openLinkShape
+} // end openSplash 
+
+// Star NAV Section 
+#site-menu { 
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	background: url('../_/assets/keplerMenu.jpg') no-repeat 0 0;
+	background-size: cover;
+	padding: 15px;
+	z-index: 70;
+	display: flex;
+	.blackLayer {
+		background-color: rgba(0,0,0,.4);
+		background-size: cover;
+	}
+	#menu {
+		width: 30%;
+		align-self: center;
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto 0;
+		width: 100%;
+		
+			li {
+				display: flex;
+				a {
+					margin: 0 auto;
+					font-family: $font-stack;
+					font-size: 2.5em;
+					color: white;
+					text-align: center;
+					line-height: 2em;
+					transition: text-decoration 2s linear;
+				} // End a 
+				a:hover {
+					text-decoration: underline;
+				}
+			} // End li 
+		} // End ul 
+	
+} // End site-menu
+#buttonArray { 
+	position: absolute;
+	top: 10px;
+	z-index: 500;
+}
+.testLineAnimation {
+	stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 10s;
+}
+
+/////////////////////////////////////////////JSON Styles 
+
+#fillSpace {
+	flex-grow: 2;
+	background: rgba(0,0,0,.8);
+	margin: 0 auto;
+	width: 50%;
+	overflow: scroll;
+	.flexhistoryImg {
+		display: flex;
+		
+		img {
+		width: 70%;
+		height: auto;
+		margin: 2% auto 2% 3%;
+		}
+		p.historyPara {
+		align-self: center;
+		width: 45%;
+		text-indent: 50px;
+		word-spacing: 2px;
+		color: rgba(255,255,255,.6);
+		}
+	}
+	p.historyPara {
+		color: rgba(255,255,255,.6);
+		// font-family: $font-stack;
+		font-size: 1.5em;
+		margin: 2% 0 1% 2%;
+		text-indent: 50px;
+		line-height: 1.5em;
+		word-spacing: 2px;
+	}
+	.historyH1 {
+		font-family: $font-stack;
+		font-size: 2.5em;
+		margin: 2% 0 2% 3%;
+		color: rgba(255,255,255,.9);
+	}
+	.historyH2 {
+		font-family: $font-stack;
+		font-size: 2em;
+		margin: 2% 0 2% 3%;
+		color: rgba(255,255,255,.9);
+	}
+	#contactForm {
+		margin: 3% 5%;
+		h2 {
+			font-size: 2em;
+			font-family: $font-stack;
+			color: rgba(255,255,255,.9);
+			margin: 2% 0 2%;
+		}
+		p {
+			color: rgba(255,255,255,.7);
+			font-family: $font-stack;
+			font-size: 2em;
+		}
+		input[type=submit] {
+			margin: 3% 0 0 0; 
+			font-family: $font-stack;
+			font-size: 1.5em;
+		}
+	} // End contactForm 
+	#spaceStations {
+		
+		h1 {
+			font-family: $font-stack;
+			font-size: 3em;
+			margin: 2% 0 2% 3%;
+			color: rgba(255,255,255,.9);
+			text-align: center;
+		}
+		h1:last-child {
+			display: none !important;
+		}
+		.spaceStationFlex {
+			display: flex;
+			flex-direction: column;
+			.spaceStationFlexColumn {
+				flex-direction: column;
+				width: 80%;
+				margin: 2% auto;
+			}
+			h2 {
+				width: 100%;
+				margin: 2% auto;
+				font-family: $font-stack;
+				font-size: 2em;
+				color: rgba(255,255,255,.9);
+				text-align: center;
+
+			}
+			p {
+				margin: 0 auto;
+				width: 100%;
+				color: rgba(255,255,255,.6);
+				text-indent: 50px;
+				line-height: 1.5em;
+				word-spacing: 2px;
+				font-size: 1.5em;
+			}
+			img {
+				margin: 2% auto;
+				width: 60%;
+			}
+		} // End spaceStationFlex
+	} // End spaceStations
+	#creditsDiv {
+		display: flex;
+		flex-direction: column;
+		h1.creditsH1 {
+				font-family: $font-stack;
+				font-size: 3em;
+				margin: 2% 0 2% 3%;
+				color: rgba(255,255,255,.9);
+				text-align: center;
+		}
+		.creditsFlex {
+			display: flex;
+			text-align: center;
+			p.creditsPara {
+				margin: 0 auto;
+				color: rgba(255,255,255,.6);
+				line-height: 1.5em;
+				word-spacing: 2px;
+				font-size: 1.5em;
+				align-self: center;
+			}
+			img {
+				margin: 2% 2% 2% 10%;
+				cursor: pointer;
+			}
+		} // End creditsFlex
+	} // end creditsDiv
+	
+} // End fillSpace
+.JSONCredits {
+	a:link {
+	font-size: 1em;
+	color: rgba(255,255,255,.7);
+	margin: 1% 0 0 3%;
+}
+	
+}
+#fillSpace::-webkit-scrollbar {
+		background-color: #000; 
+}
+#fillSpace::-webkit-scrollbar-thumb{
+background-color: rgba(85,0,0,.7);
+
+}
+///////////////////////////////////////////// Animations 
+// THis is for the opening triangle animation 
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+////////////////////////////////////Media Queries 
+// This is for the Ipads 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	#openSplash {
+		#openLinkShape {
+			padding-top: 40%;
+			ul.openUl {
+				li {
+					width: 40%;
+					a {
+						font-size: 2em;
+					}
+				}
+			}
+		}
+	} // End openSplash 
+	.btn {
+		font-size: 3em;
+	}
+	#site-menu {
+		
+		nav {
+			ul {
+				li {
+					a {
+						font-size: 4em;
+					}
+				}
+			}
+		}
+	} // End site-menu 
+	#fillSpace {
+		p.historyPara {
+			font-size: 3em;
+		} 
+		.historyH1 {
+			font-size: 5em;
+		}
+		.historyH2 {
+				font-size: 3.5em;
+		}
+		#spaceStations {
+			h1 {
+				font-size: 5em;
+			}
+			.spaceStationFlex {
+
+				.spaceStationsP {
+					font-size: 3em;
+				}
+				h2 {
+				font-size: 4em;
+				}
+			}
+		} // End spaceStastions
+		#creditsDiv {
+			h1.creditsH1 {
+				font-size: 5em;
+			}
+			.creditsFlex {
+				flex-direction: column;
+				p.creditsPara {
+					font-size: 4em;
+				}
+			}
+			img {
+				width: 40%;
+			}
+		}
+		#contactForm {
+			font-size: 1.5em;
+			h2 {
+				font-size: 3.5em;
+			}
+			p {
+				font-size: 3em;
+			}
+			input[type="email"] {
+				padding: 1em;
+			}
+			input[type="text"] {
+				padding: 1em;
+			}
+		}
+	} // End fillSpace
+} // End Ipads 
+
+// This is for the IPhones 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#site-menu { 
+		// flex-direction: column;
+		nav {
+			ul {
+				li {
+					a {
+						font-size: 2em;
+					}
+				}
+			}
+		}
+	}
+	.btn {
+		font-size: 1.5em;
+	}
+		// #menu { 
+		// 	order: 1;
+		// }
+	#fillSpace {
+		// order: 2;
+		// width: auto;
+		#spaceStations {
+			h1 {
+				font-size: 4em;
+			}
+			.historyPara {
+				font-size: 2em !important;
+			}
+		}
+		.spaceStationFlex {
+			p {
+				font-size: 2em !important;
+			}
+			h2 {
+				font-size: 2.5em !important;
+			}
+		}
+		.historyH1 {
+			font-size: 3em;
+		}
+		.historyH2 {
+			font-size: 2.5em;
+		}
+		p.historyPara {
+			font-size: 2em !important;
+		}
+	} // End fillSpace 
+	#creditsDiv {
+		h1.creditsH1 {
+			font-size: 4em !important;
+		}
+		.creditsFlex {
+			flex-direction: column;
+			img {
+				width: 40%;
+			}
+			p.creditsPara {
+				font-size: 3em !important;
+			}
+		}
+	} 
+	#contactForm {
+		input[type="email"] {
+			padding: 1em;
+		}
+		input[type="text"] {
+			padding: 1em;
+		}
+	}
+} // End Smart Phone

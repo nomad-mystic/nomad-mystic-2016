@@ -16,7 +16,7 @@ if (has_post_thumbnail()) {
     the_post_thumbnail(
         'full',
         array(
-            'class' => 'img-responsive'
+            'class' => 'img-responsive center-block'
         )
     );
 } // end if

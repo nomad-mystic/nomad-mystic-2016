@@ -1,0 +1,19 @@
+/* line 3, ../components/sass/styles.scss */
+body {
+  background: #4345f6; }
+
+/* line 7, ../components/sass/styles.scss */
+.container nav {
+  background: red; }
+/* line 10, ../components/sass/styles.scss */
+.container section {
+  background: #4345f6; }
+/* line 13, ../components/sass/styles.scss */
+.container footer {
+  background: green; }
+  /* line 16, ../components/sass/styles.scss */
+  .container footer ul li {
+    background: green; }
+    /* line 18, ../components/sass/styles.scss */
+    .container footer ul li a {
+      color: red; }
