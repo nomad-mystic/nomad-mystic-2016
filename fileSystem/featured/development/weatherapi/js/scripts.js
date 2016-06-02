@@ -2,7 +2,6 @@
  * Created by endof on 4/14/2016.
  */
 $(function() {
-
     var city_search_submit = $('.city_search_submit');
     // This is where the magic happens
     // API call, user input validate and string manipulation

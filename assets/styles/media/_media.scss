@@ -34,7 +34,18 @@
     }
   } // end postContent
 
-  .school {
+  body.school {
+    h2 {
+      font-size: 1.25em;
+      padding: .25em;
+      text-align: left;
+    }
+    p {
+      text-align: left;
+      padding: .25em;
+    }
+  } // end school
+  body.featured {
     h2 {
       font-size: 1.25em;
       padding: .25em;
@@ -78,9 +89,15 @@
     }
   } // end main
 
-  .school {
+  body.school {
     h2 {
       font-size: 1.75em;
     }
   } // end school
-}
+
+  body.featured {
+    h2 {
+      font-size: 1.75em !important;
+    }
+  }
+} // end large

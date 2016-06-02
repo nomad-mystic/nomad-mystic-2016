@@ -7,11 +7,13 @@ $RGBA90Black: rgba(0,0,0,.90);
 }
 
 //General
-a {
+a:link {
   text-decoration: none;
+  color: $secondary-purple;
 }
 a:visited {
   text-decoration: none;
+  color: $main-teal;
 }
 a:hover {
   text-decoration: none;
@@ -144,4 +146,26 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 .whiteCard {
   @include whiteCard(.5% 2%, 2% auto);
+}
+
+// adds underline on hover
+@mixin underlineText() {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  text-align: center;
+  margin: 0 auto;
+}
+@mixin underlineTextAfter() {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+@mixin underlineTextHoverAfter() {
+  width: 100%;
+  background: $main-teal;
 }
