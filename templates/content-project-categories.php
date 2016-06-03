@@ -8,15 +8,17 @@ $location_pathname = $_SERVER['REQUEST_URI'];
 $sliced_location_pathname = substr($location_pathname, 13, -1);
 
 $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
-    // var_dump($location_pathname);
-    // var_dump($sliced_location_pathname);
+    var_dump($location_pathname);
+    var_dump($sliced_location_pathname);
 ?>
 
 <?php
     wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']);
 ?>
 
-
+<section class="<?php echo $sliced_location_pathname;?>">
+<!--    <h1>--><?php //echo $capitalize_sliced_location_pathname; ?><!--</h1>-->
+    <article <?php post_class(); ?>>
         <?php
         // WP_Query arguments for querying slug by url name, ordering by ascending,
         $project_category = array(
@@ -43,29 +45,26 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
                 $remove_space_in_title = preg_replace('/\s+/', '', $title);
                 $lower_modified_title = strtolower($remove_space_in_title);
 
-                // var_dump($lower_modified_title);
+//                var_dump($lower_modified_title);
                 // production links
                 $production_link = "http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/" . $sliced_location_pathname . "/production/" . $lower_modified_title . "";
-                echo '<section class="{$sliced_location_pathname}>">';
-                // echo '<h1>$capitalize_sliced_location_pathname;</h1>';
-                // post_class();
-                echo '    <article>';
+
                 if ($sliced_location_pathname === 'featured') {
                     include('featured-include.php');
                 } else if ($sliced_location_pathname === 'websites') {
                     include('websites-include.php');
                 } else if ($sliced_location_pathname === 'school') {
-//                    include('school-include.php');
-                    get_template_part('templates/school', 'include');
+                    include('school-include.php');
+//                    get_template_part('templates/school', 'include');
                 }
             } // end while for $query->the_post()
-            echo '    </article>';
-            echo '</section>';
 
             /* Restore original Post Data */
             wp_reset_postdata();
         } // end if
         ?>
+    </article>
+</section>
 
 
 

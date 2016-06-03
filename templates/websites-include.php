@@ -6,6 +6,7 @@
  * Time: 1:13 AM
  */
 
+// creating url for link to freelance website
 // get the current tag WP_term object
 $current_tag = wp_get_post_tags($post->ID);
 //var_dump($current_tag);
@@ -53,7 +54,7 @@ if (has_post_thumbnail()) {
         )
     );
 } // end if
-echo '    </figure>';
+echo '    </figure><!--end col thumbnail-->';
 echo '  </div><!--end col-->';
 echo '  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">';
 // getting the content of the post by category
@@ -61,23 +62,18 @@ echo '    <h2>' . get_the_title() . '</h2>';
 //                echo '    <share-button>Share</share-button>';
 the_content();
 echo '    <div class="row">';
-echo '        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">';
-echo '            <div class="squareButtonPrimaryColor center-block code_button">';
+echo '        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">';
+echo '            <div class="squareButtonPrimaryColor center-block website_button">';
 echo '                <a href="http://' . $current_post_url . '" 
                                             title="' . $title . '" 
                                             class="' . $lower_modified_title . '"
                                             target="_blank">Website</a>';
 echo '            </div><!--squareButtonPrimaryColor-->';
 echo '        </div><!--end col-->';
-echo '        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">';
-echo '            <div class="squareButtonPrimaryColor center-block">';
-echo '                <a href="http://' . $current_post_url . '">Production</a>';
-echo '            </div><!--squareButtonPrimaryColor-->';
-echo '        </div><!--end col-->';
 echo '    </div><!--end row-->';
-echo '</div><!--end row-->';
 echo '  </div><!--end col-->';
-echo '</div><!--end row for text thumb and content-->';
+echo '  </div><!--end row-->';
+echo '</div><!--end row for text thumb and content whiteCard-->';
 
 // hidden for to pass on to individual page for file system
 //echo '<form action="http://localhost:3000/nomadmystic/individual/"

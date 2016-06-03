@@ -364,9 +364,7 @@
                 }); // end codeButton Click
             },
             finalize: function () {
-
                 var addProductionButtons = function() {
-
                     // add "Production" links on school-project that compile to the web
                     var productionButton = $('.production_button');
                     //get form
@@ -396,6 +394,14 @@
                 // add production_buttons to school projects that have compilable projects
                 addProductionButtons();
             }
+        }, // end school_projects
+        'websites': {
+            init: function () {
+
+            }, //e dn init
+            finalize: function () {
+
+            } // end finalize
         } // end school_projects
     }; // end Nomad object
 

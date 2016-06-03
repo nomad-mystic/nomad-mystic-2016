@@ -6,12 +6,9 @@
  * Time: 8:19 PM
  */
 
-
-// for school-project posts
-
 header('Access-Control-Allow-Origin: * ');
-header("Content-Type: text/plain");
-
+header("Content-Type: text/html");
+// for school-project posts
 // Post type featured, websites, school-projects
 $target_post_folder = $_GET['target_post_folder_type'];
 

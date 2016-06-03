@@ -35,6 +35,7 @@
   } // end postContent
 
   body.school,
+  body.school-projects,
   body.featured,
   body.websites {
     h2 {
@@ -69,6 +70,10 @@
       font-size: 2em;
     }
   }
+  footer {
+    margin: 2% 0;
+  }
+
 } // end media medium
 
 /* Large devices (large desktops, 1200px and up) */
@@ -82,6 +87,7 @@
   } // end main
 
   body.school,
+  body.school-projects,
   body.featured,
   body.websites {
     h2 {

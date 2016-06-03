@@ -16,7 +16,7 @@ while($fruit = current($fruits)) {
      next($fruits);
 }
 echo '</ul>';
-end($fruits);
+//end($fruits);
 
 echo "<ul>\n";
 while($fruit = current($fruits)) {
@@ -34,7 +34,7 @@ while($property = current($student)) {
      next($student);
 
 }
-end($student);
+//end($student);
 
 while($property = current($student)) {
      echo '<p>' . 'Key: ' . key($student) . '   && Property: ' . $property . '</p>';

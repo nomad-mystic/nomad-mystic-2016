@@ -98,7 +98,7 @@ $class_roster = [
           POINTS => '101'
      ]
 ];
-echo var_dump($class_roster);
+//echo var_dump($class_roster);
 ?>
 <!doctype html>
 <html lang="en">
@@ -146,22 +146,6 @@ echo var_dump($class_roster);
      </tr>
 
 </table>
-<?php print_r(array_column($class_roster, POINTS)); ?>
+<?php //print_r(array_column($class_roster, POINTS)); ?>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

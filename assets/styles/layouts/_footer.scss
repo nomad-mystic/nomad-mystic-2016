@@ -3,7 +3,7 @@ footer {
   border-top: 1px solid $main-teal;
   font-family: $font-stack;
   text-align: center;
-  margin: 2% 0;
+  margin: 2% 0 5%;
   // site map
   .widget_nav_menu {
     ul#menu-footer-site-map {
@@ -42,11 +42,29 @@ footer {
         }
       }
     }
+    .socialIconBox,
+    .fa-stack-1x,
     .fa-stack-2x {
-      color: $main-teal;
-      transition: all .25s;
+      color: transparent;
+      transition: color 1s;
+
       &:hover {
-        color: $main-teal-light;
+        .fa-stack-1x {
+          color: $secondary-purple;
+        }
+        .fa-stack-2x {
+          color: #fff;
+        }
+      }
+      .fa-stack-1x {
+        color: #fff;
+        //transition: color 1s linear;
+        //&:hover > .fa-stack-2x {
+        //  color: $main-teal-light;
+        //}
+      }
+      .fa-stack-2x {
+        color: $secondary-purple;
       }
     }
   } // end .footerSocialIcons
@@ -54,6 +72,15 @@ footer {
   .text-3 {
     h5 {
       font-size: 1.25em;
+    }
+    .footerEmail {
+      @include underlineText();
+      &:after {
+        @include underlineTextAfter(.5s);
+      }
+      &:hover:after {
+        @include underlineTextHoverAfter();
+      }
     }
   }
 } // end footer
