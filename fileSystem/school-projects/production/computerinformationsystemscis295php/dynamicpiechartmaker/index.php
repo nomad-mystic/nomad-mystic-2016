@@ -53,7 +53,7 @@ require_once('assets/includes/constants.php');
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Create a Dynamic Pie Chart</h4>
+					<h4 class="modal-title">Dynamically Create a Pie Chart</h4>
 				</div>
 				<div class="modal-body">
 					<div class="container-fluid">
@@ -61,7 +61,7 @@ require_once('assets/includes/constants.php');
 							<section class="user-form">
 								<div class="col-sm-6">
 									<fieldset id="<?php echo CHART_INPUTS; ?>">
-										<legend>Create Your Chart:</legend>
+										<legend>Create Your Chart Inputs:</legend>
 										<div class="form-group">
 											<label for="<?php echo NUMBER_OF_SLICES; ?>" class="label">Number of Slices?</label>
 											<input type="number" name="<?php echo NUMBER_OF_SLICES; ?>" min="1" max="4"
