@@ -33,8 +33,7 @@ while($property = current($student)) {
 
      next($student);
 
-}
-//end($student);
+} //end($student);
 
 while($property = current($student)) {
      echo '<p>' . 'Key: ' . key($student) . '   && Property: ' . $property . '</p>';

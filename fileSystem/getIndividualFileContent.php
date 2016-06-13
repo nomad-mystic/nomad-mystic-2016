@@ -9,7 +9,6 @@
 header('Access-Control-Allow-Origin: * ');
 header("Content-Type: text/plain");
 
-
 // for featured posts
 // Post type featured, websites, school-projects
 $target_post_folder = $_GET['target_post_folder_type'];
