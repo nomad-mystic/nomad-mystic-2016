@@ -83,16 +83,24 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
             <h2 class="text-center">About This Site</h2>
-            <p>This website was build to meet the requirements for Portland Community Colleges's Capstone class.
+            <p>This website was built to meet the requirements for Portland Community College's capstone class.
                 I built this website using <a href="https://wordpress.org" target="_blank" title="WordPress is web software you can use to create a beautiful website, blog, or app.">Wordpress</a>
-                as the chosen framework, <a href="https://roots.io/" target="_blank" title="Roots helps you build better WordPress sites faster.">Roots.io's</a>
-                Wordpress theme starter to jump start development of Nomad Mystic custom theme.
+                as the chosen framework, and used <a href="https://roots.io/" target="_blank" title="Roots helps you build better WordPress sites faster.">Roots.io's</a>
+                <a href="https://github.com/roots/sage" target="_blank" title="The best WordPress starter theme with a modern front-end development workflow.">Sage</a> Wordpress theme starter to accelerate the development of this custom Nomad Mystic theme.
+                This site was built with many different front-end/back-end technologies including, but limited to,
+                <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">Javascript ES5</a>,
+                <a href="https://www.w3.org/TR/html5/" target="_blank">HTML5</a>,
+                <a href="http://php.net/manual/en/" target="_blank">PHP 7</a>,
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">CSS</a>,
+                <a href="http://sass-lang.com/guide" target="_blank">SASS</a>,
+                <a href="https://nodejs.org/en/" target="_blank">Node.js</a>,
+                <a href="http://bower.io/" target="_blank">Bower.js</a>,
+                <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a>,
+                and
+                <a href="http://fontawesome.io/" target="_blank">Font-Awesome</a>.
             </p>
-            <p>This website was build to meet the requirements for Portland Community Colleges's Capstone class.
-                I built this website using <a href="https://wordpress.org" target="_blank" title="WordPress is web software you can use to create a beautiful website, blog, or app.">Wordpress</a>
-                as the chosen framework, <a href="https://roots.io/" target="_blank" title="Roots helps you build better WordPress sites faster.">Roots.io's</a>
-                Wordpress theme starter to jump start development of Nomad Mystic custom theme.
-            </p>
+            <p>All of my work for this project can be found on Github at: <a href="https://github.com/nomad-mystic/nomadmystic" target="_blank">Nomad-Mystic</a></p>
+            <p>My original portfolio website can be found here: <a href="http://nomadmystic.com" target="_blank">Original Nomad Mystic Website</a></p>
         </div><!--end col-->
     </div><!--row-->
 </section>
