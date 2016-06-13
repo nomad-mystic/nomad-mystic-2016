@@ -8,7 +8,6 @@
 
 require_once('includes/constants.php');
 
-
 echo htmlentities($GLOBALS['_' . METHOD][USER_INPUT_KEY]);
 
 $my_array = json_decode($GLOBALS['_' . METHOD][USER_INPUT_KEY], true);

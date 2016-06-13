@@ -9,7 +9,7 @@
  header('Content-Type: text/javascript');
  require_once('poker_constants.php');
 
- ?>
+?>
 
 var CARD_KEY = '<?php echo CARD_KEY; ?>';
 var HOLD_KEY = '<?php echo HOLD_KEY; ?>';

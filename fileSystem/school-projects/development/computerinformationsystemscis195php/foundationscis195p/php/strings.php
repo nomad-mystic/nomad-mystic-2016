@@ -16,7 +16,6 @@ echo $second_way;
 
 echo '</pre>';
 
-
 $blob_of_text = <<<'MY_TEXT_BLOB'
 \n	linefeed (LF or 0x0A (10) in ASCII)
 \r	carriage return (CR or 0x0D (13) in ASCII)
@@ -53,31 +52,3 @@ echo "ASCII value oh 'H' is " . ord($text[0]) .'<br>';
 echo 'The character with ASCII value 65 is: ' . chr(65) . '<br>';
 echo "The length of $full_name is " . strlen($full_name) . '.';
 echo "$full_name backwards is "  . ucwords(strtolower(strrev($full_name))) . '.';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

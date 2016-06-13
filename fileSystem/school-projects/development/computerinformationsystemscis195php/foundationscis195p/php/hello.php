@@ -6,7 +6,6 @@
  * Time: 12:35 AM
  */
 
-//include 'includes/constants.php';
 require_once 'includes/constants.php';
 require_once('includes/form.php');
 

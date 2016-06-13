@@ -8,7 +8,6 @@
 
 define('NUMBER', 'number');
 
-
 if(!isset($_GET[NUMBER])) {
      echo '<p>You must supply number.</p>';
      exit;

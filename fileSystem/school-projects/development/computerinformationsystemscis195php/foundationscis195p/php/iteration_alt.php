@@ -6,14 +6,11 @@
  * Time: 12:07 AM
  */
 
-
-
-
 $fruits = ['Apple', 'Banana', 'Strawberries', 'Kiwi'];
 
 $i = 0;
 echo "<ul>\n";
-while($i < count($fruits)):
+while ($i < count($fruits)):
      echo '         <li>' . $fruits[$i] . "</li>\n";
      $i++;
 endwhile;
@@ -55,23 +52,8 @@ echo '</ul>';
 
 $student = ["First_Name" => "Keith", "Last_Name" => "Murphy", "GPA" => "3.5" ];
 
-foreach($student as $property_name => $property):
+foreach ($student as $property_name => $property):
      echo '<p>' . $property_name . '</p>';
      echo '<p>' . $property . '</p>';
 
 endforeach;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

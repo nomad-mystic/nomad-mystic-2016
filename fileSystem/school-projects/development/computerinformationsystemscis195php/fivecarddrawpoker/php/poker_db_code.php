@@ -6,7 +6,6 @@
  * Time: 12:17 AM
  */
 
-
 /// looking up user
 function lookup_user($username)
 {

@@ -13,26 +13,30 @@ define('LETTER_GRADE', 'letter');
 define('PASS_FAIL', 'pf');
 define('AUDIT', 'audit');
 
-function write_output($text, $start = '<p>', $end = '</p>') {
+function write_output($text, $start = '<p>', $end = '</p>')
+{
      echo $start . $text . $end;
 }
-function validate_score() {
+
+function validate_score()
+{
 
      $score = $_GET[SCORE];
 
-     if(!isset($_GET[SCORE])) {
+     if (!isset($_GET[SCORE])) {
           echo '<h1>' . ' WE NEED A SCORE ' . '</h1>';
           exit;
      }
-     if(!is_numeric($score)) {
+     if (!is_numeric($score)) {
           write_output('' . 'THIS IS NOT A NUMBER' . '');
           exit;
      }
 
      return $score;
 }
-function validate_type() {
-     if(!isset($_GET[TYPE])) {
+function validate_type()
+{
+     if (!isset($_GET[TYPE])) {
           write_output('WE NEED A GRADE TYPE');
           exit;
      }
@@ -51,7 +55,8 @@ function validate_type() {
      return $type;
 }
 
-function grading($type, $score) {
+function grading($type, $score)
+{
      switch ($type) {
           case LETTER_GRADE:
                output_letter_grade($score);
@@ -72,23 +77,26 @@ function grading($type, $score) {
 }
 
 function output_pass_fail($score) {
-     if($score >= 75) {
+     if ($score >= 75) {
           write_output('' . 'YOU PASSED THE CLASS' . '');
      } else  {
           write_output('' . "YOU DON'T PASS THE CLASS" . '');
      }
 }
 
-function output_audit() {
+function output_audit()
+{
      write_output('' . "YOU ARE AUDITING THIS CLASS" . '');
 }
 
-function output_unknown_type($type) {
+function output_unknown_type($type)
+{
      write_output('' . "DEFAULT" . $type . '');
 }
 
 
-function output_letter_grade($score) {
+function output_letter_grade($score)
+{
      if($score >= 90) {
           $grade = 'A';
 
@@ -108,7 +116,8 @@ function output_letter_grade($score) {
 }
 
 
-function main() {
+function main()
+{
      $type = validate_type();
      validate_type($type);
      validate_score();
@@ -116,11 +125,3 @@ function main() {
      grading($type, $score);
 }
 main();
-
-
-
-
-
-
-
-

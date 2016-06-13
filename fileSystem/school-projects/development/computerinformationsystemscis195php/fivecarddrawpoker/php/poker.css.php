@@ -9,7 +9,7 @@
  header('Content-Type: text/css');
  require_once('poker_constants.php');
 
- ?>
+?>
 
 body {
      background: url('../images/background.jpg') no-repeat 0 0;
@@ -85,4 +85,3 @@ body {
      font-size: .75em;
 
 }
-

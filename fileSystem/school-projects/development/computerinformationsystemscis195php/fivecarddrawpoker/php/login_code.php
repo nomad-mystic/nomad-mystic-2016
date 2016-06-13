@@ -67,7 +67,6 @@ function register($username, $password, $confirm)
      return '';
 }
 
-
 function login_or_register(
      $login_pressed,
      $register_pressed,

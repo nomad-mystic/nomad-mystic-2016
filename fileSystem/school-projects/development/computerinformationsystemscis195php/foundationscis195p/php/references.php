@@ -6,7 +6,6 @@
  * Time: 9:19 PM
  */
 
-
 $batman = 'The Dark knight';
 $bruce_wayne = &$batman;
 $bruce_wayne = 'A billionaire socialite';
@@ -30,4 +29,3 @@ $villain = 'Two-Face';
 
 echo 'A villain is ' . $villain .'<br>';
 echo 'A villain is ' . $villains[0] .'<br>';
-

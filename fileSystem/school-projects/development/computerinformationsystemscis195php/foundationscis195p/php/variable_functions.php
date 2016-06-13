@@ -37,7 +37,8 @@ echo 'Sum: ' . $sum . '<br>';
 $sum = array_reduce($times_2, 'sum_item');
 echo 'Sum: ' . $sum . '<br>';
 
-function  my_array_filter($array, $callback) {
+function  my_array_filter($array, $callback)
+{
      $result = [];
      foreach($array as $key => $value) {
           if($callback($value)) {
@@ -46,13 +47,15 @@ function  my_array_filter($array, $callback) {
      }
      return $result;
 }
+
 $odd = my_array_filter($arr, 'is_odd');
 $even = my_array_filter($arr, 'is_even');
 
 print_r($odd);
 print_r($even);
 
-function my_array_map($callback, $array) {
+function my_array_map($callback, $array)
+{
      $result = [];
      foreach($array as $key => $value) {
           $result[$key] = $callback($value);
@@ -60,17 +63,20 @@ function my_array_map($callback, $array) {
      return $result;
 }
 
-$odd = my_array_filter($arr, function($value) {
+$odd = my_array_filter($arr, function($value)
+{
      return $value % 2 == 1;
 });
-$even = my_array_filter($arr, function($value) {
+$even = my_array_filter($arr, function($value)
+{
      return $value % 2 == 0;
 });
 
 print_r($odd);
 print_r($even);
 
-$times_2 = array_map(function($value) {
+$times_2 = array_map(function($value)
+{
      return $value * 2;
 }, $arr);
 
@@ -78,7 +84,8 @@ $times_2 = array_map(function($value) {
 print_r($times_2);
 print_r($arr);
 
-$sum = array_reduce($arr, function($carry, $item) {
+$sum = array_reduce($arr, function($carry, $item)
+{
      return $carry + $item;
 });
 echo 'Sum: ' . $sum . '<br>';

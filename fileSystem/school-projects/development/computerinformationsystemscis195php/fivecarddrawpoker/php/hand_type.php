@@ -6,8 +6,6 @@
  * Time: 1:09 AM
  */
 
-
-
 function is_flush($suits)
 {
      return in_array(5, $suits);
@@ -80,10 +78,6 @@ function hand_type($hand)
           $suits[$card[SUIT_FIELD]]++;
 
      }
-//     echo '<pre>';
-//     print_r($ranks);
-//     print_r($suits);
-//     echo '</pre>';
 
      $flush = is_flush($suits);
      $straight = is_straight($ranks);
@@ -122,5 +116,4 @@ function hand_type($hand)
      } else {
           return NOTHING;
      }
-
 }

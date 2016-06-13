@@ -6,8 +6,7 @@
  * Time: 1:22 AM
  */
 
-
-function average(...$args) {
+function average($args) {
      return array_sum($args) / count($args);
 }
 

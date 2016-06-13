@@ -6,7 +6,6 @@
  * Time: 8:56 PM
  */
 
-
 require_once('constants.php');
 
 function require_secure()

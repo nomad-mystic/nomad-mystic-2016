@@ -46,7 +46,6 @@ $a7 = 1;
      </style>
 </head>
 <body>
-<!--is_null, isset, and empty-->
 <table>
      <tr>
           <th>Variable</th>
@@ -192,34 +191,7 @@ echo '"0" == null' . ("0" == null ? ' True' : ' false') . '<br>' ;
 echo '0 == "0"' . (0 == "0" ? ' True' : ' false') . '<br>' ;
 echo '"3x" == "3.0x"' . ("3x" == "3.0x" ? ' True' : ' false') . '<br>' ;
 
-
 ?>
-
-
-
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

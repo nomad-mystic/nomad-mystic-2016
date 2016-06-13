@@ -13,15 +13,11 @@ define('LETTER_GRADE', 'letter');
 define('PASS_FAIL', 'pf');
 define('AUDIT', 'audit');
 
-
-
-
-
-if(!isset($_GET[SCORE])) {
+if (!isset($_GET[SCORE])) {
      echo '<h1>' . ' WE NEED A SCORE ' . '</h1>';
      exit;
 }
-if(!isset($_GET[TYPE])) {
+if (!isset($_GET[TYPE])) {
      echo '<h1>' . ' WE NEED A GRADE TYPE ' . '</h1>';
      exit;
 }
@@ -39,7 +35,7 @@ switch ($type) {
           echo '<h1>' . 'THE GRADE MUST BE "letter" OT "pf"' . '</h1>';
           exit;
 }
-if(!is_numeric($score)) {
+if (!is_numeric($score)) {
      echo '<h1>' . 'THIS IS NOT A NUMBER' . '</h1>';
      exit;
 }
@@ -80,11 +76,3 @@ switch ($type) {
           echo '<h1>' . "DEFAULT" . '</h1>';
           break;
 }
-
-
-
-
-
-
-
-

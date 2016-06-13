@@ -15,8 +15,6 @@ const POKER_FONT = <<<POKER
 
 POKER;
 
-
-
 //Choice and scores
 const MAX_CHOICE = 32;
 
@@ -88,8 +86,6 @@ const SUIT_NAMES = [
 
 //////////////////////
 
-
-
 /////////////Form Constants
 const HAND_KEY = 'hand';
 const DECK_KEY = 'deck';
@@ -123,8 +119,6 @@ const BOAT = 'Full House';
 const QUADS = 'four of Kind';
 const STRAIGHT_FLUSH = 'Straight flush';
 const ROYAL_FLUSH = 'royal Flush';
-
-
 
 ///Payout
 const PAYOFFS = [

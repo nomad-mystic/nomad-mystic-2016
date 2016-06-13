@@ -19,18 +19,15 @@ const REGISTER_BUTTON_VALUE = 'register';
 
 const SESSION_USER_KEY = 'username';
 
-
 // Fields
 const ACCOUNT_USERNAME_FIELD = 0;
 const ACCOUNT_PASSWORD_HASH_FIELD = 1;
-
 
 //Files
 const USER_ACCOUNT_FILE = 'data/users.csv';
 
 const E_LOGIN = 'Error Logging In';
 const E_REGISTER = 'Error REGISTERING';
-
 
 //Errors
 const E_NO_USERNAME = 'Username must be supplied';
@@ -40,5 +37,3 @@ const E_CONFIRM_MISMATCH = 'Password must match';
 const E_ACCOUNT_EXISTS = 'Username already exists. Please try a different one';
 const E_USERNAME_NOT_FOUND = 'Username not found';
 const E_PASSWORD_INCORRECT = 'Incorrect Password';
-
-

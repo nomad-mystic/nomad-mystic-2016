@@ -6,7 +6,6 @@
  * Time: 1:35 AM
  */
 
-
 function make_deck() {
 
      $deck = [];
@@ -234,17 +233,11 @@ QUERY;
      $result = $db->query($query);
      $scores = $result->fetch_all(MYSQLI_NUM);
      $scores_assoc = [];
-//     var_dump($scores);
 
      foreach($scores as $score) {
           $scores_assoc[$score[SCORES_GROUPED_HAND_FIELD]] = $score;
      }
-//     foreach ($choices as &$choice) {
-//          $score = $scores_assoc[$choice[CHOICE_GROUPED_HAND_FIELD]];
-//          $choice[CHOICE_EXPECTED_RETURN_FIELD] = $score[SCORES_EXPECTED_RETURN_FIELD];
-//          $choice[CHOICE_NAME_FILED] = $score[SCORES_NAME_FIELD];
-//     }
-//     var_dump($choices);
+     
      return $choices;
 }
 

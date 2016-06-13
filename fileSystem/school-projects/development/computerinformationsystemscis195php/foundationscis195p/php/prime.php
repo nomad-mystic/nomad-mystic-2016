@@ -9,17 +9,17 @@
 define('NUMBER', 'number');
 
 
-if(!isset($_GET[NUMBER])) {
+if (!isset($_GET[NUMBER])) {
      echo '<p>You must supply number.</p>';
      exit;
 }
 $number = $_GET[NUMBER];
-if(!is_numeric($number)) {
+if (!is_numeric($number)) {
      echo '<p>Please Enter a Number.</p>';
      exit;
 }
 
-for($candidate = 2; $candidate < $number; $candidate++) {
+for ($candidate = 2; $candidate < $number; $candidate++) {
      if($number % $candidate == 0) {
           break;
      }

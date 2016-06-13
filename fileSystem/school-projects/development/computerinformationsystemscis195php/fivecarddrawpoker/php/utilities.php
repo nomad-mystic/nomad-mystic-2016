@@ -109,4 +109,3 @@ function destroy_session()
           $session_info['sesure'], $session_info['httponly']);
      session_destroy();
 }
-

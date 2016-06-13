@@ -9,5 +9,3 @@
 $ohms = isset($_GET['ohms']) ? (float) $_GET['ohms'] : 0.0;
 
 echo '$ohms is type ' . gettype($ohms) . ' with value ' . $ohms . '<br>';
-
-

@@ -6,7 +6,6 @@
  * Time: 12:35 AM
  */
 
-
 const HELLO_STRING = 'Hello World';
 
 ///////////////////////// POST WalkThrough
