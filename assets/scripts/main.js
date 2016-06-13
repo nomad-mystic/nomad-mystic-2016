@@ -376,6 +376,7 @@
                     var CIS195PString = 'javascriptforwebdeveloperscis133w';
                     var CAS213String = 'jqueryfordesignerscas213';
                     var CAS225String = 'phpandmysqlfordesignerscas225';
+                    var CIS295String = 'computerinformationsystemscis295php';
 
                     // check if it is a school project page
                     if (schoolProjectsPostsForm) {
@@ -387,6 +388,8 @@
                         } else if (forInputValuesForClassSelected === CAS213String) {
                             productionButton.removeClass('displayNone');
                         } else if (forInputValuesForClassSelected === CAS225String) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CIS295String) {
                             productionButton.removeClass('displayNone');
                         }
                     } // end schoolProjectsPostsForm checker
