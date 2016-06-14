@@ -1,12 +1,13 @@
 {
   "metaData": {
     "schoolProjects": {
-      "murderrates": "Murder Rates",
-      "fivecarddrawpoker": "Five-card Draw Poker",
+      "murderrates": "Murder Rates CIS195P",
+      "fivecarddrawpoker": "Five-card Draw Poker CIS195P",
       "foundationscis195p": "Foundations CIS195P",
       "internationalcoalconsumptioncis195p": "International Coal Consumption CIS195P",
+      "endangeredspeciesinvestigator": "Endangered Species Investigator CIS195P",
 
-      "dynamicpiechartmaker": "Dynamic Pie Chart Maker",
+      "dynamicpiechartmaker": "Dynamic Pie Chart Maker CIS295P",
 
       "calculatorwithvalidation": "Calculator With Validation",
       "pizzatime1": "Pizza Time 1.0",
