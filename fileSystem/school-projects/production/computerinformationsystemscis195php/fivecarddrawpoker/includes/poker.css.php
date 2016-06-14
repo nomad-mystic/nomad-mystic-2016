@@ -45,22 +45,34 @@ body {
      text-align: center;
      padding: <?php echo HAND_PADDING; ?>;
      margin: 5% auto 0;
+     color: white;
 }
 
 #draw_button {
      background: red;
      color: white;
-<?php echo POKER_FONT; ?>
+     <?php echo POKER_FONT; ?>
      border-radius: 1em;
      cursor: pointer;
 }
 
+#redraw_button {
+     text-align: center;
+     background: red;
+     color: white;
+     <?php echo POKER_FONT; ?>
+     border-radius: 1em;
+     cursor: pointer;
+     width: 10%;
+     margin: 5% auto 0;
+}
+
 #hand_type {
-<?php echo POKER_FONT; ?>
+     <?php echo POKER_FONT; ?>
 }
 
 #payoff {
-<?php echo POKER_FONT; ?>
+     <?php echo POKER_FONT; ?>
 }
 
 #user_pane {

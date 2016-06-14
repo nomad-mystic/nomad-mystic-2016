@@ -89,11 +89,16 @@ function init(final) {
      centerContent();
      showContent();
 
-     if(!final) {
+     if (!final) {
           var draw_button = document.getElementById('draw_button');
           draw_button.addEventListener('click', function() {
                submitForm();
           });
           makeCardsClickable();
+     } else {
+          var redraw_button = document.getElementById('redraw_button');
+          redraw_button.addEventListener('click', function() {
+               window.history.back();
+          });
      }
 }

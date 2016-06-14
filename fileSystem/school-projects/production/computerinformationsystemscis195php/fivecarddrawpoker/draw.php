@@ -43,6 +43,7 @@ draw_cards($hand, $deck);
      <div id="spacer"></div>
 
      <?php show_content($hand, TRUE); ?>
-
+     
+     
 </body>
 </html>

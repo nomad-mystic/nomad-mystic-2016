@@ -118,6 +118,7 @@ function show_content($hand, $final=FALSE)
      show_hand($hand);
      if ($final) {
           show_type($hand);
+          echo '<div id="redraw_button">Redraw</div>';
      } else {
           show_draw_button();
      }
