@@ -2,6 +2,11 @@
   "metaData": {
     "schoolProjects": {
       "murderrates": "Murder Rates",
+      "fivecarddrawpoker": "Five-card Draw Poker",
+      "foundationscis195p": "Foundations CIS195P",
+      "internationalcoalconsumptioncis195p": "International Coal Consumption CIS195P",
+
+      "dynamicpiechartmaker": "Dynamic Pie Chart Maker",
 
       "calculatorwithvalidation": "Calculator With Validation",
       "pizzatime1": "Pizza Time 1.0",

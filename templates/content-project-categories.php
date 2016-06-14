@@ -8,8 +8,8 @@ $location_pathname = $_SERVER['REQUEST_URI'];
 $sliced_location_pathname = substr($location_pathname, 13, -1);
 
 $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
-    var_dump($location_pathname);
-    var_dump($sliced_location_pathname);
+//    var_dump($location_pathname);
+//    var_dump($sliced_location_pathname);
 ?>
 
 <?php
