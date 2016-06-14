@@ -38,48 +38,41 @@ if ($find_dash_in_slug_name === false) { // note: three equal signs
     $current_post_url = $domain_name . "." . $domain_name_system;
     // var_dump($current_post_url);
 }
+?>
 
-
-// build DOM for each individual post
-echo '<div class="entry-content container whiteCard">';
-echo '<div class="row">';
-echo '  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">';
-echo '    <figure>';
-if (has_post_thumbnail()) {
-    // getting full size featured image and adding responsive class
-    the_post_thumbnail(
-        'full',
-        array(
-            'class' => 'img-responsive'
-        )
-    );
-} // end if
-echo '    </figure><!--end col thumbnail-->';
-echo '  </div><!--end col-->';
-echo '  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">';
-// getting the content of the post by category
-echo '    <h2>' . get_the_title() . '</h2>';
-//                echo '    <share-button>Share</share-button>';
-the_content();
-echo '    <div class="row">';
-echo '        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">';
-echo '            <div class="squareButtonPrimaryColor center-block website_button">';
-echo '                <a href="http://' . $current_post_url . '" 
-                                            title="' . $title . '" 
-                                            class="' . $lower_modified_title . '"
-                                            target="_blank">Website</a>';
-echo '            </div><!--squareButtonPrimaryColor-->';
-echo '        </div><!--end col-->';
-echo '    </div><!--end row-->';
-echo '  </div><!--end col-->';
-echo '  </div><!--end row-->';
-echo '</div><!--end row for text thumb and content whiteCard-->';
-
-// hidden for to pass on to individual page for file system
-//echo '<form action="http://localhost:3000/nomadmystic/individual/"
-//                            method="post"
-//                            id="' . $lower_modified_title .'">';
-//echo '    <input type="hidden" value="' . $lower_modified_title . '" name="title_of_individual">';
-//echo '    <input type="hidden" value="' . $sliced_location_pathname . '" name="title_of_folder">';
-//echo '</form>';
-//echo '</div><!--end entry-content-->';
+<!--// build DOM for each individual post-->
+<div class="entry-content container whiteCard">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">
+            <figure>
+                <?php
+                if (has_post_thumbnail()) {
+                    // getting full size featured image and adding responsive class
+                    the_post_thumbnail(
+                        'full',
+                        array(
+                            'class' => 'img-responsive center-block'
+                        )
+                    );
+                } // end if
+                ?>
+            </figure><!--end col thumbnail-->
+        </div><!--end col-->
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">
+            <!--// getting the content of the post by category-->
+            <h2><?php echo  get_the_title(); ?></h2>
+            <!--// <share-button>Share</share-button>-->
+            <?php echo the_content(); ?>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="squareButtonPrimaryColor center-block website_button">
+                        <a href="http://<?php echo  $current_post_url; ?>"
+                                                    title="<?php echo  $title; ?>"
+                                                    class="<?php echo  $lower_modified_title; ?>"
+                                                    target="_blank">Website</a>
+                    </div><!--squareButtonPrimaryColor-->
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end col-->
+    </div><!--end row-->
+</div><!--end row for text thumb and content whiteCard-->
