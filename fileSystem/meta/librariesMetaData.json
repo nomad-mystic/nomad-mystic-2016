@@ -1,0 +1,6 @@
+{
+  "libraries": {
+    "jquery": "https://www.jquery.com/",
+    "jqueryUI": "https://www.jqueryui.com/"
+  }
+}

@@ -34,7 +34,10 @@ $individual_target_file = $_GET['individual_target_file'];
 
 $file_query = "$target_post_folder/development/$target_folder/$target_tab_selected/$individual_target_file";
 if (!empty($individual_target_file)) {
-    $file_content = file_get_contents($file_query);
-    echo htmlspecialchars($file_content);
+    // check to see if the individual tab was not libraries
+    if ($target_tab_selected != 'libraries') {
+        $file_content = file_get_contents($file_query);
+        echo htmlspecialchars($file_content);
+    }
 }
 

@@ -55,7 +55,7 @@
                             // loop over each folder returned from getFiles.php and create tabContent for each
                             for (var nameOfFolder in data) {
                                 var arrayKey = data[nameOfFolder];
-                                console.log(JSON.stringify(data[nameOfFolder]));
+                                // console.log(JSON.stringify(data[nameOfFolder]));
                                 // calling each file type for population of the DOM
                                 Nomad.common.buildContent.createFileContentTab(arrayKey, data, nameOfFolder);
                             }
@@ -79,7 +79,7 @@
                     $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/meta/individualMetaData.json', function(metaData) {
                         var activeIndividualProjectInView = $('#activeIndividualProjectInView');
                         // var parsedMetaData = $.parseJSON(metaData);
-                        console.log('Meta data ' + JSON.stringify(metaData.metaData));
+                        // console.log('Meta data ' + JSON.stringify(metaData.metaData));
                         // loop through metaData for each project type school-projects or featured
                         for (var projectType in metaData.metaData) {
                             if (metaData.metaData.hasOwnProperty(projectType)) {
@@ -89,8 +89,8 @@
                                     for (var featuredProjectName in metaData.metaData.featured) {
                                         if (metaData.metaData.featured.hasOwnProperty(featuredProjectName)) {
                                             if (featuredProjectName === getIndividualValue) {
-                                                console.log('Project Type A: featured ' + featuredProjectName);
-                                                console.log('Project Type A: featured ' + metaData.metaData.featured[featuredProjectName]);
+                                                // console.log('Project Type A: featured ' + featuredProjectName);
+                                                // console.log('Project Type A: featured ' + metaData.metaData.featured[featuredProjectName]);
                                                 activeIndividualProjectInView.text(metaData.metaData.featured[featuredProjectName]);
                                             }
                                         }
@@ -100,13 +100,13 @@
                                     for (var schoolProjectName in metaData.metaData.schoolProjects) {
                                         if (metaData.metaData.schoolProjects.hasOwnProperty(schoolProjectName)) {
                                             if (schoolProjectName === getIndividualValue) {
-                                                console.log('Project Type A: featured ' + schoolProjectName);
-                                                console.log('Project Type A: featured ' + metaData.metaData.schoolProjects[schoolProjectName]);
+                                                // console.log('Project Type A: featured ' + schoolProjectName);
+                                                // console.log('Project Type A: featured ' + metaData.metaData.schoolProjects[schoolProjectName]);
                                                 activeIndividualProjectInView.text(metaData.metaData.schoolProjects[schoolProjectName]);
                                             }
                                         }
                                     }
-                                    console.log('Project Type B: school project');
+                                    // console.log('Project Type B: school project');
                                 }
                             }
                         }
@@ -117,38 +117,72 @@
                     var individualTabs = $('.individualTabs');
                     // if folder not empty
                     if (filesArray !== undefined) {
-                        // console.log(filesArray.length);
-                        console.log(filesArray + ' :filesArray');
-                        console.log(name + ' :name');
+                        // console.log(filesArray);
+                        // console.log(name + ' :name');
                         var output = '';
+                        // check if the position on the filesArray is not Libraries
+                        if (name !== 'Libraries') {
+                            // creating DOM pieces
+                            output += '<li class="dropdown">';
+                            output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
+                            output += '     <ul class="dropdown-menu " role="menu">';
 
-                        // adding text to lib folder dynamically
-                        // if (name === 'Lib') {
-                        //     console.log('This is to checking to see if the name is the lib folder');
-                        //     name = 'Libraries';
-                        // }
-                        // creating DOM pieces
-                        output += '<li class="dropdown">';
-                        output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
-                        output += '     <ul class="dropdown-menu " role="menu">';
+                            // looping through each file in the folder and populating the DOM with Tab dropdown
+                            // Starting at 2 to remove the first two files '.' and '..' from data loop
+                            for (var files = 2; files < filesArray.length; files++) {
+                                output += '         <li><a href="#' + filesArray[files] + '" ' +
+                                    'role="tab" ' +
+                                    'data-toggle="tab"' +
+                                    'class="individual">' + filesArray[files] + '</a></li>';
+                                // console.log(filesArray[files] + ' :files array in loop');
+                            }
+                            output += '     </ul>';
+                            output += '</li>';
 
-                        // looping through each file in the folder and populating the DOM with Tab dropdown
-                        // Starting at 2 to remove the first two files '.' and '..' from data loop
-                        for (var files = 2; files < filesArray.length; files++) {
-                            output += '         <li><a href="#' + filesArray[files] + '" ' +
-                                'role="tab" ' +
-                                'data-toggle="tab"' +
-                                'class="individual">' + filesArray[files] + '</a></li>';
-                            // console.log(filesArray[files] + ' :files array in loop');
-                        }
-                        output += '     </ul>';
-                        output += '</li>';
+                            // populate DOM with Tab
+                            individualTabs.prepend(output);
+                        } // end if name !== 'Libraries'
+                        else {
+                            // create links to the 'Libraries' used documentation website's if the filesArray is on 'Libraries
+                            console.log(filesArray.length);
+                            console.log(filesArray + ' :filesArray');
+                            console.log(name);
+                            $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/meta/librariesMetaData.json', function(fileNamesInLibraries) {
+                                console.log(fileNamesInLibraries);
 
-                        // populate DOM with Tab
-                        individualTabs.prepend(output);
+                                // adding links to lib folder dynamically
+                                output += '<li class="dropdown">';
+                                output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
+                                output += '     <ul class="dropdown-menu " role="menu">';
+
+                                // Looping through files in libraries folder to fine a matching key for that library
+                                for (var key in fileNamesInLibraries.libraries) {
+                                    if (fileNamesInLibraries.libraries.hasOwnProperty(key)) {
+                                        console.log('key: ' + key);
+                                        console.log(fileNamesInLibraries.libraries[key]);
+                                        if (filesArray.indexOf(fileNamesInLibraries.libraries[key])) {
+                                            console.log(fileNamesInLibraries.libraries[key] + ' this is the comparison');
+                                            output += '         <li><a href="' + fileNamesInLibraries.libraries[key].toString() + '"' +
+                                                        'role="tab" ' +
+                                                        'data-toggle="tab"' +
+                                                        'target="_blank"' +
+                                                        'class="individual">' + key + '</a></li>';
+                                                    // console.log(filesArray[files] + ' :files array in loop');
+                                        }
+                                    }
+                                } // end for loop
+
+                                // closing out the tab for libraries
+                                output += '     </ul>';
+                                output += '</li>';
+
+                                // // populate DOM with Tab
+                                individualTabs.prepend(output);
+                            });
+                        } // end else
                     } else {
-                        console.log('This folder is undefined');
-                    }
+                        // console.log('This folder is undefined');
+                    } // end filesArray !== undefined
 
                 }, // end createFileContent();
                 getTabContent: function(evnt) {
@@ -162,8 +196,8 @@
 
                     // get individual file in tab
                     if (evnt.target.classList[0] === 'individual') {
-                        console.log(evnt);
-                        console.log('Individual file');
+                        // console.log(evnt);
+                        // console.log('Individual file');
                         // individual file selected
                         var targetFile = evnt.target.innerText;
 
@@ -186,7 +220,7 @@
                         // need to check and create AJAX call for get PHP server page
                         // if this is not a school project 
                         if (getSchoolClassSelectedValue === '') {
-                            console.log('This is a test for empty string in school projects hidden form');
+                            // console.log('This is a test for empty string in school projects hidden form');
                             $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/getIndividualFileContent.php?target_post_folder_type=' + getFolderValue  + '&get_individual_project_folder=' + getIndividualValue + '&tab_selected=' + lowerTabContent + '&individual_target_file=' + targetFile + '', function(individualFileContents) {
                                 // console.log(individualFileContents);
                                 Nomad.common.buildContent.buildTabContent(individualFileContents);
@@ -217,7 +251,7 @@
                     // get file clicked on by user
                     var getActiveFile = $('ul.dropdown-menu li.active');
                     var activeFileText = getActiveFile.text();
-                    console.log('activeFileText ' + activeFileText);
+                    // console.log('activeFileText ' + activeFileText);
 
                     // this div which holds the selected code content
                     var tabCodeContent = $('#tabCodeContent');
@@ -230,6 +264,7 @@
                     var output = '';
                     // Adding default tab-content text
                     tabCodeContent.html('Welcome String');
+                    console.log('tabContentString: ' + tabContentString);
                     // check to see if active tab is images
                     if (tabContentString === 'Images') {
                         // check to see if the folder was images and school-projects
@@ -244,6 +279,9 @@
                             tabCodeContent.css('background', '#000');
                             tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
                         }
+                    } else if (tabContentString === 'Libraries') {
+                        // check it see if the active tab is Libraries
+                        console.log('check it see if the active tab is Libraries');
                     } else {
                         // clear tab content text
                         tabCodeContent.html('');
@@ -342,7 +380,7 @@
                 // click code to submit hidden form to build content Refactor!!!
                 var codeButton = $('.code_button a');
                 codeButton.on('hover', function(evnt) {
-                    console.log(evnt);
+                    // console.log(evnt);
                     var findClassOfEvent = evnt.target.classList[0];
                     $('form#' + findClassOfEvent).submit();
                     evnt.preventDefault();
@@ -357,7 +395,7 @@
                 // click code to submit hidden form to build content Refactor!!!
                 var codeButton = $('.code_button a');
                 codeButton.on('click', function (evnt) {
-                    console.log(evnt);
+                    // console.log(evnt);
                     var findClassOfEvent = evnt.target.classList[0];
                     $('form#' + findClassOfEvent).submit();
                     evnt.preventDefault();
@@ -401,6 +439,14 @@
         'websites': {
             init: function () {
 
+            }, //e dn init
+            finalize: function () {
+
+            } // end finalize
+        }, // end school_projects
+        'testing_svg': {
+            init: function () {
+                console.log('testing Init');
             }, //e dn init
             finalize: function () {
 

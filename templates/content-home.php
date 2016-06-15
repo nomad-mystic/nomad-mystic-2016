@@ -67,12 +67,10 @@
                         <g id="homeSVGText">
                             <text transform="matrix(1 0 0 1 537 704)" class="st4 st5 st6">WordPress Development</text>
                             <text transform="matrix(1 0 0 1 466 220)" class="st4 st5 st7">Dream Not of Today </text>
-                            <text transform="matrix(1 0 0 1 538 348)" class="st4 st5 st6">Web Delevopment</text>
+                            <text transform="matrix(1 0 0 1 538 348)" class="st4 st5 st6">Web Development</text>
                             <text transform="matrix(1 0 0 1 538 525)" class="st4 st5 st6">UI Development </text>
                         </g>
-</svg>
-
-
+                    </svg>
                 </div><!--end col-->
             </div><!--end row-->
         </article>
@@ -103,12 +101,7 @@
             <p>My original portfolio website can be found here: <a href="http://nomadmystic.com" target="_blank">Original Nomad Mystic Website</a></p>
         </div><!--end col-->
     </div><!--row-->
-</section>
-
-
-
-
-
+</section><!--homeAboutThisSite-->
 
 <?php the_content(); ?>
 <?php

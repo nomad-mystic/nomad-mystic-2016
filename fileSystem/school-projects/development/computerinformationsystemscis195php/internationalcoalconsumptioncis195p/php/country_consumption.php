@@ -1,5 +1,3 @@
-
-'<pre>
 <!doctype html>
 <html lang="en">
 <!--     --><?php //require_once('includes/main_head.php'); ?>
@@ -11,4 +9,3 @@
           <canvas id="canvas" width="1000" height="600"></canvas>
      </body>
 </html>
-</pre>'
