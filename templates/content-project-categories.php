@@ -42,6 +42,7 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 
                 // uses a regular expression to remove all whitespaces
                 // clean title
+                
                 $remove_space_in_title = preg_replace('/\s+/', '', $title);
                 $lower_modified_title = strtolower($remove_space_in_title);
 

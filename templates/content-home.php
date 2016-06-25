@@ -42,6 +42,7 @@
         </div><!--end col>
     </article><!--end row-->
 </section>
+
 <img src="wordpress/wp-content/themes/nomadmystic/dist/images/dividerBanner_1.jpg" class="img-responsive" alt="Image">
 <section class="services-section">
     <div class="container">
