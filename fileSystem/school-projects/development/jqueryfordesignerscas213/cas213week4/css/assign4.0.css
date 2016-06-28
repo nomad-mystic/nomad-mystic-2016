@@ -1,0 +1,78 @@
+/*
+File Name: assign4.css
+Date: 10-18-2014
+Programmer: Keith Murphy
+*/
+
+/*==========chapter 4 ==============*/
+h2 {
+	background: #236A62;
+	border-radius: 25px 0;
+	width: 50%;
+	padding: 2%;
+	margin: 2% 0;
+	color: white;
+	font-size: 2em;
+}
+#scrolling {
+	width: 50%;
+	height: 25%;
+	overflow: auto;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	border: 5px solid black;
+	border-radius: 25px 0 0 25px;
+	margin: 2% 0 3% 15%;
+}
+#scrolling  p {
+    font-size: 1.25em;
+}
+.linkpath {
+	width: 75%;
+	border: 2px solid black;
+	border-radius: 10px 0;
+	padding: 3%;
+	margin: 2% 0;
+	background: black;
+	color: white;
+	font-size: 1.25em;
+}
+.linkpath a {
+	color: white;
+	text-decoration: none;
+	padding: 1%;
+	margin: 0 2%;
+	border: 2px solid white;
+	border-radius: 10px 0;
+}
+
+
+/*-----------added by keith.murphy1 for custom CSS on jquery.jscrollpane.css----------*/ 
+.jspContainer p
+{
+	text-indent: 1em;
+	padding: 2%;
+	margin-left: 1%;
+}
+
+.jspTrack
+{
+	background: #42847D;
+	position: relative;
+}
+
+.jspDrag
+{
+	background: black;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+
+.jspArrowUp {
+	background: #651142 url(../images/arrows.png) 0 0 no-repeat;
+}
+.jspArrowDown {
+	background: #651142 url(../images/arrows.png) 0 -16px no-repeat;
+}

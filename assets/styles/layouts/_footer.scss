@@ -1,5 +1,86 @@
 
 footer {
-  border: 2px solid $RGBA90Black;
+  border-top: 1px solid $main-teal;
+  font-family: $font-stack;
+  text-align: center;
+  margin: 2% 0 5%;
+  // site map
+  .widget_nav_menu {
+    ul#menu-footer-site-map {
+      padding: 0;
+      li {
 
-}
+        a {
+          color: $main-teal;
+          @include underlineText();
+          &:after {
+            @include underlineTextAfter(.5s);
+          }
+          &:hover:after {
+            @include underlineTextHoverAfter();
+          }
+        }
+      }
+
+    }
+  } // end .widget_nav_menu
+  section.text-2 {
+    margin: 2% auto;
+  }
+  .footerSocialIcons {
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    ul {
+      display: block;
+      margin: 0 auto;
+      li {
+        float: left;
+        margin: 0 2%;
+        i {
+
+        }
+      }
+    }
+    .socialIconBox,
+    .fa-stack-1x,
+    .fa-stack-2x {
+      color: transparent;
+      transition: color 1s;
+
+      &:hover {
+        .fa-stack-1x {
+          color: $secondary-purple;
+        }
+        .fa-stack-2x {
+          color: #fff;
+        }
+      }
+      .fa-stack-1x {
+        color: #fff;
+        //transition: color 1s linear;
+        //&:hover > .fa-stack-2x {
+        //  color: $main-teal-light;
+        //}
+      }
+      .fa-stack-2x {
+        color: $secondary-purple;
+      }
+    }
+  } // end .footerSocialIcons
+  // contact widget
+  .text-3 {
+    h5 {
+      font-size: 1.25em;
+    }
+    .footerEmail {
+      @include underlineText();
+      &:after {
+        @include underlineTextAfter(.5s);
+      }
+      &:hover:after {
+        @include underlineTextHoverAfter();
+      }
+    }
+  }
+} // end footer

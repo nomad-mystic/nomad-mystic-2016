@@ -7,11 +7,13 @@ $RGBA90Black: rgba(0,0,0,.90);
 }
 
 //General
-a {
+a:link {
   text-decoration: none;
+  color: $secondary-purple;
 }
 a:visited {
   text-decoration: none;
+  color: $main-teal;
 }
 a:hover {
   text-decoration: none;
@@ -28,9 +30,14 @@ h1 {
 }
 h2 {
   font-family: $font-stack;
-  font-size: 2em;
+  font-size: 2.5em;
 }
-
+h5 {
+  font-size: 2.25em;
+}
+li {
+  list-style-type: none;
+}
 
 // Helper clases
 .displayNone {
@@ -43,6 +50,7 @@ h2 {
   float: left;
 }
 
+
 //Bootstrap Overrides
 .navbar-default .navbar-toggle {
   border: none;
@@ -54,6 +62,9 @@ h2 {
 .navbar-toggle {
   margin-top: 12px;
 }
+
+// font-awesome overrides
+
 
 // for the code snippets
 /* Pretty printing styles. Used with prettify.js. */
@@ -73,19 +84,20 @@ pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 
 pre.prettyprint, code.prettyprint {
   background-color: #000;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -o-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -khtml-border-radius: 8px;
-  border-radius: 8px;
+  border: none;
 }
 
 pre.prettyprint {
   width: 95%;
-  margin: 1em auto;
+  margin: 0 auto 1em;
   padding: 1em;
   white-space: pre-wrap;
+
+}
+// removes the first and last span for which aligns with the top left of the page Nomad
+#tabCodeContent > div > div > pre > span.pln,
+#tabCodeContent > div > div > pre > span.com {
+  display: none;
 }
 
 
@@ -108,3 +120,57 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   pre .atv, code .atv { color: #060; }
 }
 
+/*---mixins--*/
+// taken from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+// adding card like look for posts and code viewer
+@mixin whiteCard($padding, $margin) {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .25);
+  padding: $padding;
+  margin: $margin;
+}
+.whiteCard {
+  @include whiteCard(.5% 2%, 2% auto);
+}
+
+// adds underline on hover
+@mixin underlineText() {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  text-align: center;
+  margin: 0 auto;
+}
+@mixin underlineTextAfter($speed) {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width $speed ease, background-color $speed ease;
+}
+@mixin underlineTextHoverAfter() {
+  width: 100%;
+  background: $main-teal;
+}
+
+// Social Icons animation
+@mixin inverseIconCircle() {
+
+}

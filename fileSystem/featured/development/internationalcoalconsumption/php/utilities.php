@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * Created by PhpStorm.
@@ -87,5 +85,3 @@ function destroy_session()
           $session_info['secure'], $session_info['httponly']);
      session_destroy();
 }
-
-

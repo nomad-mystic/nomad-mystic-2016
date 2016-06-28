@@ -1,25 +1,54 @@
 .container-fluid {
-    // NAV
+    //////////////////////// NAV
     .navbar-default {
         margin-bottom: 0;
         border-radius: 0;
-    }
+        background-color: transparent;
+        color: #000;
+        font-family: $font-stack;
+        .navbar-header {
+            background-color: #ffffff;
+        }
+        .navbar-nav {
+            margin: 0 auto 2px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .25);
+            padding: 1%;
+            background-color: #ffffff;
+            li {
+                a {
+                    color: #000;
+                    transition: all .25s;
+                    &:hover {
+                        background: $main-teal;
+                        color: #fff;
+                    }
+                }
+            } // end li
+            .active a {
+                background: $secondary-purple !important;
+                color: #fff;
+            }
+        } // end navbar-nav
+    }// end navbar-default
     .navbar-brand {
         padding: 2% 2% 5% 0;
         margin-left: 20px;
     }
     .navbar-toggle {
-        margin-right: 40px;
+        margin-right: 20px;
+    }
+    .navbar-fixed-top {
+        border-width: 0 0 0;
     }
 
-    // Home Header Area
+    /////////////////// Home Header Area
     .home-jumbotron {
         background: no-repeat 0 0;
         background-size: cover;
         border-radius: 0;
-        margin: 0 0 0 0;
+        margin: 10% 0 0 0;
     }
-}
+} // end container-fluid
 
 
 

@@ -17,7 +17,7 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 ?>
 
 <section class="<?php echo $sliced_location_pathname;?>">
-    <h1><?php echo $capitalize_sliced_location_pathname; ?></h1>
+<!--    <h1>--><?php //echo $capitalize_sliced_location_pathname; ?><!--</h1>-->
     <article <?php post_class(); ?>>
         <?php
         // WP_Query arguments for querying slug by url name, ordering by ascending,
@@ -42,6 +42,7 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
 
                 // uses a regular expression to remove all whitespaces
                 // clean title
+                
                 $remove_space_in_title = preg_replace('/\s+/', '', $title);
                 $lower_modified_title = strtolower($remove_space_in_title);
 
@@ -49,19 +50,18 @@ $capitalize_sliced_location_pathname = ucfirst($sliced_location_pathname);
                 // production links
                 $production_link = "http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/" . $sliced_location_pathname . "/production/" . $lower_modified_title . "";
 
-
                 if ($sliced_location_pathname === 'featured') {
-                    require('featured-include.php');
-
+                    include('featured-include.php');
                 } else if ($sliced_location_pathname === 'websites') {
-                    require('websites-include.php');
-
+                    include('websites-include.php');
                 } else if ($sliced_location_pathname === 'school') {
-                    require('school-include.php');
+                    include('school-include.php');
+//                    get_template_part('templates/school', 'include');
                 }
-
-
             } // end while for $query->the_post()
+
+            /* Restore original Post Data */
+            wp_reset_postdata();
         } // end if
         ?>
     </article>

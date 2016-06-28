@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">OhmsLaw</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="volts">Volts</string>
+    <string name="calculate">Calculate</string>
+    <string name="ohms">ohms</string>
+    <string name="amps">amps</string>
+</resources>

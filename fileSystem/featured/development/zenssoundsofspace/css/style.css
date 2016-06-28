@@ -1,0 +1,30 @@
+
+
+body {
+    background: url('../images/background.jpg') no-repeat 0 0 fixed;
+    max-width: 100vw;
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+footer {
+    background: rgba(0,0,0,.75);
+    color: #fff;
+    margin: 0;
+    padding: 1em;
+}
+#zen-participation {
+    margin: 2% 0;
+}
+.navbar {
+    margin: 0 auto 1%;
+    width: 100%;
+}
+.navbar-default .navbar-nav  li a:hover {
+    color: #555 !important;
+    background-color: #e7e7e7 !important;
+}
+
+#wrapper {
+    background: #fff;
+}

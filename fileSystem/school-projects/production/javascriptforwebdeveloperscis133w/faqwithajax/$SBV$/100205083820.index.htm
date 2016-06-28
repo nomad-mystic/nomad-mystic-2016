@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FAQ Page with AJAX</title>
+<!--
+For this to work, the answers in answers.htm must be in the same order as the questions on this page.
+ -->
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	background: #999;
+}
+
+p {
+	margin: 0.7em 0;
+}
+
+#main {
+	width: 45em;
+	height: 1000px;
+	margin: 0 auto 0 auto;
+	border: double #000;
+	border-width: 0 6px;
+	padding: 20px 20px 40px 20px;
+	background: #ffd;
+}
+
+#main h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 2em;
+	font-weight: normal;
+	color: #900;
+	border-bottom: 1px solid #A7A37E;
+	margin-bottom: 1em;
+	padding-bottom: 0.1em;
+}
+
+#main h2 {
+	color: #555;
+	font-size: 1em;
+	font-weight: bold;
+	background: url(arrow.png) no-repeat left center;
+	padding-left: 20px;
+	padding-bottom: 0.2em;
+	cursor: pointer;
+}
+
+#main h2.selected {
+	color: #639;
+}
+
+#main h2:hover {
+	background-image: url(circular_arrow.png);
+}
+
+div#answer {
+	background: #efe;
+	float: right;
+	width: 300px;
+	border: 1px solid black;
+	padding: 0 10px;
+	font-size: 0.8em;
+}
+
+div#answer ul {
+	margin: 0.5em 0 0.5em 1em;
+}
+
+div#answer ul > li {
+	margin-top: 0.5em;
+}
+</style>
+
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('#main h2').click(
+		function() {
+			$('#main #questions h2').removeClass('selected'); // init all the questions first
+			$(this).addClass('selected');
+			
+			//var index = $('#main h2').index(this);
+			//var index = $(this).parent().get(0).index(this);
+			var index = $(this).parent().index(this);
+			console.log(index);
+			//$('#answer').load("answers.htm div#divAnswers div:eq(" + index + ")");
+		}
+	);
+	
+}); // jQuery
+</script>
+
+</head>
+
+<body>
+
+<div id="main">
+	<h1>Frequently Asked Questions</h1>
+
+	<div id="answer"><strong>Your Answer</strong></div>
+
+	<div id="questions">
+		<h2>What's your philosophy of teaching?</h2>
+		<h2>Are you easy or hard?</h2>
+		<h2>Are you a good witch or a bad witch?</h2>
+		<h2>How do I get a good grade in your class?</h2>
+		<h2>So what made you decide to start teaching?</h2>
+	</div>
+
+
+</div>
+
+
+</body>
+</html>

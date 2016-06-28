@@ -1,0 +1,593 @@
+/*  Prgrammer = Keith Murphy 
+	File = styles.scss
+	Date Created = 4-2-2015
+	Last Mod = 4-29-2015
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*------Variables----*/
+/*---------Reset---------*/
+/* line 16, ../_/components/sass/styles.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 37, ../_/components/sass/styles.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 41, ../_/components/sass/styles.scss */
+body {
+  line-height: 1; }
+
+/* line 45, ../_/components/sass/styles.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 48, ../_/components/sass/styles.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 51, ../_/components/sass/styles.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 56, ../_/components/sass/styles.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*---------------------------------End Reset---------*/
+/*---------------------------------General Styles----------*/
+/* line 62, ../_/components/sass/styles.scss */
+* {
+  border-sizing: border-box; }
+
+/* line 65, ../_/components/sass/styles.scss */
+.addFixed {
+  position: fixed; }
+
+/* line 68, ../_/components/sass/styles.scss */
+body {
+  background: black; }
+
+/* line 72, ../_/components/sass/styles.scss */
+a:link {
+  color: white;
+  text-decoration: none; }
+
+/* line 76, ../_/components/sass/styles.scss */
+a:hover {
+  color: blue;
+  text-decoration: none; }
+
+/*-----JS classes ---------------*/
+/* line 81, ../_/components/sass/styles.scss */
+.current {
+  text-decoration: underline; }
+
+/*-----;------------changing up bootstrap Section ----------------*/
+/* line 85, ../_/components/sass/styles.scss */
+.btn-default {
+  background: black;
+  color: white;
+  border: none; }
+
+/*
+* Uses Font Awesome and Bootstrap 3
+* Both aren't required for this demo
+*/
+/* line 94, ../_/components/sass/styles.scss */
+#site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  /* Temp: Simulates a tall page. */ }
+
+/* line 101, ../_/components/sass/styles.scss */
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+      transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 5% 0;
+  /* Temp: Just spacing. */ }
+
+/* line 120, ../_/components/sass/styles.scss */
+.show-nav #site-canvas {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+      transform: translateX(100%);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
+
+/* line 130, ../_/components/sass/styles.scss */
+canvas {
+  display: block;
+  z-index: 1000;
+  margin: 0 auto 0; }
+
+/* line 137, ../_/components/sass/styles.scss */
+#starDiv {
+  display: block;
+  margin: 0 auto 0; }
+  /* line 140, ../_/components/sass/styles.scss */
+  #starDiv #starSVG {
+    display: block;
+    margin: 0 auto -10%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/* line 150, ../_/components/sass/styles.scss */
+video {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover; }
+
+/* line 162, ../_/components/sass/styles.scss */
+#openSplash {
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: url("../assets/openImage.jpg") no-repeat center center fixed;
+  background-size: cover; }
+  /* line 169, ../_/components/sass/styles.scss */
+  #openSplash .openLayer {
+    background: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    z-index: 0;
+    width: 100%;
+    height: 100%; }
+  /* line 176, ../_/components/sass/styles.scss */
+  #openSplash #openLinkShape {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 20%;
+    z-index: 110; }
+    /* line 181, ../_/components/sass/styles.scss */
+    #openSplash #openLinkShape #openShape {
+      margin: 0 auto; }
+      /* line 184, ../_/components/sass/styles.scss */
+      #openSplash #openLinkShape #openShape #openTriangle {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        -webkit-animation: dash 4s linear forwards;
+                animation: dash 4s linear forwards; }
+    /* line 191, ../_/components/sass/styles.scss */
+    #openSplash #openLinkShape ul.openUl {
+      margin: 0 auto;
+      padding: 0; }
+      /* line 195, ../_/components/sass/styles.scss */
+      #openSplash #openLinkShape ul.openUl li {
+        border: 3px solid white;
+        padding: 1em;
+        text-align: center;
+        font-size: 2em;
+        font-family: "Changa One", Arial, sans-sarif;
+        margin: 0 auto;
+        width: 25%;
+        cursor: pointer; }
+        /* line 204, ../_/components/sass/styles.scss */
+        #openSplash #openLinkShape ul.openUl li a {
+          color: white;
+          text-decoration: none; }
+
+/* line 214, ../_/components/sass/styles.scss */
+#site-menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: url("../assets/keplerMenu.jpg") no-repeat 0 0;
+  background-size: cover;
+  padding: 15px;
+  z-index: 70;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  /* line 225, ../_/components/sass/styles.scss */
+  #site-menu .blackLayer {
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover; }
+  /* line 229, ../_/components/sass/styles.scss */
+  #site-menu #menu {
+    width: 30%;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  /* line 233, ../_/components/sass/styles.scss */
+  #site-menu ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto 0;
+    width: 100%; }
+    /* line 240, ../_/components/sass/styles.scss */
+    #site-menu ul li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      /* line 242, ../_/components/sass/styles.scss */
+      #site-menu ul li a {
+        margin: 0 auto;
+        font-family: "Changa One", Arial, sans-sarif;
+        font-size: 2.5em;
+        color: white;
+        text-align: center;
+        line-height: 2em;
+        -webkit-transition: text-decoration 2s linear;
+                transition: text-decoration 2s linear; }
+      /* line 251, ../_/components/sass/styles.scss */
+      #site-menu ul li a:hover {
+        text-decoration: underline; }
+
+/* line 258, ../_/components/sass/styles.scss */
+#buttonArray {
+  position: absolute;
+  top: 10px;
+  z-index: 500; }
+
+/* line 263, ../_/components/sass/styles.scss */
+.testLineAnimation {
+  stroke-dashoffset: 1000;
+  -webkit-transition: stroke-dashoffset 10s;
+          transition: stroke-dashoffset 10s; }
+
+/* line 270, ../_/components/sass/styles.scss */
+#fillSpace {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  width: 50%;
+  overflow: scroll; }
+  /* line 276, ../_/components/sass/styles.scss */
+  #fillSpace .flexhistoryImg {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    /* line 279, ../_/components/sass/styles.scss */
+    #fillSpace .flexhistoryImg img {
+      width: 70%;
+      height: auto;
+      margin: 2% auto 2% 3%; }
+    /* line 284, ../_/components/sass/styles.scss */
+    #fillSpace .flexhistoryImg p.historyPara {
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+      width: 45%;
+      text-indent: 50px;
+      word-spacing: 2px;
+      color: rgba(255, 255, 255, 0.6); }
+  /* line 292, ../_/components/sass/styles.scss */
+  #fillSpace p.historyPara {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5em;
+    margin: 2% 0 1% 2%;
+    text-indent: 50px;
+    line-height: 1.5em;
+    word-spacing: 2px; }
+  /* line 301, ../_/components/sass/styles.scss */
+  #fillSpace .historyH1 {
+    font-family: "Changa One", Arial, sans-sarif;
+    font-size: 2.5em;
+    margin: 2% 0 2% 3%;
+    color: rgba(255, 255, 255, 0.9); }
+  /* line 307, ../_/components/sass/styles.scss */
+  #fillSpace .historyH2 {
+    font-family: "Changa One", Arial, sans-sarif;
+    font-size: 2em;
+    margin: 2% 0 2% 3%;
+    color: rgba(255, 255, 255, 0.9); }
+  /* line 313, ../_/components/sass/styles.scss */
+  #fillSpace #contactForm {
+    margin: 3% 5%; }
+    /* line 315, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm h2 {
+      font-size: 2em;
+      font-family: "Changa One", Arial, sans-sarif;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 2% 0 2%; }
+    /* line 321, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm p {
+      color: rgba(255, 255, 255, 0.7);
+      font-family: "Changa One", Arial, sans-sarif;
+      font-size: 2em; }
+    /* line 326, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm input[type=submit] {
+      margin: 3% 0 0 0;
+      font-family: "Changa One", Arial, sans-sarif;
+      font-size: 1.5em; }
+  /* line 334, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations h1 {
+    font-family: "Changa One", Arial, sans-sarif;
+    font-size: 3em;
+    margin: 2% 0 2% 3%;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center; }
+  /* line 341, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations h1:last-child {
+    display: none !important; }
+  /* line 344, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations .spaceStationFlex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    /* line 347, ../_/components/sass/styles.scss */
+    #fillSpace #spaceStations .spaceStationFlex .spaceStationFlexColumn {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 80%;
+      margin: 2% auto; }
+    /* line 352, ../_/components/sass/styles.scss */
+    #fillSpace #spaceStations .spaceStationFlex h2 {
+      width: 100%;
+      margin: 2% auto;
+      font-family: "Changa One", Arial, sans-sarif;
+      font-size: 2em;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center; }
+    /* line 361, ../_/components/sass/styles.scss */
+    #fillSpace #spaceStations .spaceStationFlex p {
+      margin: 0 auto;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.6);
+      text-indent: 50px;
+      line-height: 1.5em;
+      word-spacing: 2px;
+      font-size: 1.5em; }
+    /* line 370, ../_/components/sass/styles.scss */
+    #fillSpace #spaceStations .spaceStationFlex img {
+      margin: 2% auto;
+      width: 60%; }
+  /* line 376, ../_/components/sass/styles.scss */
+  #fillSpace #creditsDiv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    /* line 379, ../_/components/sass/styles.scss */
+    #fillSpace #creditsDiv h1.creditsH1 {
+      font-family: "Changa One", Arial, sans-sarif;
+      font-size: 3em;
+      margin: 2% 0 2% 3%;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center; }
+    /* line 386, ../_/components/sass/styles.scss */
+    #fillSpace #creditsDiv .creditsFlex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center; }
+      /* line 389, ../_/components/sass/styles.scss */
+      #fillSpace #creditsDiv .creditsFlex p.creditsPara {
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.5em;
+        word-spacing: 2px;
+        font-size: 1.5em;
+        -webkit-align-self: center;
+            -ms-flex-item-align: center;
+                align-self: center; }
+      /* line 397, ../_/components/sass/styles.scss */
+      #fillSpace #creditsDiv .creditsFlex img {
+        margin: 2% 2% 2% 10%;
+        cursor: pointer; }
+
+/* line 406, ../_/components/sass/styles.scss */
+.JSONCredits a:link {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 1% 0 0 3%; }
+
+/* line 413, ../_/components/sass/styles.scss */
+#fillSpace::-webkit-scrollbar {
+  background-color: #000; }
+
+/* line 416, ../_/components/sass/styles.scss */
+#fillSpace::-webkit-scrollbar-thumb {
+  background-color: rgba(85, 0, 0, 0.7); }
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* line 434, ../_/components/sass/styles.scss */
+  #openSplash #openLinkShape {
+    padding-top: 40%; }
+    /* line 437, ../_/components/sass/styles.scss */
+    #openSplash #openLinkShape ul.openUl li {
+      width: 40%; }
+      /* line 439, ../_/components/sass/styles.scss */
+      #openSplash #openLinkShape ul.openUl li a {
+        font-size: 2em; }
+
+  /* line 446, ../_/components/sass/styles.scss */
+  .btn {
+    font-size: 3em; }
+
+  /* line 454, ../_/components/sass/styles.scss */
+  #site-menu nav ul li a {
+    font-size: 4em; }
+
+  /* line 462, ../_/components/sass/styles.scss */
+  #fillSpace p.historyPara {
+    font-size: 3em; }
+  /* line 465, ../_/components/sass/styles.scss */
+  #fillSpace .historyH1 {
+    font-size: 5em; }
+  /* line 468, ../_/components/sass/styles.scss */
+  #fillSpace .historyH2 {
+    font-size: 3.5em; }
+  /* line 472, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations h1 {
+    font-size: 5em; }
+  /* line 477, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations .spaceStationFlex .spaceStationsP {
+    font-size: 3em; }
+  /* line 480, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations .spaceStationFlex h2 {
+    font-size: 4em; }
+  /* line 486, ../_/components/sass/styles.scss */
+  #fillSpace #creditsDiv h1.creditsH1 {
+    font-size: 5em; }
+  /* line 489, ../_/components/sass/styles.scss */
+  #fillSpace #creditsDiv .creditsFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    /* line 491, ../_/components/sass/styles.scss */
+    #fillSpace #creditsDiv .creditsFlex p.creditsPara {
+      font-size: 4em; }
+  /* line 495, ../_/components/sass/styles.scss */
+  #fillSpace #creditsDiv img {
+    width: 40%; }
+  /* line 499, ../_/components/sass/styles.scss */
+  #fillSpace #contactForm {
+    font-size: 1.5em; }
+    /* line 501, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm h2 {
+      font-size: 3.5em; }
+    /* line 504, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm p {
+      font-size: 3em; }
+    /* line 507, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm input[type="email"] {
+      padding: 1em; }
+    /* line 510, ../_/components/sass/styles.scss */
+    #fillSpace #contactForm input[type="text"] {
+      padding: 1em; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 527, ../_/components/sass/styles.scss */
+  #site-menu nav ul li a {
+    font-size: 2em; }
+
+  /* line 534, ../_/components/sass/styles.scss */
+  .btn {
+    font-size: 1.5em; }
+
+  /* line 544, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations h1 {
+    font-size: 4em; }
+  /* line 547, ../_/components/sass/styles.scss */
+  #fillSpace #spaceStations .historyPara {
+    font-size: 2em !important; }
+  /* line 552, ../_/components/sass/styles.scss */
+  #fillSpace .spaceStationFlex p {
+    font-size: 2em !important; }
+  /* line 555, ../_/components/sass/styles.scss */
+  #fillSpace .spaceStationFlex h2 {
+    font-size: 2.5em !important; }
+  /* line 559, ../_/components/sass/styles.scss */
+  #fillSpace .historyH1 {
+    font-size: 3em; }
+  /* line 562, ../_/components/sass/styles.scss */
+  #fillSpace .historyH2 {
+    font-size: 2.5em; }
+  /* line 565, ../_/components/sass/styles.scss */
+  #fillSpace p.historyPara {
+    font-size: 2em !important; }
+
+  /* line 570, ../_/components/sass/styles.scss */
+  #creditsDiv h1.creditsH1 {
+    font-size: 4em !important; }
+  /* line 573, ../_/components/sass/styles.scss */
+  #creditsDiv .creditsFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    /* line 575, ../_/components/sass/styles.scss */
+    #creditsDiv .creditsFlex img {
+      width: 40%; }
+    /* line 578, ../_/components/sass/styles.scss */
+    #creditsDiv .creditsFlex p.creditsPara {
+      font-size: 3em !important; }
+
+  /* line 584, ../_/components/sass/styles.scss */
+  #contactForm input[type="email"] {
+    padding: 1em; }
+  /* line 587, ../_/components/sass/styles.scss */
+  #contactForm input[type="text"] {
+    padding: 1em; } }

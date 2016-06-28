@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Survey</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_text">This is the welcome message</string>
+    <string name="welcome_header_text">Welcome to the CIS 135m Mobile Quiz</string>
+    <string name="enter_name">Please Enter Your Name?</string>
+    <string name="enter_your_name">Mike Murphy</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="title_activity_results">Results</string>
+</resources>

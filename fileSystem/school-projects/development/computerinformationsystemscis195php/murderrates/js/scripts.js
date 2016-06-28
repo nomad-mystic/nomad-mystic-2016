@@ -5,7 +5,6 @@
     Last Mod = 10_13_2015
  */
 
-
 $(document).ready(function() {
 
     $('.accordion').accordion({
@@ -24,7 +23,7 @@ $(document).ready(function() {
         var parsedData = jQuery.parseJSON(data);
 
         // The North East
-        for(var ne=0; ne < parsedData.theNorthEast.length; ne++) {
+        for (var ne=0; ne < parsedData.theNorthEast.length; ne++) {
 
             var theNorthEast = $('.murderRate2012 .theNorthEast');
 
@@ -43,7 +42,7 @@ $(document).ready(function() {
         } // End For loop
 
         // The Midwest
-        for(var mw=0; mw < parsedData.theMidwest.length; mw++) {
+        for (var mw=0; mw < parsedData.theMidwest.length; mw++) {
 
             var theMidwest = $('.murderRate2012 .theMidwest');
 
@@ -62,7 +61,7 @@ $(document).ready(function() {
         } // End For loop
 
         // The West North Central
-        for(var wnc=0; wnc < parsedData.theWestNorthCentral.length; wnc++) {
+        for (var wnc=0; wnc < parsedData.theWestNorthCentral.length; wnc++) {
             var theWestNorthCentral = $('.murderRate2012 .theWestNorthCentral');
             theWestNorthCentral.append($('<h4></h4>', {
                 class: 'displayBlock' ,
@@ -79,7 +78,7 @@ $(document).ready(function() {
         } // End For loop
 
         // The South
-        for(var so=0; so < parsedData.theSouth.length; so++) {
+        for (var so=0; so < parsedData.theSouth.length; so++) {
             var theSouth = $('.murderRate2012 .theSouth');
             theSouth.append($('<h4></h4>', {
                 class: 'displayBlock',
@@ -96,7 +95,7 @@ $(document).ready(function() {
         } // End For loop
 
         // the East South Central
-        for(var esc=0; esc < parsedData.theEastSouthCentral.length; esc++) {
+        for (var esc=0; esc < parsedData.theEastSouthCentral.length; esc++) {
             var theEastSouthCentral = $('.murderRate2012 .theEastSouthCentral');
             theEastSouthCentral.append($('<h4></h4>', {
                 class: 'displayBlock',
@@ -113,7 +112,7 @@ $(document).ready(function() {
         } // End For Loop
 
         // The South West Central
-        for(var swc=0; swc < parsedData.theSouthWestCentral.length; swc++) {
+        for (var swc=0; swc < parsedData.theSouthWestCentral.length; swc++) {
 
             var theSouthWestCentral = $('.murderRate2012 .theSouthWestCentral');
 
@@ -132,7 +131,7 @@ $(document).ready(function() {
         }// End For Loop
 
         // The West
-        for(var w=0; w < parsedData.theWest.length; w++) {
+        for (var w=0; w < parsedData.theWest.length; w++) {
 
             var theWest = $('.murderRate2012 .theWest');
 
@@ -151,7 +150,7 @@ $(document).ready(function() {
         } // End For Loop
 
         // The Pacific
-        for(var p=0; p < parsedData.thePacific.length; p++) {
+        for (var p=0; p < parsedData.thePacific.length; p++) {
 
             var thePacific = $('.murderRate2012 .thePacific');
 
@@ -175,7 +174,7 @@ $(document).ready(function() {
         var parsedData = jQuery.parseJSON(data);
 
         // The North East
-        for(var ne=0; ne < parsedData.theNorthEast.length; ne++) {
+        for (var ne=0; ne < parsedData.theNorthEast.length; ne++) {
 
             var theNorthEast = $('.murderRate2011 .theNorthEast');
 
@@ -194,7 +193,7 @@ $(document).ready(function() {
         } // End For loop
 
         // The Midwest
-        for(var mw=0; mw < parsedData.theMidwest.length; mw++) {
+        for (var mw=0; mw < parsedData.theMidwest.length; mw++) {
 
             var theMidwest = $('.murderRate2011 .theMidwest');
 
@@ -213,7 +212,7 @@ $(document).ready(function() {
         } // End For loop
 
         // The West North Central
-        for(var wnc=0; wnc < parsedData.theWestNorthCentral.length; wnc++) {
+        for (var wnc=0; wnc < parsedData.theWestNorthCentral.length; wnc++) {
 
             var theWestNorthCentral = $('.murderRate2011 .theWestNorthCentral');
             theWestNorthCentral.append($('<h4></h4>', {
@@ -231,7 +230,7 @@ $(document).ready(function() {
         } // End For loop
 
         // The South
-        for(var so=0; so < parsedData.theSouth.length; so++) {
+        for (var so=0; so < parsedData.theSouth.length; so++) {
             var theSouth = $('.murderRate2011 .theSouth');
             theSouth.append($('<h4></h4>', {
                 class: 'displayBlock',
@@ -248,7 +247,7 @@ $(document).ready(function() {
         } // End For loop
 
         // the East South Central
-        for(var esc=0; esc < parsedData.theEastSouthCentral.length; esc++) {
+        for (var esc=0; esc < parsedData.theEastSouthCentral.length; esc++) {
             var theEastSouthCentral = $('.murderRate2011 .theEastSouthCentral');
             theEastSouthCentral.append($('<h4></h4>', {
                 class: 'displayBlock',
@@ -265,7 +264,7 @@ $(document).ready(function() {
         } // End For Loop
 
         // The South West Central
-        for(var swc=0; swc < parsedData.theSouthWestCentral.length; swc++) {
+        for (var swc=0; swc < parsedData.theSouthWestCentral.length; swc++) {
 
             var theSouthWestCentral = $('.murderRate2011 .theSouthWestCentral');
 
@@ -284,7 +283,7 @@ $(document).ready(function() {
         }// End For Loop
 
         // The West
-        for(var w=0; w < parsedData.theWest.length; w++) {
+        for (var w=0; w < parsedData.theWest.length; w++) {
 
             var theWest = $('.murderRate2011 .theWest');
 
@@ -303,7 +302,7 @@ $(document).ready(function() {
         } // End For Loop
 
         // The Pacific
-        for(var p=0; p < parsedData.thePacific.length; p++) {
+        for (var p=0; p < parsedData.thePacific.length; p++) {
 
             var thePacific = $('.murderRate2011 .thePacific');
 

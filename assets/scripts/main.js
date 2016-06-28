@@ -49,51 +49,140 @@
                         'fileSystem/getFiles.php?title_of_individual=' + getIndividualValue + '&title_of_folder=' + getFolderValue + '&title_of_school_class_selected=' + getSchoolClassSelectedValue + '',
                         function(data) {
                             // console.log(data);
-                            var parsedData = $.parseJSON(data);
-                            // console.log(parsedData);
+                            // var parsedData = $.parseJSON(data);
 
                             // get the section from the returned file object
                             // loop over each folder returned from getFiles.php and create tabContent for each
-                            for (var key in parsedData) {
-                                var arrayKey = parsedData[key];
+                            for (var nameOfFolder in data) {
+                                var arrayKey = data[nameOfFolder];
+                                // console.log(JSON.stringify(data[nameOfFolder]));
                                 // calling each file type for population of the DOM
-                                Nomad.common.buildContent.createFileContentTab(arrayKey, parsedData, key);
+                                Nomad.common.buildContent.createFileContentTab(arrayKey, data, nameOfFolder);
                             }
+                            // create default tab content
+                            Nomad.common.buildContent.createDefaultTabContentOnLoad();
+
                         }
                     ); // end get
+                    // populate the DOM with current project on load
+                    Nomad.common.buildContent.getCurrentProjectForViewing(getIndividualValue);
+                },
+                createDefaultTabContentOnLoad: function() {
+                    $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/wellcomeToCodeViewer.html', function(html) {
+                        var tabCodeContent = $('#tabCodeContent');
+                        tabCodeContent.html(html);
+                    }); // end get() default content
+                    // console.log('Inside createDefaultTabContentOnLoad');
+                },
+                getCurrentProjectForViewing: function(getIndividualValue) {
+                    // Populate description with the title of the project selected
+                    $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/meta/individualMetaData.json', function(metaData) {
+                        var activeIndividualProjectInView = $('#activeIndividualProjectInView');
+                        // var parsedMetaData = $.parseJSON(metaData);
+                        // console.log('Meta data ' + JSON.stringify(metaData.metaData));
+                        // loop through metaData for each project type school-projects or featured
+                        for (var projectType in metaData.metaData) {
+                            if (metaData.metaData.hasOwnProperty(projectType)) {
+                                // if this a a featured project
+                                if (projectType === 'featured') {
+                                    // loop through metaData object to find current featured project
+                                    for (var featuredProjectName in metaData.metaData.featured) {
+                                        if (metaData.metaData.featured.hasOwnProperty(featuredProjectName)) {
+                                            if (featuredProjectName === getIndividualValue) {
+                                                // console.log('Project Type A: featured ' + featuredProjectName);
+                                                // console.log('Project Type A: featured ' + metaData.metaData.featured[featuredProjectName]);
+                                                activeIndividualProjectInView.text(metaData.metaData.featured[featuredProjectName]);
+                                            }
+                                        }
+                                    }
+                                } else if (projectType === 'schoolProjects') {
+                                    // loop through metaData object to find current schoolProject
+                                    for (var schoolProjectName in metaData.metaData.schoolProjects) {
+                                        if (metaData.metaData.schoolProjects.hasOwnProperty(schoolProjectName)) {
+                                            if (schoolProjectName === getIndividualValue) {
+                                                // console.log('Project Type A: featured ' + schoolProjectName);
+                                                // console.log('Project Type A: featured ' + metaData.metaData.schoolProjects[schoolProjectName]);
+                                                activeIndividualProjectInView.text(metaData.metaData.schoolProjects[schoolProjectName]);
+                                            }
+                                        }
+                                    }
+                                    // console.log('Project Type B: school project');
+                                }
+                            }
+                        }
+                    });
                 },
                 createFileContentTab: function (filesArray, parsedData, name) {
+                    // This is part of a loop which creates the tab content for each folder type
                     var individualTabs = $('.individualTabs');
-                    console.log(filesArray);
                     // if folder not empty
                     if (filesArray !== undefined) {
-                        // console.log(filesArray.length);
-                        console.log(filesArray);
+                        // console.log(filesArray);
+                        // console.log(name + ' :name');
                         var output = '';
+                        // check if the position on the filesArray is not Libraries
+                        if (name !== 'Libraries') {
+                            // creating DOM pieces
+                            output += '<li class="dropdown">';
+                            output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
+                            output += '     <ul class="dropdown-menu " role="menu">';
 
-                        // creating DOM pieces
-                        output += '<li class="dropdown">';
-                        output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
-                        output += '     <ul class="dropdown-menu " role="menu">';
+                            // looping through each file in the folder and populating the DOM with Tab dropdown
+                            // Starting at 2 to remove the first two files '.' and '..' from data loop
+                            for (var files = 2; files < filesArray.length; files++) {
+                                output += '         <li><a href="#' + filesArray[files] + '" ' +
+                                    'role="tab" ' +
+                                    'data-toggle="tab"' +
+                                    'class="individual">' + filesArray[files] + '</a></li>';
+                                // console.log(filesArray[files] + ' :files array in loop');
+                            }
+                            output += '     </ul>';
+                            output += '</li>';
 
-                        // looping through each file in the folder and populating the DOM with Tab dropdown
-                        // Starting at 2 to remove the first two files '.' and '..' from data loop
-                        for (var files = 2; files < filesArray.length; files++) {
-                            output += '         <li><a href="#' + filesArray[files] + '" ' +
-                                'role="tab" ' +
-                                'data-toggle="tab"' +
-                                'class="individual">' + filesArray[files] + '</a></li>';
-                            // console.log(filesArray[files]);
-                        }
-                        output += '     </ul>';
-                        output += '</li>';
+                            // populate DOM with Tab
+                            individualTabs.prepend(output);
+                        } // end if name !== 'Libraries'
+                        else {
+                            // create links to the 'Libraries' used documentation website's if the filesArray is on 'Libraries
+                            console.log(filesArray.length);
+                            console.log(filesArray + ' :filesArray');
+                            console.log(name);
+                            $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/meta/librariesMetaData.json', function(fileNamesInLibraries) {
+                                console.log(fileNamesInLibraries);
 
-                        // populate DOM with Tab
-                        individualTabs.prepend(output);
+                                // adding links to lib folder dynamically
+                                output += '<li class="dropdown">';
+                                output += '     <a class="dropdown-toggle" data-toggle="dropdown" href="#">' + name + '<span class="caret"></span></a>';
+                                output += '     <ul class="dropdown-menu " role="menu">';
 
+                                // Looping through files in libraries folder to fine a matching key for that library
+                                for (var key in fileNamesInLibraries.libraries) {
+                                    if (fileNamesInLibraries.libraries.hasOwnProperty(key)) {
+                                        console.log('key: ' + key);
+                                        console.log(fileNamesInLibraries.libraries[key]);
+                                        if (filesArray.indexOf(fileNamesInLibraries.libraries[key])) {
+                                            console.log(fileNamesInLibraries.libraries[key] + ' this is the comparison');
+                                            output += '         <li><a href="' + fileNamesInLibraries.libraries[key].toString() + '"' +
+                                                        'role="tab" ' +
+                                                        'data-toggle="tab"' +
+                                                        'target="_blank"' +
+                                                        'class="individual">' + key + '</a></li>';
+                                                    // console.log(filesArray[files] + ' :files array in loop');
+                                        }
+                                    }
+                                } // end for loop
+
+                                // closing out the tab for libraries
+                                output += '     </ul>';
+                                output += '</li>';
+
+                                // // populate DOM with Tab
+                                individualTabs.prepend(output);
+                            });
+                        } // end else
                     } else {
-                        console.log('This folder is undefined');
-                    }
+                        // console.log('This folder is undefined');
+                    } // end filesArray !== undefined
 
                 }, // end createFileContent();
                 getTabContent: function(evnt) {
@@ -107,8 +196,8 @@
 
                     // get individual file in tab
                     if (evnt.target.classList[0] === 'individual') {
-                        console.log(evnt);
-                        console.log('Individual file');
+                        // console.log(evnt);
+                        // console.log('Individual file');
                         // individual file selected
                         var targetFile = evnt.target.innerText;
 
@@ -131,7 +220,7 @@
                         // need to check and create AJAX call for get PHP server page
                         // if this is not a school project 
                         if (getSchoolClassSelectedValue === '') {
-                            console.log('This is a test for empty string in school projects hidden form');
+                            // console.log('This is a test for empty string in school projects hidden form');
                             $.get('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/getIndividualFileContent.php?target_post_folder_type=' + getFolderValue  + '&get_individual_project_folder=' + getIndividualValue + '&tab_selected=' + lowerTabContent + '&individual_target_file=' + targetFile + '', function(individualFileContents) {
                                 // console.log(individualFileContents);
                                 Nomad.common.buildContent.buildTabContent(individualFileContents);
@@ -150,30 +239,49 @@
                     // DOM handlers to grab POST data from project-categories.php form post
                     var titleOfFolderHidden = $('.titleOfFolderHidden');
                     var titleOfIndividualHidden = $('.titleOfIndividualHidden');
+                    var titleOfSchoolClassSelectedHidden = $('.titleOfSchoolClassSelectedHidden');
                     var getFolderValue = titleOfFolderHidden.text();
                     var getIndividualValue = titleOfIndividualHidden.text();
+                    var getSchoolClassSelectedValue = titleOfSchoolClassSelectedHidden.text();
                     
-                    // checking to find the active tab
+                    // checking to find the active tab text
                     var tabContent = $('.individualTabs .active');
                     var tabContentString = tabContent.find('a.dropdown-toggle').text();
 
                     // get file clicked on by user
                     var getActiveFile = $('ul.dropdown-menu li.active');
                     var activeFileText = getActiveFile.text();
-                    console.log('activeFileText ' + activeFileText);
-                    // grabbing and clearing tab content
+                    // console.log('activeFileText ' + activeFileText);
+
+                    // this div which holds the selected code content
                     var tabCodeContent = $('#tabCodeContent');
+
+                    // This adds the active text for the viewer to know what file they are looking at
+                    var activeIndividualFileInView = $('#activeIndividualFileInView');
+                    activeIndividualFileInView.text(activeFileText);
+
                     // tabCodeContent.html(individualFileContents);
                     var output = '';
-
                     // Adding default tab-content text
                     tabCodeContent.html('Welcome String');
+                    console.log('tabContentString: ' + tabContentString);
                     // check to see if active tab is images
                     if (tabContentString === 'Images') {
-                        // clear tab content text
-                        tabCodeContent.html('');
-                        tabCodeContent.css('background', '#000');
-                        tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
+                        // check to see if the folder was images and school-projects
+                        if (getFolderValue === 'school-projects') {
+                            // clear tab content text
+                            tabCodeContent.html('');
+                            tabCodeContent.css('background', '#000');
+                            tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getSchoolClassSelectedValue + '/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
+                        } else if (getFolderValue === 'featured') {
+                            // clear tab content text
+                            tabCodeContent.html('');
+                            tabCodeContent.css('background', '#000');
+                            tabCodeContent.append('<img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/fileSystem/' + getFolderValue + '/development/' + getIndividualValue + '/images/' + activeFileText + '" class="img-responsive center-block">');
+                        }
+                    } else if (tabContentString === 'Libraries') {
+                        // check it see if the active tab is Libraries
+                        console.log('check it see if the active tab is Libraries');
                     } else {
                         // clear tab content text
                         tabCodeContent.html('');
@@ -229,7 +337,7 @@
 
                 });
             },
-            finish: function() {
+            finalize: function() {
                 // this is testing AJAX call to get JSON for individual project and return files
                 // in that folder define by file type
                 // file types: path fileSystem/
@@ -255,7 +363,7 @@
                     }
                 });
             },
-            finish: function() {
+            finalize: function() {
 
             }
         }, // end featured
@@ -272,31 +380,78 @@
                 // click code to submit hidden form to build content Refactor!!!
                 var codeButton = $('.code_button a');
                 codeButton.on('hover', function(evnt) {
-                    console.log(evnt);
+                    // console.log(evnt);
                     var findClassOfEvent = evnt.target.classList[0];
                     $('form#' + findClassOfEvent).submit();
                     evnt.preventDefault();
                 }); // end codeButton Click
             },
-            finished: function() {
+            finalize: function() {
                 
             }
         },
         'school_projects': {
-            init: function() {
+            init: function () {
                 // click code to submit hidden form to build content Refactor!!!
                 var codeButton = $('.code_button a');
-                codeButton.on('hover', function(evnt) {
-                    console.log(evnt);
+                codeButton.on('click', function (evnt) {
+                    // console.log(evnt);
                     var findClassOfEvent = evnt.target.classList[0];
                     $('form#' + findClassOfEvent).submit();
                     evnt.preventDefault();
                 }); // end codeButton Click
             },
-            finished: function() {
+            finalize: function () {
+                var addProductionButtons = function() {
+                    // add "Production" links on school-project that compile to the web
+                    var productionButton = $('.production_button');
+                    //get form
+                    var schoolProjectsPostsForm = $('form.school_projects');
+                    var forInputValuesForClassSelected = $('.title_of_school_class_selected').attr('value');
 
+                    // get individual projects titles
+                    var CIS133WString = 'computerinformationsystemscis195php';
+                    var CIS195PString = 'javascriptforwebdeveloperscis133w';
+                    var CAS213String = 'jqueryfordesignerscas213';
+                    var CAS225String = 'phpandmysqlfordesignerscas225';
+                    var CIS295String = 'computerinformationsystemscis295php';
+
+                    // check if it is a school project page
+                    if (schoolProjectsPostsForm) {
+                        // show .production_buttons for classes that compile
+                        if (forInputValuesForClassSelected === CIS133WString) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CIS195PString) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CAS213String) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CAS225String) {
+                            productionButton.removeClass('displayNone');
+                        } else if (forInputValuesForClassSelected === CIS295String) {
+                            productionButton.removeClass('displayNone');
+                        }
+                    } // end schoolProjectsPostsForm checker
+                }; // end addProductionButtons
+                // add production_buttons to school projects that have compilable projects
+                addProductionButtons();
             }
-        }
+        }, // end school_projects
+        'websites': {
+            init: function () {
+
+            }, //e dn init
+            finalize: function () {
+
+            } // end finalize
+        }, // end school_projects
+        'testing_svg': {
+            init: function () {
+                console.log('testing Init');
+            }, //e dn init
+            finalize: function () {
+
+            } // end finalize
+        } // end school_projects
     }; // end Nomad object
 
   // The routing fires all common scripts, followed by the page specific scripts.
@@ -317,13 +472,11 @@
     loadEvents: function() {
         // Fire common init JS
         UTIL.fire('common');
-
         // Fire page-specific init JS, and then finalize JS
         $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
             UTIL.fire(classnm);
             UTIL.fire(classnm, 'finalize');
         });
-
         // Fire common finalize JS
         UTIL.fire('common', 'finalize');
     }

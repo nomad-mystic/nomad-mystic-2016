@@ -1,0 +1,62 @@
+/*
+File Name: contact.css
+Date: 10/1/2010
+Programmer: Ron Bekey
+*/
+
+form, .blockquote {
+     text-align: left;
+     margin-top: 10px;
+     margin-left: 30%; 
+     margin-right: 30%;
+     }
+     
+tr.addRecord {
+     height:40px;
+}
+
+td.col1 {
+     width: 120px;
+     vertical-align: center;
+     border: none;
+}
+
+td.col2 {
+     width: 470px;
+     text-align: left;
+     vertical-align: center;
+     border: none;
+}
+
+table {
+     margin-left: auto; 
+     margin-right: auto;
+     border-collapse: collapse;
+}
+
+td, th {
+     border: 1px solid #000;
+}
+
+.blockquote2 {
+     margin-left: 40%;
+     margin-right: 40%;
+}
+
+.shade {
+     border: 1px solid black;
+     border-collapse: collapse;
+     text-align: center;
+     background-color: #cccccc;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.viewTable {
+     border: 2px solid black;
+     background-color: #cccccc;
+}
+
+
+
+

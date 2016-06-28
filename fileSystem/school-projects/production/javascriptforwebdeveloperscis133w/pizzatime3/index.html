@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PizzaTime</title>
+
+<script src="main.js"></script>
+
+</head>
+
+<body>
+<form id="frmMain">
+
+	<h1 id="h1Title">PizzaTime</h1>
+
+	<div id="divErrors"></div>
+
+	<div id="divSize">
+		<h3>Select your size:</h3>
+		<label><input type="radio" name="radSize" value="Short"> Short</label>
+		<label><input type="radio" name="radSize" value="Medium"> Medium</label>
+		<label><input type="radio" name="radSize" value="Long"> Long</label>
+		<label><input type="radio" name="radSize" value="Extra Long"> Extra Long</label>
+	</div>
+
+
+	<div id="divToppings">
+		<h3>Select your toppings:</h3>
+		<div>
+			<label><input type="checkbox" name="chkTopping" value="Pepperoni"> Pepperoni</label><br>
+			<label><input type="checkbox" name="chkTopping" value="Sausage"> Sausage</label><br>
+			<label><input type="checkbox" name="chkTopping" value="Mushrooms"> Mushrooms</label><br>
+			<label><input type="checkbox" name="chkTopping" value="Onions"> Onions</label><br>
+		</div>
+		<div>
+			<label><input type="checkbox" name="chkTopping" value="Garlic"> Garlic</label><br>
+			<label><input type="checkbox" name="chkTopping" value="Pineapple"> Pineapple</label><br>
+			<label><input type="checkbox" name="chkTopping" value="Spinach"> Spinach</label><br>
+			<label><input type="checkbox" name="chkTopping" value="Ear Wax"> Ear Wax</label><br>
+		</div>
+	</div>
+
+	<br class="brClear">
+
+
+	<h3>Now select a unique smell for your pizza:</h3>
+	<select id="selSmell" name="selSmell">
+		<option selected="selected" value=""></option>
+		<option value="Pine">Door #1</option>
+		<option value="Gardenia">Door #2</option>
+		<option value="Feet">Door #3</option>
+	</select>
+
+
+	<div id="divCustInfo">
+		<div>
+			<label>Enter your name</label><br>
+			<input type="text" id="txtName" name="txtName">
+		</div>
+
+		<div>
+			<label><input type="checkbox" id="chkDelivery" name="chkDelivery"> Deliver to:</label><br>
+			<input type="text" id="txtAddress" name="txtAddress">
+		</div>
+
+		<input type="button" id="btnPlaceOrder" name="btnPlaceOrder" value="Place Order">
+
+		<div id="divOrder"></div>
+	</div><!-- divCustInfo -->
+
+	<input type="reset" id="Reset" name="Reset" value="Reset">
+
+</form>
+</body>
+</html>

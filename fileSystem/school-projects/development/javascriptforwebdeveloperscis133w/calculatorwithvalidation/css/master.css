@@ -1,0 +1,29 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #efe;
+}
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 1em;
+}
+
+table tr th {
+	text-align: right;
+}
+
+input[type="text"] {
+	width: 5em;
+	text-align: right;
+}
+
+div#divOutput {
+	font-size: 1.5em;
+	border: 4px double black;
+	background: #343;
+	color: #efe;
+	width: 15em;
+	margin-top: 2em;
+	text-align: center;
+	padding: 1em;
+}

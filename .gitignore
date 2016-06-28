@@ -101,6 +101,7 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 # Nomad Adds
-/bower_components/
 /offline/
 wordpress/
+*.mp4
+*.lvix

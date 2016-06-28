@@ -1,0 +1,14 @@
+tr.odd{
+	background: #f1f7fb;
+
+}
+tr.even {
+	background: white;
+
+}
+tr.odd td.sorting_1 {
+	background: #d6e7f4;
+}
+tr.even td.sorting_1{
+	background: #e4eff8;
+}

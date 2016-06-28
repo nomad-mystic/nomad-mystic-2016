@@ -1,0 +1,19 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/header_size"
+        android:id="@+id/caption"
+        android:text="@string/cute_animals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <VideoView
+        android:id="@+id/video_view"
+        android:src="@drawable/cute"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
