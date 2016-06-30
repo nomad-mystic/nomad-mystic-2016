@@ -17,6 +17,12 @@ body.home {
       position: static;
     }
   }
+  header .jumbotron img {
+    opacity: 0;
+  }
+  .homePage {
+    margin: 2% auto 0;
+  }
   .homeAnimationArea {
     margin: 3% auto;
     padding: 5% 0;

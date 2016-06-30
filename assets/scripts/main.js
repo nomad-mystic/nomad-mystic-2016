@@ -352,7 +352,7 @@
                     fillPathAnimation: function(path, duration) {
                         for (var i=0; i < path.length; i++) {
                             path[i].style.fill = '#fff';
-                            path[i].style.tranistion = path[i].style.webkitTranistion = 'fill ' + duration + ' ease-in';
+                            path[i].style.tranistion = path[i].style.webkitTranistion = 'fill-opacity ' + duration + ' ease-in';
                         }
                     }
                 }; // end createAnimations
@@ -437,14 +437,17 @@
                                 var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
                                 var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
 
-                                createAnimations.fillPathAnimation(dreamNotOfTodayPath, '3s');
+                                createAnimations.fillPathAnimation(dreamNotOfTodayPath, '2s');
                                 createAnimations.fillPathAnimation(webDevelopmentPath, '3s');
-                                createAnimations.fillPathAnimation(UIDevelopmentPath, '3s');
-                                createAnimations.fillPathAnimation(wordpressDevelopmentPath, '3s');
+                                createAnimations.fillPathAnimation(UIDevelopmentPath, '4s');
+                                createAnimations.fillPathAnimation(wordpressDevelopmentPath, '5s');
                             }, 8000);
                         }
                 }); // end scroll event callback
 
+                // fadeIn header image when user loads page
+                var homeLetterImage = document.getElementById('home_header_letter_layer');
+                createAnimations.fadeIdAnimation(homeLetterImage, '1s');
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS

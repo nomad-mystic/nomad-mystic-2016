@@ -41,7 +41,6 @@
         $lower_header_background_image_path = 'home_header_background.jpg';
         $lower_header_letter_image_path = 'home_header_letter_layer.png';
 
-
     } else {
         $sliced_location_pathname = substr($location_pathname, 13, -1);
         $lower_location_pathname = strtolower($sliced_location_pathname);
@@ -55,9 +54,8 @@
             <div class="container">
                     <img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/<?php echo $lower_header_letter_image_path;?>"
                          class='img-responsive'
-                         alt='Header logo for nomadmystic.com'>
+                         alt='Header logo for nomadmystic.com'
+                         id="<?php echo substr($lower_header_letter_image_path, 0, - 4);?>">
                 </div><!--end container-->
         </div><!--jumbotron-->
-
-
 </header>

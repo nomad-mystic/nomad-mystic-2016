@@ -328,7 +328,7 @@
             <p>My original portfolio website can be found here: <a href="http://nomadmystic.com" target="_blank">Original Nomad Mystic Website</a></p>
         </div><!--end col-->
     </div><!--row-->
-</section><!--homeAboutThisSite-->
+</section><!--about this Site-->
 
 <?php the_content(); ?>
 <?php
