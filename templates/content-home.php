@@ -326,9 +326,9 @@
                 <a href="http://fontawesome.io/" target="_blank">Font-Awesome</a>.
             </p>
             <p>
-                This portfolio website showcases my development work from classes taken starting Winter 2016 - Spring 2016 and 
-                the freelance projects done outside of school. This website is built using a <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a> methodology as the underlying design element.
-                Each project has two views one for the final production outcome and the code used with syntax highlighting provided by
+                This portfolio website showcases my development work from classes taken starting Winter 2016 - Spring 2016 and
+                the freelance projects done outside of school. This website is built using a <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a>
+                methodology as the underlying design element. Each project has two views one for the final production outcome and a second one for the code used to create it with syntax highlighting provided by the
                 <a href="https://github.com/google/code-prettify" target="_blank">Google Prettified</a> Javascript library.
             </p>
             <p>All of my work for this project can be found on Github.com at: <a href="https://github.com/nomad-mystic/nomadmystic" target="_blank">Nomad-Mystic</a></p>
