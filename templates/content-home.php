@@ -308,11 +308,12 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
             <h2 class="text-center">About This Site</h2>
-            <p>This website was built to meet the requirements for Portland Community College's capstone class.
-                I built this website using <a href="https://wordpress.org" target="_blank" title="WordPress is web software you can use to create a beautiful website, blog, or app.">Wordpress</a>
-                as the chosen framework, and used <a href="https://roots.io/" target="_blank" title="Roots helps you build better WordPress sites faster.">Roots.io's</a>
-                <a href="https://github.com/roots/sage" target="_blank" title="The best WordPress starter theme with a modern front-end development workflow.">Sage</a> Wordpress theme starter to accelerate the development of this custom Nomad Mystic theme.
-                This site was built with many different front-end/back-end technologies including, but limited to,
+            <p>This website was built to meet the requirements for Portland Community College's capstone class and is a work in progress.
+                This website is built with <a href="https://wordpress.org" target="_blank" title="WordPress is web software you can use to create a beautiful website, blog, or app.">Wordpress</a>
+                as the chosen framework and it uses <a href="https://roots.io/" target="_blank" title="Roots helps you build better WordPress sites faster.">Roots.io's</a>
+                <a href="https://github.com/roots/sage" target="_blank" title="The best WordPress starter theme with a modern front-end development workflow.">Sage</a>
+                Wordpress theme starter system to accelerate its development.
+                This site was built with many different front-end/back-end technologies including, but not-limited to,
                 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">Javascript ES5</a>,
                 <a href="https://www.w3.org/TR/html5/" target="_blank">HTML5</a>,
                 <a href="http://php.net/manual/en/" target="_blank">PHP 7</a>,
@@ -324,7 +325,13 @@
                 and
                 <a href="http://fontawesome.io/" target="_blank">Font-Awesome</a>.
             </p>
-            <p>All of my work for this project can be found on Github at: <a href="https://github.com/nomad-mystic/nomadmystic" target="_blank">Nomad-Mystic</a></p>
+            <p>
+                This portfolio website showcases my development work from classes taken starting Winter 2016 - Spring 2016 and 
+                the freelance projects done outside of school. This website is built using a <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a> methodology as the underlying design element.
+                Each project has two views one for the final production outcome and the code used with syntax highlighting provided by
+                <a href="https://github.com/google/code-prettify" target="_blank">Google Prettified</a> Javascript library.
+            </p>
+            <p>All of my work for this project can be found on Github.com at: <a href="https://github.com/nomad-mystic/nomadmystic" target="_blank">Nomad-Mystic</a></p>
             <p>My original portfolio website can be found here: <a href="http://nomadmystic.com" target="_blank">Original Nomad Mystic Website</a></p>
         </div><!--end col-->
     </div><!--row-->
