@@ -17,8 +17,15 @@ body.home {
       position: static;
     }
   }
-  .services-section {
-    margin: 0 auto;
+  header .jumbotron img {
+    opacity: 0;
+  }
+  .homePage {
+    margin: 2% auto 0;
+  }
+  .homeAnimationArea {
+    margin: 3% auto;
+    padding: 5% 0;
     background: $main-teal;
     h2 {
       font-family: $font-stack;
@@ -44,19 +51,29 @@ body.home {
       stroke-width: 10;
       stroke-miterlimit: 10;
     }
-    .st4{
-      fill:#fff;
+    .bulletPoints {
+      opacity: 0;
     }
-    .st5{
+    .subLine {
+      opacity: 0;
+    }
+
+    #homeSVGPolygons,
+    #homeSVGLines,
+    #homeSVGText {
       font-family: $font-stack;
+      fill: none;
     }
-    .st6{
-      font-size:50px;
+    #headerTriangle {
+      opacity: 0;
     }
-    .st7{
-      font-size:80px;
+    #headerLargeHexagon {
+      opacity: 0;
     }
-  } // services-section
+    #headerSmallHexagon {
+      opacity: 0;
+    }
+  } // homeAnimationArea
 
   .homeAboutThisSite {
     P {
