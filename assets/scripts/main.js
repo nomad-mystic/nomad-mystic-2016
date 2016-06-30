@@ -311,7 +311,139 @@
         // Home page
         'home': {
             init: function() {
-                // JavaScript to be fired on the home page
+                // // JavaScript to be fired on the home page
+                var createAnimations = {
+                    // created style.Transition Animation with stroke-dashoffset
+                    textPathAnimation: function(path, duration) {
+                        for (var i=0; i < path.length; i++) {
+                            // adds color back into the shape
+                            path[i].style.stroke = '#fff';
+
+                            var length = path[i].getTotalLength();
+                            // Clear any previous transition
+                            path[i].style.transition = path[i].style.webkitTransition = 'none';
+                            // Set up the starting positions
+                            path[i].style.strokeDasharray = length + ' ' + length;
+                            // console.log(path[i].style.strokeDasharray);
+
+                            path[i].style.strokeDashoffset = length;
+                            // console.log(path[i].style.strokeDashoffset + ': path.style.strokeDashoffset');
+                            // Trigger a layout so styles are calculated & the browser
+                            // picks up the starting position before animating
+                            path[i].getBoundingClientRect();
+                            // Define our transition
+                            path[i].style.transition = path[i].style.webkitTransition = 'stroke-dashoffset ' + duration + ' ease-in-out';
+                            path[i].style.strokeDashoffset = '0';
+
+                        }
+                    }, // end textPath
+                    fadeIdAnimation: function(id, duration) {
+                        id.style.opacity = 1;
+                        id.style.transition = 'opacity ' + duration + ' ease-in';
+
+                    }, // end rotateAnimation
+                    fadeClassAnimation: function(classArray, duration) {
+                        // console.log(classArray);
+                        for (var i=0; i < classArray.length; i++) {
+                            classArray[i].style.opacity = 1;
+                            classArray[i].style.transition = 'opacity ' + duration + ' ease-in';
+                        }
+                    }, // end fadeClassAnimation
+                    fillPathAnimation: function(path, duration) {
+                        for (var i=0; i < path.length; i++) {
+                            path[i].style.fill = '#fff';
+                            path[i].style.tranistion = path[i].style.webkitTranistion = 'fill ' + duration + ' ease-in';
+                        }
+                    }
+                }; // end createAnimations
+                //
+                //
+                // /////////////////////////////////////// When user scrolls to homeAnimationArea
+
+                var homeAnimationArea =$('.homeAnimationArea');
+                function isScrolledIntoView(elem) {
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(elem).offset().top;
+                    var elemBottom = elemTop + $(elem).height();
+                    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                }
+                $(window).scroll(0);
+                $(window).scroll(function(evnt) {
+                    if (isScrolledIntoView(homeAnimationArea)) {
+                        $(window).unbind('scroll');
+                            //////////////////// header shapes animations
+                            // triangle
+                            var headerTriangle = document.getElementById('headerTriangle');
+                            createAnimations.fadeIdAnimation(headerTriangle, '1.5s');
+                            // headerLargeHexagon
+                            var headerLargeHexagon = document.getElementById('headerLargeHexagon');
+                            createAnimations.fadeIdAnimation(headerLargeHexagon, '1s');
+
+                            // headerSmallHexagon
+                            setTimeout(function () {
+                                var headerSmallHexagon = document.getElementById('headerSmallHexagon');
+                                createAnimations.fadeIdAnimation(headerSmallHexagon, '1s');
+                                // animation for header text Dream Not of Today
+                                setTimeout(function () {
+                                    var dreamNotOfTodayPath = document.getElementsByClassName('dreamNotOfTodayPath');
+                                    createAnimations.textPathAnimation(dreamNotOfTodayPath, '3s');
+                                    // console.log(dreamNotOfTodayPath);
+                                }, 500); // end Dream Not of Today
+                            }, 1000); // end headerSmallHexagon
+
+                            // sub lines and hexagons(bulletPoints)
+                            setInterval(function () {
+                                // bulletPoints animations
+                                var bulletPoints = document.getElementsByClassName('bulletPoints');
+                                createAnimations.fadeClassAnimation(bulletPoints, '2s');
+                                // console.log(bulletPoints);
+
+                                // subLine animations
+                                var subLines = document.getElementsByClassName('subLine');
+                                createAnimations.fadeClassAnimation(subLines, '2s');
+                                // console.log(subLines);
+                            }, 2000); // end lines and bulletPoints
+
+                            ///////////////////// Text Animations
+                            // delaying small text animation so it waits for the header to animate in
+                            setTimeout(function () {
+                                // animation for Web Development text
+                                setTimeout(function () {
+                                    var webDevelopmentPath = document.getElementsByClassName('webDevelopmentPath');
+                                    createAnimations.textPathAnimation(webDevelopmentPath, '2s');
+                                    // console.log(webDevelopmentPath);
+                                }, 1000);
+
+                                // animation for Text UI Development
+                                setTimeout(function () {
+                                    var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
+                                    createAnimations.textPathAnimation(UIDevelopmentPath, '2s');
+                                    // console.log(UIDevelopmentPath);
+                                }, 2000);
+
+                                // animation for WordPress Development text
+                                setTimeout(function () {
+                                    var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
+                                    createAnimations.textPathAnimation(wordpressDevelopmentPath, '2s');
+                                    // console.log(wordpressDevelopmentPath);
+                                }, 3000);
+                            }, 2500); // small text animation
+
+                            // sets the timing/delay of the animation for text fills
+                            setTimeout(function () {
+                                var dreamNotOfTodayPath = document.getElementsByClassName('dreamNotOfTodayPath');
+                                var webDevelopmentPath = document.getElementsByClassName('webDevelopmentPath');
+                                var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
+                                var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
+
+                                createAnimations.fillPathAnimation(dreamNotOfTodayPath, '3s');
+                                createAnimations.fillPathAnimation(webDevelopmentPath, '3s');
+                                createAnimations.fillPathAnimation(UIDevelopmentPath, '3s');
+                                createAnimations.fillPathAnimation(wordpressDevelopmentPath, '3s');
+                            }, 8000);
+                        }
+                }); // end scroll event callback
 
             },
             finalize: function() {
