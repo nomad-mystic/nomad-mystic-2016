@@ -155,7 +155,7 @@ http://codepen.io/jackrugile/
 		c.height = 400;			
 		var cw = c.width;
 		var ch = c.height;	
-		document.body.childNodes[6].childNodes[4].childNodes[9].appendChild(c);
+		document.getElementById('videoWrapper').appendChild(c);
 		var cl = new smoothTrail(c, cw, ch);				
 	    
 		setupRAF();
@@ -192,7 +192,7 @@ http://codepen.io/jackrugile/
 	$('.soundControl').on('click', function(evnt) { 
 		var soundCheckImage = $('.soundControlSpan');
         // grabs the audio#musicPlayer tag
-		var music = evnt.view.document.body.childNodes[21];
+		var music = document.getElementById('musicPlayer');
 		
 		if (soundCheckImage.hasClass('glyphicon-volume-up')) {
 			music.pause();
@@ -211,8 +211,8 @@ http://codepen.io/jackrugile/
 		console.log(evnt);
 		var videoAudioImage = $('.videoAudioControlSpan');
         // grabs the audio#musicPlayer tag
-		var music = evnt.view.document.body.childNodes[21];
-		var video = evnt.view.document.body.childNodes[6].childNodes[4].childNodes[9].childNodes[1];
+		var music = document.getElementById('musicPlayer');
+		var video = document.getElementById('openVideo');
 		
 		if (videoAudioImage.hasClass('glyphicon-play')) {
 			video.pause();
@@ -237,8 +237,8 @@ http://codepen.io/jackrugile/
 	var toggleNav = function(evnt) {
         console.log(evnt);
         // grabs the audio#musicPlayer tag
-		var music = evnt.view.document.body.childNodes[21];
-		var video = evnt.view.document.body.childNodes[6].childNodes[4].childNodes[9].childNodes[1];
+		var music = document.getElementById('musicPlayer');
+		var video = document.getElementById('openVideo');
 		
 		if ($('#site-wrapper').hasClass('show-nav')) {
 			// Do things on Nav Close
@@ -334,7 +334,7 @@ http://codepen.io/jackrugile/
 		var music = document.createElement('audio');
 		
 		document.body.appendChild(music);
-		music.id = 'musicplayer';
+		music.id = 'musicPlayer';
 		music.src = '_/audio/music.mp3';
 		music.play();
 		
