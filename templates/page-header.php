@@ -41,8 +41,10 @@
 
 
         $lower_header_background_image_path = 'home_header_background.jpg';
-        require_once('home-header-svg.php');
-//        $lower_header_letter_image_path = 'home_header_letter_layer.png';
+//        require_once('home-header-svg.php');
+        $lower_header_letter_image_path = 'home_header_letter_layer.png';
+
+        require_once('header-include.php');
 
     } else {
         $sliced_location_pathname = substr($location_pathname, 13, -1);
