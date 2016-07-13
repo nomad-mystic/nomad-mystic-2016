@@ -1,48 +1,18 @@
-<section class="container-fluid homePage">
-    <article class="row">
-        <!--Feature Projects-->
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
-        	<div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
-            </span>
-                    </div>
-                    <div class="squareButtonPrimaryColor">
-                        <a href="http://localhost:3000/nomadmystic/featured/" title="">Featured Projects</a>
-                    </div>
-                </div><!--end col-->
-                <!--School Projects-->
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
-            </span>
-                    </div>
-                    <div class="squareButtonPrimaryColor">
-                        <a href="http://localhost:3000/nomadmystic/school/" title="">School Projects</a>
-                    </div>
-                </div><!--end col-->
-                <!--Freelance Websites-->
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="font-stack">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-modx fa-stack-1x fa-inverse"></i>
-            </span>
-                    </div>
-                    <div class="squareButtonPrimaryColor">
-                        <a href="http://localhost:3000/nomadmystic/websites" title="">Freelance Websites</a>
-                    </div>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div><!--end col>
-    </article><!--end row-->
+<section class="homePageThreeFeatures">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 homePageThreeFeaturePiece">
+                <h2><a href="http://localhost:3000/nomadmystic/featured/">Featured Projects</a></h2>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 homePageThreeFeaturePiece">
+                <h2><a href="http://localhost:3000/nomadmystic/school/">School Projects</a></h2>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 homePageThreeFeaturePiece">
+                <h2><a href="http://localhost:3000/nomadmystic/websites/">Freelance Projects</a></h2>
+            </div>
+        </div>
+    </div>
 </section>
-
 <!--<img src="wordpress/wp-content/themes/nomadmystic/dist/images/dividerBanner_1.jpg" class="img-responsive" alt="Image">-->
 <section class="homeAnimationArea">
     <div class="container">
@@ -341,3 +311,48 @@
 <?php
     wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']);
 ?>
+
+<section class="container-fluid homePage">
+    <article class="row">
+        <!--Feature Projects-->
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="font-stack">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+            </span>
+                    </div>
+                    <div class="squareButtonPrimaryColor">
+                        <a href="http://localhost:3000/nomadmystic/featured/" title="">Featured Projects</a>
+                    </div>
+                </div><!--end col-->
+                <!--School Projects-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="font-stack">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-institution fa-stack-1x fa-inverse"></i>
+            </span>
+                    </div>
+                    <div class="squareButtonPrimaryColor">
+                        <a href="http://localhost:3000/nomadmystic/school/" title="">School Projects</a>
+                    </div>
+                </div><!--end col-->
+                <!--Freelance Websites-->
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="font-stack">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-modx fa-stack-1x fa-inverse"></i>
+            </span>
+                    </div>
+                    <div class="squareButtonPrimaryColor">
+                        <a href="http://localhost:3000/nomadmystic/websites" title="">Freelance Websites</a>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end col>
+    </article><!--end row-->
+</section>

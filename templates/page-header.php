@@ -38,24 +38,23 @@
         $location_pathname = $_SERVER['REQUEST_URI'];
     // need to
     if ($location_pathname  === '/nomadmystic/') {
+
+
         $lower_header_background_image_path = 'home_header_background.jpg';
+//        require_once('home-header-svg.php');
         $lower_header_letter_image_path = 'home_header_letter_layer.png';
+
+        require_once('header-include.php');
 
     } else {
         $sliced_location_pathname = substr($location_pathname, 13, -1);
         $lower_location_pathname = strtolower($sliced_location_pathname);
         $lower_header_background_image_path = $lower_location_pathname . '_header_background.jpg';
         $lower_header_letter_image_path = $lower_location_pathname . '_header_letter_layer.png';
+
+        require_once('header-include.php');
     }
 
     ?>
-    <div class="jumbotron home-jumbotron"
-         style="background-image: url('http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/<?php echo $lower_header_background_image_path;?>')">
-            <div class="container">
-                    <img src="http://localhost:3000/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/<?php echo $lower_header_letter_image_path;?>"
-                         class='img-responsive'
-                         alt='Header logo for nomadmystic.com'
-                         id="<?php echo substr($lower_header_letter_image_path, 0, - 4);?>">
-                </div><!--end container-->
-        </div><!--jumbotron-->
+    
 </header>

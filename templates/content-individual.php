@@ -1,8 +1,8 @@
 <?php
 
-var_dump($_POST['title_of_folder'] . ' title_of_folder');
-var_dump($_POST['title_of_individual'] . ' title_of_individual');
-var_dump($_POST['title_of_school_class_selected'] . ' title_of_school_class_selected');
+//var_dump($_POST['title_of_folder'] . ' title_of_folder');
+//var_dump($_POST['title_of_individual'] . ' title_of_individual');
+//var_dump($_POST['title_of_school_class_selected'] . ' title_of_school_class_selected');
 
 $title_of_folder = $_POST['title_of_folder'];
 $title_of_individual = $_POST['title_of_individual'];

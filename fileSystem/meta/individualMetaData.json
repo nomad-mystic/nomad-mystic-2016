@@ -7,7 +7,7 @@
       "internationalcoalconsumptioncis195p": "International Coal Consumption CIS195P",
       "endangeredspeciesinvestigator": "Endangered Species Investigator CIS195P",
 
-      "dynamicpiechartmaker": "Dynamic Pie Chart Maker CIS295P",
+      "dynamicpiechart": "Dynamic Pie Chart CIS295P",
 
       "calculatorwithvalidation": "Calculator With Validation",
       "pizzatime1": "Pizza Time 1.0",
@@ -53,7 +53,8 @@
       "udocumentary": "U Documentary - Angular",
       "weatherapi": "Underground Weather API - Weather Checker",
       "thehistoryofspaceexplorationbyhumans": "The History of Space Exploration by Humans - CAS222 Midterm",
-      "zenssoundsofspace": "Zen's Sounds of Space - Sound Cloud API"
+      "zenssoundsofspace": "Zen's Sounds of Space - Sound Cloud API",
+      "dynamicpiechart": "Dynamic Pie Chart"
     }
   }
 }
