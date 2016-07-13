@@ -11,9 +11,6 @@ require_once('constants.php');
 
  ?>
 
-
-
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -68,14 +65,13 @@ table {
 body {
      max-width: 100%;
      padding: 0;
-     background: <?php echo BLUE_BACKGROUND; ?>;
+     background: #3cc0cc;
 }
 /* main.php----*/
-.float {
-     float: <?php echo FLOAT_DIRECTION; ?>;
-     width: <?php echo FLOAT_WIDTH;?>%;
-     padding: 0;
-     margin: 2% 2%;
+.container {
+     background: #fff;
+     box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+     margin: 2% auto;
 }
 body > section > div:nth-child(2) {
      background: #fff;
@@ -83,40 +79,50 @@ body > section > div:nth-child(2) {
      border-radius: <?php echo BORDER_RADIUS; ?>;
 
 }
-.float h1 {
-     font-size: 3em;
-     padding: <?php echo TEXT_PADDING; ?>%;
+.container h1 {
+     font-size: 2em;
+     text-align: center;
+     padding: 0 <?php echo TEXT_PADDING; ?>% <?php echo TEXT_PADDING; ?>%;
 }
-.float h3 {
+.container h3 {
+     text-align: center;
      padding: <?php echo TEXT_PADDING; ?>%;
-     font-size: <?php echo BASE_FONT_SIZE; ?>;
+     font-size: <?php echo BASE_FONT_SIZE; ?>em;
      line-height: 1.25em;
 }
-.float h4 {
+.container h4 {
+     text-align: center;
      padding: <?php echo TEXT_PADDING; ?>%;
-     font-size: <?php echo BASE_FONT_SIZE; ?>;
+     font-size: <?php echo BASE_FONT_SIZE; ?>em;
 }
-body > section > div:nth-child(3) img {
-     width: 100%;
+div.container > article > main > .row {
+     margin-top: 2%;
+}
+body .img-responsive {
+/*     width: 100%;*/
      background: <?php echo WHITE_BACKGROUND; ?>;
      padding: 2%;
      border-radius: <?php echo BORDER_RADIUS; ?>;
+     margin-bottom: 2%;
 }
 form {
      margin: 2%;
-     display: block;
+}
+label {
+     font-weight: bold;
 }
 input[type="text"] {
-     font-size: 1em;
-     border-radius: 4px;
-     border: <?php echo BORDER; ?>;
+/*     font-size: 1em;*/
+/*     border-radius: 4px;*/
+/*     border: */<?php //echo BORDER; ?>/*;*/
+     margin-top: 3%;
 }
 .wrapper input[type="submit"]  {
      border: <?php echo BORDER_RADIUS; ?>;
      -webkit-border-radius: <?php echo BORDER_RADIUS; ?>;
      -moz-border-radius: <?php echo BORDER_RADIUS; ?>;
      border-radius: <?php echo BORDER_RADIUS; ?>;
-     font-size: <?php echo BASE_FONT_SIZE; ?>;
+     font-size: <?php echo BASE_FONT_SIZE; ?>em;
      padding: .5em;
      cursor: pointer;
      -webkit-transition: <?php echo BUTTON_HOVER_TRANISTION; ?>;
@@ -201,31 +207,3 @@ input[type="text"] {
      border-radius: <?php echo BORDER_RADIUS; ?>;
      border: <?php echo BORDER; ?>;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

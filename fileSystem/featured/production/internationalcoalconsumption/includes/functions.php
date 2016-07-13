@@ -8,17 +8,19 @@
 
 function display_form($method, $action)
 {
-     echo "<form method='{$method}' action='{$action}'>" . "\n";
-     echo '              <table>' . "\n";
-     echo '                  <tr>' . "\n";
-     echo "              <td><label for='" . CHOSEN_COUNTRY_KEY_1 . "'>First Country</label><input type='text' name='" . CHOSEN_COUNTRY_KEY_1 . "'></td>"  . "\n";
-     echo "              <td><label for='" . CHOSEN_COUNTRY_KEY_2 . "'>Second Country</label><input type='text' name='" . CHOSEN_COUNTRY_KEY_2 . "'></td>"  . "\n";
-     echo '                  </tr>' . "\n";
-     echo '              </table>' . "\n";
-     echo "              <input type='submit' value='Submit'>" . "\n";
-     echo '          </form>' . "\n";
-
+     echo "<form method='{$method}' action='{$action}'  role='form'>" . "\n";
+     echo '    <div class="form-group">';
+     echo '         <label for="' . CHOSEN_COUNTRY_KEY_1 . '">First Country:</label>';
+     echo '         <input type="text" class="form-control" name="'. CHOSEN_COUNTRY_KEY_1 .'" placeholder="Please Enter the First Country to Search...">';
+     echo '    </div>';
+     echo '    <div class="form-group">';
+     echo '         <label for="' . CHOSEN_COUNTRY_KEY_2 . '">First Country:</label>';
+     echo '         <input type="text" class="form-control" name="'. CHOSEN_COUNTRY_KEY_2 .'" placeholder="Please Enter the First Country to Search...">';
+     echo '    </div>';
+     echo '    <button type="submit" class="btn btn-primary">Submit</button>';
+     echo '</form>';
 }
+
 function validation($user_input, $country_names_array)
 {
      $user_input = trim($user_input);
@@ -38,6 +40,7 @@ function validation($user_input, $country_names_array)
      }
      return $user_input;
 }
+
 function find_country($user_input, $array_data)
 {
      for ($i = 0; $i < NUMBER_COUNTRIES; $i++) {
@@ -48,6 +51,7 @@ function find_country($user_input, $array_data)
      }
      return $json_data;
 }
+
 function create_country_array()
 {
      $array_data = [];
@@ -70,7 +74,7 @@ function create_country_array()
 function map_data($current_country)
 {
      $current_country = array_map(function($var) {
-          return is_numeric($var) ? (float) $var   : $var;
+          return is_numeric($var) ? (float) $var : $var;
      }, $current_country);
      $current_country_data = array_slice($current_country, 1, 29);
      $json_data = json_encode($current_country_data);
@@ -95,26 +99,3 @@ function show_user_info()
      echo '        <a href="' . LOGOUT_PAGE . '">LOGOUT</a>' . "\n"  . '    </div>'. "\n";
      echo '</div>' . "\n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

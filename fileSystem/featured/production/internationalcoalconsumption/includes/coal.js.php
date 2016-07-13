@@ -1,17 +1,14 @@
-
 <?php
 /**
  * Created by Nomad_Mystic on 11/10/2015.
  */
 
-//header('Content-Type: text/javascript');
+header('Content-Type: text/javascript');
 require_once('constants.php');
 require_once('functions.php');
 
 ?>
-
-
-function init(json_data_1, json_data_2) {
+function init(json_data_1, json_data_2, validated_country_1, validated_country_2) {
      var ctx = document.getElementById("canvas").getContext("2d");
      var data = {
         labels: [
@@ -48,30 +45,26 @@ function init(json_data_1, json_data_2) {
         ],
         datasets: [
              {
-                  label: "My second dataset",
-                  fillColor: "rgba(200,233,0,.50)",
-                  strokeColor: "rgba(0,0,0,.5)",
-                  pointColor: "#2F9099",
-                  pointStrokeColor: "#000",
-                  pointHighlightFill: "#fff",
-                  pointHighlightStroke: "rgba(220,220,220,1)",
-                  data: json_data_2
-
-            },
-             {
-               label: "My First dataset",
-                  fillColor: "rgba(197,0,100,.50)",
-                  strokeColor: "rgba(0,0,0,.5)",
-                  pointColor: "rgba(197,0,100,1)",
-                  pointStrokeColor: "#000",
-                  pointHighlightFill: "#fff",
-                  pointHighlightStroke: "rgba(220,220,220,1)",
+                  label: validated_country_1,
+                  backgroundColor: "rgba(197, 0, 100, .25)",
+                  borderColor: "rgba(197,0,100, 1)",
+                  borderWidth: 5,
+                  pointBorderWidth: 8,
                   data: json_data_1
-             }
-
+             },
+             {
+                  label: validated_country_2,
+                  backgroundColor: "rgba(75, 192, 192, 0.25)",
+                  borderColor: "rgba(75, 192, 192, 1)",
+                  borderWidth: 5,
+                  pointBorderWidth: 8,
+                  pointBorderColor: 'rgba(75, 192, 192, 1)',
+                  data: json_data_2
+            }
         ]
-
-    };
-     var MyNewChart = new Chart(ctx).Line(data);
-}
+     }; // end data
+     var MyNewChart = new Chart.Line(ctx, {
+          data: data
+     });
+} // end init
 
