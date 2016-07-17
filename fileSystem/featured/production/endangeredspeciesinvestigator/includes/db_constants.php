@@ -7,6 +7,6 @@
  */
 
 const DB_SERVER = '127.0.0.1';
-const DB_DATABASE = 'nomad_endangered_species';
-const DB_USER = 'nomad_species';
+const DB_DATABASE = 'endangered_species';
+const DB_USER = 'species_admin';
 const DB_PASSWORD = 'species_admin';
