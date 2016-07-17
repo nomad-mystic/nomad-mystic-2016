@@ -30,7 +30,7 @@ FROM animals
 WHERE type = '$safe_type';
 QUERY;
           $results = $db->query($query);
-          $records = $results->fetch_all(MYSQLI_NUM);
+          $records = $results->fetch_array(MYSQLI_NUM);
 
           foreach ($records as $recs) {
                $type_records = new EndangeredSpeciesRecord(
