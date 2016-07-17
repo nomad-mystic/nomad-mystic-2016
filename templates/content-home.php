@@ -302,7 +302,7 @@
                 <a href="https://github.com/google/code-prettify" target="_blank">Google Prettified</a> Javascript library.
             </p>
             <p>All of my work for this project can be found on Github.com at: <a href="https://github.com/nomad-mystic/nomadmystic" target="_blank">Nomad-Mystic</a></p>
-            <p>My original portfolio website can be found here: <a href="http://nomadmystic.com" target="_blank">Original Nomad Mystic Website</a></p>
+            <p>My original portfolio website can be found here: <a href="http://nomadmystic.com/oldNomadMystic" target="_blank">Original Nomad Mystic Website</a></p>
         </div><!--end col-->
     </div><!--row-->
 </section><!--about this Site-->
