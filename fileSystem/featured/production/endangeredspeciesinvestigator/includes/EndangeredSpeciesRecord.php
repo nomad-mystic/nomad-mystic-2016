@@ -8,14 +8,14 @@
 
 class EndangeredSpeciesRecord
 {
-     private $mType;
-     private $mCommon;
-     private $mScience;
-     private $mDescription;
-     private $mImage;
-     private $mThumb;
-     private $mId;
-     private $mUrl;
+     public $mType;
+     public $mCommon;
+     public $mScience;
+     public $mDescription;
+     public $mImage;
+     public $mThumb;
+     public $mId;
+     public $mUrl;
 
      function __construct($type, $common_name, $science_name, $description, $image, $thumb, $id, $url)
      {
