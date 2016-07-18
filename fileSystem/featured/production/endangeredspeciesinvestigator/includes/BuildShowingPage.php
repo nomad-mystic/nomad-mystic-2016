@@ -8,12 +8,12 @@
 
 class BuildingShowingPage
 {
-     private $mSelected;
+     private $mAnimals;
      private $mType;
 
      function __construct($records, $type)
      {
-          $this->mSelected = $records;
+          $this->mAnimals = $records;
           $this->mType = $type;
      }
 
@@ -28,9 +28,9 @@ class BuildingShowingPage
           echo '        <div class="panel-heading text-center"><h1>Click Thumb to Investigate</h1></div>' . "\n";
           echo '         <div class="panel-body">' . "\n";
           echo '           <div id="selectableArea"  class="center-block">' . "\n";
-          foreach ($this->mSelected as $rec) {
-               $thumb = $rec->getThumb();
-               $id = $rec->getId();
+          foreach ($this->mAnimals as $animal) {
+               $thumb = $animal->getThumb();
+               $id = $animal->getId();
                echo '          <div class="ui-state-default img-thumbnail center-block img-responsive" id="' . $id . '"';
                echo ' style="background: url('. $thumb . ') no-repeat; background-size: 100% auto;"';
                echo '></div>' . "\n";
@@ -40,13 +40,13 @@ class BuildingShowingPage
           echo '       </div>' . "\n";
           echo '     </div>' . "\n";
           echo '  <div class="col-xs-12 col-sm-7 col-md-6 col-lg-7" id="js_info_area">' . "\n";
-          foreach ($this->mSelected as $rec) {
-               $common = $rec->getCommon();
-               $description = $rec->getDescription();
-               $image = $rec->getImage();
-               $science = $rec->getScience();
-               $id = $rec->getId();
-               $url = $rec->getUrl();
+          foreach ($this->mAnimals as $animal) {
+               $common = $animal->getCommon();
+               $description = $animal->getDescription();
+               $image = $animal->getImage();
+               $science = $animal->getScience();
+               $id = $animal->getId();
+               $url = $animal->getUrl();
                echo '    <div class="panel panel-primary" id="panel' . $id . '">' . "\n";
                echo '      <div class="panel-heading"><h1>' . $common . '</h1></div>' . "\n";
                echo '        <div class="panel-body">' . "\n";

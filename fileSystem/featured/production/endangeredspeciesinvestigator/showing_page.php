@@ -8,6 +8,7 @@
 
 require_once('includes/constants.php');
 require_once('includes/db_constants.php');
+require_once('includes/records.php');
 require_once('includes/EndangeredSpeciesRecord.php');
 require_once('includes/EndangeredSpeciesSet.php');
 require_once('includes/BuildShowingPage.php');
@@ -15,7 +16,7 @@ require_once('includes/AnimalSet.php');
 
 $type = $_POST[ANIMAL_TYPE_KEY];
 
-$records = new AnimalSet($type);
+$records = new AnimalSet($type, $animalData);
 $showing_page = new BuildingShowingPage($records->getRecords(), $type);
 
 ?>
