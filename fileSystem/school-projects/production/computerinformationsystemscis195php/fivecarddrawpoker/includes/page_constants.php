@@ -6,6 +6,6 @@
  * Time: 7:15 PM
  */
 
-const HOME_PAGE = '/CIS195PHP/week6_poker_login/index.php';
-const LOGIN_PAGE = '/CIS195PHP/week6_poker_login/login.php';
-const LOGOUT_PAGE = '/CIS195PHP/week6_poker_login/logout.php';
+const HOME_PAGE = 'http://www.nomadmystic.com/wordpress/wp-content/themes/nomadmystic/fileSystem/school-projects/production/computerinformationsystemscis195php/fivecarddrawpoker/index.php';
+const LOGIN_PAGE = 'http://www.nomadmystic.com/wordpress/wp-content/themes/nomadmystic/fileSystem/school-projects/production/computerinformationsystemscis195php/fivecarddrawpoker/login.php';
+const LOGOUT_PAGE = 'http://www.nomadmystic.com/wordpress/wp-content/themes/nomadmystic/fileSystem/school-projects/production/computerinformationsystemscis195php/fivecarddrawpoker/logout.php';
