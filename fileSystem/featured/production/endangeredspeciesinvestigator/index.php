@@ -13,9 +13,11 @@ require_once('includes/constants.php');
 <html lang="en">
 <head>
      <meta charset="UTF-8">
-     <title>landing_page</title>
+     <title>Endangered Species Investigator</title>
      <meta name="viewport"
            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+     <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="includes/species.css.php" type="text/css">
@@ -66,7 +68,7 @@ require_once('includes/constants.php');
                          </form>
                     </div>
                </div>
-          </div>
+          </div><!--end col-->
           <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                <div class="panel panel-default">
                     <div class="panel-heading">
@@ -101,9 +103,9 @@ require_once('includes/constants.php');
                               Atkinson Center for a Sustainable Future (ACSF) at Cornell University.</p>
                     </div>
                </div>
-          </div>
-	</div>
-</div>
+          </div><!--end col-->
+	</div><!--end row-->
+</div><!--end container-fluid-->
 <img src="images/headers/jumbotron_footer.jpg" class="img-responsive" alt="Image">
 </body>
 </html>

@@ -8,13 +8,47 @@
 
 header('Content-Type: text/css');
 
- ?>
-
+?>
+/*----helper functions---*/
+.displayNone {
+     display: none;
+}
 /*----General Styles---*/
 body {
      background: #0178A8;
 }
 
+h1 {
+     font-family: 'Crimson Text', Arial, Helvitica, serif;
+     margin: 1% auto;
+}
+h2 {
+     text-align: center;
+     font-family: 'Crimson Text', Arial, Helvitica, serif;
+}
+h3 {
+     text-align: center;
+     font-family: 'Crimson Text', Arial, Helvitica, serif;
+     font-size: 2em;
+}
+h4 {
+     text-align: center;
+     font-family: 'Crimson Text', Arial, Helvitica, serif;
+     font-size: 1.5em;
+}
+h6 {
+     text-align: center;
+}
+p {
+     text-align: center;
+}
+legend {
+     font-family: 'Crimson Text', Arial, Helvitica, serif;
+     padding: 0 0 2%;
+}
+blockquote {
+     font-size: 14px;
+}
 /*----for the landing page----*/
 .landing_page .page-header {
      background: #fff;
@@ -31,28 +65,34 @@ body {
      font-size: 1.4em;
 }
 #selectableArea .ui-selecting {
-     background: #FECA40;
+     background: transparent;
 }
 #selectableArea .ui-selected {
-     background: #F39814;
+     background: transparent;
      color: white;
 }
 #selectableArea {
      list-style-type: none;
 }
-#js-selectArea {
-     border: solid 2px rgba(0,0,0,.5);
+#js_select_area {
      margin: 0 auto;
+     padding-right: 0;
+     padding-left: 0;
 }
-#selectableArea div {
-     margin: 3px;
-     padding: 1px;
-     float: left;
+#selectableArea .individualThumbItem {
      font-size: 4em;
      text-align: center;
      cursor: pointer;
+     display: block;
+/*     text-indent: -1000px; hide link text */
+     overflow: hidden;
 }
-
+.individualThumbnail {
+     width: 300px;
+     height: 300px;
+     margin: 2% auto;
+     border-radius: 4px;
+}
 /* for the showing page */
 .container-fluid {
      margin: 1% auto;
@@ -63,7 +103,7 @@ body {
      background: #fff;
      padding: 1em;
      border-radius: 3px;
-     width: 90%;
+     width: 100%;
 }
 .showing_header_img {
      box-shadow: 0 2px 2px 2px rgba(0,0,0,.05);
@@ -77,23 +117,49 @@ body {
      top: 0;
      left: 0;
 }
-
+.panel-primary img {
+     border-radius: 4px;
+}
+.animalThumbnail > a {
+     display: block;
+     height: 200px;
+     /* for center alignment */
+     position: relative;
+}
+.animalThumbnail > a > img {
+     max-width: 100%;
+     max-height: 100%;
+     /* for center alignment */
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin-top: auto;
+     margin-bottom: auto;
+     border-radius: 4px;
+     border: 1px solid #aaa;
+     padding: 1px;
+}
 /* Media Queries */
-@media screen and (max-width: 767px) {
-     #selectableArea div {
-          width: 130px;
-          height: 130px;
-     }
-}
+/* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
-     #selectableArea div {
-          width: 100px;
-          height: 100px;
+     #js_select_area {
+          padding-right: 15px;
+     }
+     #selectableArea .individualThumbnail  {
+
      }
 }
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}
+
 @media screen and (min-width: 1280px) {
      #selectableArea div {
-          width: 150px;
-          height: 150px;
+/*          width: 150px;*/
+/*          height: 150px;*/
      }
 }

@@ -25,15 +25,16 @@ $showing_page = new BuildingShowingPage($records->getRecords(), $type);
 <html lang="en">
 <head>
      <meta charset="UTF-8">
-     <title>Showing Page</title>
+     <title>Investigator</title>
      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="includes/species.css.php" type="text/css">
 </head>
 <body>
-
      <?php $showing_page->buildPage(); ?>
 
+     <div class="displayNone chosenAnimals"><?php echo $type; ?></div>
      <script src="bower_components/jquery/dist/jquery.min.js"></script>
      <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
      <script src="bower_components/velocity/velocity.min.js"></script>
