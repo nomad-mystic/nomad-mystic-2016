@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>CSS Zen Garden: The Beauty of CSS Design</title>
     <script src="//connect.soundcloud.com/sdk.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="libraries/jquery.fancybox.css">
     <link rel="stylesheet" href="libraries/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,7 +17,7 @@
 <nav class="navbar navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bootstrapNavigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -24,7 +25,7 @@
         </button>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="bootstrapNavigation">
         <ul class="nav navbar-nav">
             <li id="step1"><a href="#">Hide</a></li>
             <li id="step2"><a href="#">Show</a></li>
@@ -37,30 +38,30 @@
     </div><!-- /.navbar-collapse -->
 </nav>
 <section id="wrapper" class="container">
-        <div class="row" id="zen-participation">
-            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
-                <h1>Sounds From the Deep of Space</h1>
-                <p>Human spaceflight (also referred to as manned spaceflight) is space travel with a
-                    crew aboard the spacecraft. When a spacecraft is crewed, it can be operated directly,
-                    as opposed to being remotely operated or autonomous.</p>
+    <div class="row" id="zen-participation">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h1>Sounds From the Deep of Space</h1>
+            <p>Human spaceflight (also referred to as manned spaceflight) is space travel with a
+                crew aboard the spacecraft. When a spacecraft is crewed, it can be operated directly,
+                as opposed to being remotely operated or autonomous.</p>
 
-                <p>The first human spaceflight was launched by the Soviet Union on 12 April 1961 as a part of
-                    the Vostok program, with cosmonaut Yuri Gagarin aboard. Humans have been continually present
-                    in space for 15 years and 102 days on the International Space Station.</p>
+            <p>The first human spaceflight was launched by the Soviet Union on 12 April 1961 as a part of
+                the Vostok program, with cosmonaut Yuri Gagarin aboard. Humans have been continually present
+                in space for 15 years and 102 days on the International Space Station.</p>
 
-                <p>Since the retirement of the US Space Shuttle in 2011, only Russia and China have maintained
-                    human spaceflight capability with the Soyuz program and Shenzhou program. Currently, all
-                    expeditions to the International Space Station use Soyuz vehicles, which remain attached to
-                    the station to allow quick return if needed. The United States is developing commercial crew
-                    transportation to facilitate domestic access to ISS and low Earth orbit, as well as the Orion
-                    vehicle for beyond-low Earth orbit applications.</p>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
-                <div>
-                    <img src="images/apollo_11.jpg" class="img-responsive apollo_11" alt="This an astronaut on the moon.">
-                </div>
+            <p>Since the retirement of the US Space Shuttle in 2011, only Russia and China have maintained
+                human spaceflight capability with the Soyuz program and Shenzhou program. Currently, all
+                expeditions to the International Space Station use Soyuz vehicles, which remain attached to
+                the station to allow quick return if needed. The United States is developing commercial crew
+                transportation to facilitate domestic access to ISS and low Earth orbit, as well as the Orion
+                vehicle for beyond-low Earth orbit applications.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div>
+                <img src="images/apollo_11.jpg" class="img-responsive apollo_11" alt="This an astronaut on the moon.">
             </div>
         </div>
+    </div>
     <section class="requirements row">
         <h2 class="text-center">Requirements</h2>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

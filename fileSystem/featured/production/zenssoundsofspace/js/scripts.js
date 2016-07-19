@@ -17,7 +17,7 @@ $(function() {
     });
 
     $('#step4').on('click', function() {
-        $('.explanation').stop().slideToggle(1000);
+        $('.requirements').stop().slideToggle(1000);
     });
 
     $('#step5').on('click', function() {
@@ -93,5 +93,17 @@ $(function() {
             imagesOutput += '</div>';
             $('#extra2').html(imagesOutput);
         }); // End Get
+    });
+
+    $('.navbar-toggle').on('click', function() {
+        var bootstrapNavigation = $('#bootstrapNavigation');
+
+        if (bootstrapNavigation.hasClass('collapse')) {
+            bootstrapNavigation.removeClass('collapse');
+            bootstrapNavigation.addClass('collapse.in');
+        } else {
+            bootstrapNavigation.removeClass('collapse.in');
+            bootstrapNavigation.addClass('collapse');
+        }
     });
 }); // End Ready

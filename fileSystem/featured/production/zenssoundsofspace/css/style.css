@@ -6,6 +6,13 @@ body {
     height: 100vh;
     -webkit-background-size: cover;
     background-size: cover;
+    text-align: center;
+}
+h1 {
+    font-family: 'Raleway', Arial, Helvetia, sans-serif;
+}
+h2 {
+    font-family: 'Raleway', Arial, Helvetia, sans-serif;
 }
 footer {
     background: rgba(0,0,0,.75);
