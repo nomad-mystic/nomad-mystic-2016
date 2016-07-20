@@ -445,7 +445,6 @@
                         } // end if statement homeAnimationArea
                     }); // end scroll event callback
                 }; // homeAnimationAreaAnimations
-
                 // class animations for home page animation area "Dream not of Today"
                 homeAnimationAreaAnimations();
 
@@ -453,8 +452,29 @@
                 // var homeLetterImage = document.getElementById('home_header_letter_layer');
                 // createAnimations.fadeIdAnimation(homeLetterImage, '1s');
 
+                ///////////// Three Sections call to action Featured, School, and Website SVGs
+                var homeActionSections = function() {
+                    // called from homePageHeaderAnimations() in timeout
+                    setTimeout(function() {
+                        var homeSectionsFeaturedPaths = $('.homePageFeaturedSectionsFeaturedPath');
+                        createAnimations.textPathAnimation(homeSectionsFeaturedPaths, '2s');
 
-                // Home Page header animations
+                        var homeSectionsSchoolPaths = $('.homePageFeaturedSectionsSchoolPath');
+                        createAnimations.textPathAnimation(homeSectionsSchoolPaths, '2s');
+
+                        var homeSectionsWebsitesPath = $('.homePageFeaturedSectionsWebsitesPath');
+                        createAnimations.textPathAnimation(homeSectionsWebsitesPath, '2s');
+
+                        // Animations for filling three sections action words
+                        setTimeout(function() {
+                            createAnimations.fillPathAnimation(homeSectionsFeaturedPaths, '3s');
+                            createAnimations.fillPathAnimation(homeSectionsSchoolPaths, '3s');
+                            createAnimations.fillPathAnimation(homeSectionsWebsitesPath, '3s');
+                        }, 2000);
+                    }, 2000);
+                }; // homeActionSections
+
+                //////////// Home Page header animations
                 var homePageHeaderAnimations = function() {
                     // animating Nomad Mystic letters in home page header
                     var headerMysticTextPaths = document.getElementsByClassName('headerMysticTextPath');
@@ -466,9 +486,12 @@
                     var homePageHeaderTriangle = document.getElementById('homePageHeaderTriangle');
                     createAnimations.fadeIdAnimation(homePageHeaderTriangle, '4s');
 
+                    // fills Nomad Mystic text (SVG)
                     setTimeout(function() {
                         var headerMysticTextPaths = $('.headerMysticTextPath');
                         createAnimations.fillPathAnimation(headerMysticTextPaths, '3s');
+
+                        homeActionSections();
                     }, 5000);
                 }; // end homePageHeaderAnimations
                 // creates animations for home page header SVG letters and shapes
