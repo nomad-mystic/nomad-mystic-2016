@@ -44,7 +44,7 @@ if ($find_dash_in_slug_name === false) { // note: three equal signs
 <div class="entry-content container whiteCard">
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">
-            <figure>
+            <a href="<?php echo $production_link; ?>">
                 <?php
                 if (has_post_thumbnail()) {
                     // getting full size featured image and adding responsive class
@@ -56,6 +56,7 @@ if ($find_dash_in_slug_name === false) { // note: three equal signs
                     );
                 } // end if
                 ?>
+            </a>
             </figure><!--end col thumbnail-->
         </div><!--end col-->
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">

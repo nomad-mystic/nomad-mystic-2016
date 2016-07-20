@@ -56,17 +56,19 @@ var_dump($title_of_school_class_selected . ' Title of class selected');
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 postThumb">
                 <figure>
-                    <?php
-                    if (has_post_thumbnail()) {
-                        // getting full size featured image and adding responsive class
-                        the_post_thumbnail(
-                            'full',
-                            array(
-                                'class' => 'img-responsive center-block'
-                            )
-                        );
-                    } // end if
-                    ?>
+                    <a href="<?php echo $production_link; ?>">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            // getting full size featured image and adding responsive class
+                            the_post_thumbnail(
+                                'full',
+                                array(
+                                    'class' => 'img-responsive center-block'
+                                )
+                            );
+                        } // end if
+                        ?>
+                    </a>
                 </figure>
             </div><!--end col-->
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">
