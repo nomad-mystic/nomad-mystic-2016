@@ -14,6 +14,10 @@
 body {
      background: url('../images/background.jpg') no-repeat 0 0;
      margin: 0;
+     -webkit-background-size: cover;
+     background-size: cover;
+     height: 100vh;
+
 }
 .card_image {
      max-width: <?php echo CARD_IMAGE_PERCENT?>;
@@ -65,7 +69,7 @@ body {
      border-radius: 1em;
      cursor: pointer;
      width: 10%;
-     margin: 5% auto 0;
+     margin: 2% auto 0;
 }
 
 #hand_type {

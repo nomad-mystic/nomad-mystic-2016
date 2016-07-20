@@ -349,30 +349,30 @@
                             classArray[i].style.transition = 'opacity ' + duration + ' ease-in';
                         }
                     }, // end fadeClassAnimation
-                    fillPathAnimation: function(path, duration) {
-                        for (var i=0; i < path.length; i++) {
-                            path[i].style.fill = '#fff';
-                            path[i].style.tranistion = path[i].style.webkitTranistion = 'fill-opacity ' + duration + ' ease-in';
-                        }
+                    fillPathAnimation: function(paths, duration) {
+                        paths.css({
+                            'fill': '#fff',
+                            'transition': 'fill ' + duration
+                        });
                     }
                 }; // end createAnimations
                 //
                 //
-                // /////////////////////////////////////// When user scrolls to homeAnimationArea
-
-                var homeAnimationArea =$('.homeAnimationArea');
-                function isScrolledIntoView(elem) {
-                    var docViewTop = $(window).scrollTop();
-                    var docViewBottom = docViewTop + $(window).height();
-                    var elemTop = $(elem).offset().top;
-                    var elemBottom = elemTop + $(elem).height();
-                    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-                }
-                $(window).scroll(0);
-                $(window).scroll(function(evnt) {
-                    if (isScrolledIntoView(homeAnimationArea)) {
-                        $(window).unbind('scroll');
-                            //////////////////// header shapes animations
+                // /////// When user scrolls to homeAnimationArea
+                var homeAnimationAreaAnimations = function() {
+                    var homeAnimationArea =$('.homeAnimationArea');
+                    function isScrolledIntoView(elem) {
+                        var docViewTop = $(window).scrollTop();
+                        var docViewBottom = docViewTop + $(window).height();
+                        var elemTop = $(elem).offset().top;
+                        var elemBottom = elemTop + $(elem).height();
+                        return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                    }
+                    $(window).scroll(0);
+                    $(window).scroll(function(evnt) {
+                        if (isScrolledIntoView(homeAnimationArea)) {
+                            $(window).unbind('scroll');
+                            //////////////////// header in homeAnimationArea shapes animations
                             // triangle
                             var headerTriangle = document.getElementById('headerTriangle');
                             createAnimations.fadeIdAnimation(headerTriangle, '1.5s');
@@ -380,7 +380,7 @@
                             var headerLargeHexagon = document.getElementById('headerLargeHexagon');
                             createAnimations.fadeIdAnimation(headerLargeHexagon, '1s');
 
-                            // headerSmallHexagon
+                            // headerSmallHexagon in homeAnimationArea
                             setTimeout(function () {
                                 var headerSmallHexagon = document.getElementById('headerSmallHexagon');
                                 createAnimations.fadeIdAnimation(headerSmallHexagon, '1s');
@@ -392,7 +392,7 @@
                                 }, 500); // end Dream Not of Today
                             }, 1000); // end headerSmallHexagon
 
-                            // sub lines and hexagons(bulletPoints)
+                            // sub lines and hexagons(bulletPoints) in homeAnimationArea
                             setInterval(function () {
                                 // bulletPoints animations
                                 var bulletPoints = document.getElementsByClassName('bulletPoints');
@@ -405,7 +405,7 @@
                                 // console.log(subLines);
                             }, 2000); // end lines and bulletPoints
 
-                            ///////////////////// Text Animations
+                            ///////////////////// Text Animations in homeAnimationArea
                             // delaying small text animation so it waits for the header to animate in
                             setTimeout(function () {
                                 // animation for Web Development text
@@ -415,14 +415,14 @@
                                     // console.log(webDevelopmentPath);
                                 }, 1000);
 
-                                // animation for Text UI Development
+                                // animation for Text UI Development in homeAnimationArea
                                 setTimeout(function () {
                                     var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
                                     createAnimations.textPathAnimation(UIDevelopmentPath, '2s');
                                     // console.log(UIDevelopmentPath);
                                 }, 2000);
 
-                                // animation for WordPress Development text
+                                // animation for WordPress Development text in homeAnimationArea
                                 setTimeout(function () {
                                     var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
                                     createAnimations.textPathAnimation(wordpressDevelopmentPath, '2s');
@@ -430,28 +430,53 @@
                                 }, 3000);
                             }, 2500); // small text animation
 
-                            // sets the timing/delay of the animation for text fills
+                            // sets the timing/delay of the animation for text fills in homeAnimationArea
                             setTimeout(function () {
-                                var dreamNotOfTodayPath = document.getElementsByClassName('dreamNotOfTodayPath');
-                                var webDevelopmentPath = document.getElementsByClassName('webDevelopmentPath');
-                                var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
-                                var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
+                                var dreamNotOfTodayPaths = $('.dreamNotOfTodayPath');
+                                var webDevelopmentPaths = $('.webDevelopmentPath');
+                                var UIDevelopmentPaths = $('.UIDevelopmentPath');
+                                var wordpressDevelopmentPaths = $('.wordpressDevelopmentPath');
 
-                                createAnimations.fillPathAnimation(dreamNotOfTodayPath, '2s');
-                                createAnimations.fillPathAnimation(webDevelopmentPath, '3s');
-                                createAnimations.fillPathAnimation(UIDevelopmentPath, '4s');
-                                createAnimations.fillPathAnimation(wordpressDevelopmentPath, '5s');
+                                createAnimations.fillPathAnimation(dreamNotOfTodayPaths, '3s');
+                                createAnimations.fillPathAnimation(webDevelopmentPaths, '4s');
+                                createAnimations.fillPathAnimation(UIDevelopmentPaths, '5s');
+                                createAnimations.fillPathAnimation(wordpressDevelopmentPaths, '6s');
                             }, 8000);
-                        }
-                }); // end scroll event callback
+                        } // end if statement homeAnimationArea
+                    }); // end scroll event callback
+                }; // homeAnimationAreaAnimations
+
+                // class animations for home page animation area "Dream not of Today"
+                homeAnimationAreaAnimations();
 
                 // fadeIn header image when user loads page
-                var homeLetterImage = document.getElementById('home_header_letter_layer');
-                createAnimations.fadeIdAnimation(homeLetterImage, '1s');
+                // var homeLetterImage = document.getElementById('home_header_letter_layer');
+                // createAnimations.fadeIdAnimation(homeLetterImage, '1s');
+
+
+                // Home Page header animations
+                var homePageHeaderAnimations = function() {
+                    // animating Nomad Mystic letters in home page header
+                    var headerMysticTextPaths = document.getElementsByClassName('headerMysticTextPath');
+                    createAnimations.textPathAnimation(headerMysticTextPaths, '5s');
+
+                    var homePageHeaderHexagon = document.getElementById('homePageHeaderHexagon');
+                    createAnimations.fadeIdAnimation(homePageHeaderHexagon, '3s');
+
+                    var homePageHeaderTriangle = document.getElementById('homePageHeaderTriangle');
+                    createAnimations.fadeIdAnimation(homePageHeaderTriangle, '4s');
+
+                    setTimeout(function() {
+                        var headerMysticTextPaths = $('.headerMysticTextPath');
+                        createAnimations.fillPathAnimation(headerMysticTextPaths, '3s');
+                    }, 5000);
+                }; // end homePageHeaderAnimations
+                // creates animations for home page header SVG letters and shapes
+                homePageHeaderAnimations();
+
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS
-                
             }
         },
         // About us page, note the change from about-us to about_us.

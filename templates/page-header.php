@@ -36,17 +36,16 @@
         // dynamic header image
         // URI now: '/nomadmystic/project-category/'
         $location_pathname = $_SERVER['REQUEST_URI'];
-    // need to
+    // if page is the root folder add SVG animation
     if ($location_pathname  === '/nomadmystic/') {
-
-
         $lower_header_background_image_path = 'home_header_background.jpg';
-//        require_once('home-header-svg.php');
-        $lower_header_letter_image_path = 'home_header_letter_layer.png';
+        require_once('home-header-svg.php');
+//        $lower_header_letter_image_path = 'home_header_letter_layer.png';
 
-        require_once('header-include.php');
+//        require_once('header-include.php');
 
     } else {
+        // all other none home pages
         $sliced_location_pathname = substr($location_pathname, 13, -1);
         $lower_location_pathname = strtolower($sliced_location_pathname);
         $lower_header_background_image_path = $lower_location_pathname . '_header_background.jpg';

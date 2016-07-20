@@ -20,6 +20,24 @@ body.home {
   header .jumbotron img {
     opacity: 0;
   }
+  .homeHeaderSVGDiv {
+    .container {
+      margin: 12% auto;
+      #homePageHeaderHexagon,
+      #homePageHeaderTriangle {
+        opacity: 0;
+        fill: transparent;
+        stroke:#fff;
+        stroke-width: 10;
+        stroke-miterlimit: 10;
+
+      }
+      .headerMysticTextPath {
+        fill: transparent;
+        stroke-miterlimit: 10;
+      }
+    }
+  }
   .homePage {
     margin: 2% auto 0;
   }
@@ -40,13 +58,13 @@ body.home {
       }
     }
     .hexagon {
-      fill: none;
+      fill: transparent;
       stroke: #fff;
       stroke-width: 10;
       stroke-miterlimit: 10;
     }
     .line {
-      fill: none;
+      fill: transparent;
       stroke: #fff;
       stroke-width: 10;
       stroke-miterlimit: 10;
@@ -58,11 +76,19 @@ body.home {
       opacity: 0;
     }
 
+    .wordpressDevelopmentPath,
+    .UIDevelopmentPath,
+    .webDevelopmentPath,
+    .dreamNotOfTodayPath {
+      //fill-opacity: 0;
+      fill: transparent;
+    }
+
     #homeSVGPolygons,
     #homeSVGLines,
     #homeSVGText {
       font-family: $font-stack;
-      fill: none;
+      fill: transparent;
     }
     #headerTriangle {
       opacity: 0;
@@ -80,12 +106,6 @@ body.home {
       text-align: center;
       font-size: 1.25em;
     }
-    //a {
-    //  @include underlineText();
-    //  &:hover {
-    //    @include underlineTextHover();
-    //  }
-    //}
     a {
       @include underlineText();
       &:after {
@@ -97,8 +117,8 @@ body.home {
     }
   } // end .homeAboutThisSite
 
-  .homePageThreeFeatures {
 
+  .homePageThreeFeatures {
     .homePageThreeFeaturePiece {
       margin: 1px auto;
       position: relative;
