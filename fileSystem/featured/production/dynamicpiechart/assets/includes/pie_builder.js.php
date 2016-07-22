@@ -89,7 +89,7 @@ $(function() {
 		for (i = 0; i < user_input_val; i++) {
 			var label_number = i + 1;
 
-			input_fields_HTML += '<label for="<?php echo SLICE_NUMBER_VAL; ?>" class="label">Enter the Value of the Slice:' + label_number + '</label>';
+			input_fields_HTML += '<label for="<?php echo SLICE_NUMBER_VAL; ?>" class="label">Enter the Value of Slice: ' + label_number + '</label>';
 			input_fields_HTML += '<input type="number" name="<?php echo SLICE_NUMBER_VAL; ?>[]" min="0" max="1000" class="form-control">';
 
 			input_fields_HTML += '<label for="<?php echo SLICE_COLOR; ?>" class="label">Slice Color: ' + label_number + '</label>';

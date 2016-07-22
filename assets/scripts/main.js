@@ -333,6 +333,7 @@
                             path[i].getBoundingClientRect();
                             // Define our transition
                             path[i].style.transition = path[i].style.webkitTransition = 'stroke-dashoffset ' + duration + ' ease-in-out';
+                            path[i].style.transition = path[i].style.transition = 'stroke-dashoffset ' + duration + ' ease-in-out';
                             path[i].style.strokeDashoffset = '0';
 
                         }
