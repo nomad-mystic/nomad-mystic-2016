@@ -361,7 +361,7 @@
                 //
                 // /////// When user scrolls to homeAnimationArea
                 var homeAnimationAreaAnimations = function() {
-                    var homeAnimationArea =$('.homeAnimationArea');
+                    var homeAnimationArea = $('.homeAnimationArea');
                     function isScrolledIntoView(elem) {
                         var docViewTop = $(window).scrollTop();
                         var docViewBottom = docViewTop + $(window).height();
@@ -453,6 +453,44 @@
                 // var homeLetterImage = document.getElementById('home_header_letter_layer');
                 // createAnimations.fadeIdAnimation(homeLetterImage, '1s');
 
+                // homePageExploreDiscoverCode section animations
+                var homePageExploreDiscoverCodeAnimations = function() {
+                    // animating explore
+                    var homePageExploreDiscoverCodeExplorePaths = document.getElementsByClassName('homePageExploreDiscoverCodeExplorePath');
+                    createAnimations.textPathAnimation(homePageExploreDiscoverCodeExplorePaths, '3s');
+
+                    // animating discover
+                    setTimeout(function() {
+                        var homePageExploreDiscoverCodeDiscoverPaths = document.getElementsByClassName('homePageExploreDiscoverCodeDiscoverPath');
+                        createAnimations.textPathAnimation(homePageExploreDiscoverCodeDiscoverPaths, '3s');
+                    }, 1000);
+
+                    // animating explore
+                    setTimeout(function() {
+                        var homePageExploreDiscoverCodeCodePaths = document.getElementsByClassName('homePageExploreDiscoverCodeCodePath');
+                        createAnimations.textPathAnimation(homePageExploreDiscoverCodeCodePaths, '3s');
+                    }, 2000);
+
+                    // after paths stroke-dasharray animations fill the paths with color in left to right order
+                    setTimeout(function() {
+                        // fill Explore first
+                        var homePageExploreDiscoverCodeExplorePaths = $('.homePageExploreDiscoverCodeExplorePath');
+                        createAnimations.fillPathAnimation(homePageExploreDiscoverCodeExplorePaths, '1s');
+
+                        // fill Discover path after explore finishes
+                        setTimeout(function() {
+                            var homePageExploreDiscoverCodeDiscoverPaths = $('.homePageExploreDiscoverCodeDiscoverPath');
+                            createAnimations.fillPathAnimation(homePageExploreDiscoverCodeDiscoverPaths, '1s');
+
+                            // fill code path after Discover and Explore paths are filled
+                            setTimeout(function() {
+                                var homePageExploreDiscoverCodeCodePaths = $('.homePageExploreDiscoverCodeCodePath');
+                                createAnimations.fillPathAnimation(homePageExploreDiscoverCodeCodePaths, '1s');
+                            }, 1000); // end Code path fill
+                        }, 1000); // end Discover path fill
+                    }, 4000); // end wait for path stroke animations - fill animation
+                };
+
                 ///////////// Three Sections call to action Featured, School, and Website SVGs
                 var homeActionSections = function() {
                     // called from homePageHeaderAnimations() in timeout
@@ -474,7 +512,7 @@
                         }, 2000);
                     }, 2000);
                 }; // homeActionSections
-
+                homeActionSections();
                 //////////// Home Page header animations
                 var homePageHeaderAnimations = function() {
                     // animating Nomad Mystic letters in home page header
@@ -492,7 +530,12 @@
                         var headerMysticTextPaths = $('.headerMysticTextPath');
                         createAnimations.fillPathAnimation(headerMysticTextPaths, '3s');
 
-                        homeActionSections();
+                        // when header animations stop call Explore Discover and Code path animations
+                        setTimeout(function() {
+                            homePageExploreDiscoverCodeAnimations();
+                        }, 1000);
+
+                        // homeActionSections();
                     }, 5000);
                 }; // end homePageHeaderAnimations
                 // creates animations for home page header SVG letters and shapes
