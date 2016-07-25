@@ -117,6 +117,45 @@ body.home {
     }
   } // end .homeAboutThisSite
 
+  .homePageThreeSVG {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    margin: auto;
+  }
+
+  .homePageExploreDiscoverCodeSection {
+    .homePageExploreDiscoverCode {
+      margin: 1px auto;
+      position: relative;
+      height: 30vh;
+      text-align: center;
+      padding-right: 0;
+      padding-left: 0;
+      .homePageExploreDiscoverCodeExplorePath,
+      .homePageExploreDiscoverCodeDiscoverPath,
+      .homePageExploreDiscoverCodeCodePath {
+        fill: transparent;
+        //stroke: #fff;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
+    } // end homePageExploreDiscoverCode
+    .exploreDiscoverCodeExploreGroup {
+      background: rgba(60, 192, 204, 0.61);
+    }
+    .exploreDiscoverCodeDiscoverGroup {
+      background: $main-teal;
+    }
+    .exploreDiscoverCodeCodeGroup {
+      background: rgba(60, 192, 204, 0.61);
+    }
+  } // end homePageExploreDiscoverCodeSection
+
 
   .homePageThreeFeatures {
     .homePageThreeFeaturePiece {
@@ -126,21 +165,12 @@ body.home {
       text-align: center;
       padding-right: 0;
       padding-left: 0;
-      .homePageThreeSVG {
-        width: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 30%;
-        margin: auto;
-      }
+
       .homePageFeaturedSectionsWebsitesPath,
       .homePageFeaturedSectionsSchoolPath,
       .homePageFeaturedSectionsFeaturedPath {
         fill: transparent;
-        //stroke: #fff;
+        stroke: #fff;
         stroke-width: 2;
         stroke-miterlimit: 10;
       }
