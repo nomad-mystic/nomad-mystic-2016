@@ -359,7 +359,29 @@
                 }; // end createAnimations
                 //
                 //
-                // /////// When user scrolls to homeAnimationArea
+                ///////////// Three Sections call to action Featured, School, and Website SVGs
+                var homeActionSections = function() {
+                    // called from homePageHeaderAnimations() in timeout
+                    setTimeout(function() {
+                        var homeSectionsFeaturedPaths = $('.homePageFeaturedSectionsFeaturedPath');
+                        createAnimations.textPathAnimation(homeSectionsFeaturedPaths, '2s');
+
+                        var homeSectionsSchoolPaths = $('.homePageFeaturedSectionsSchoolPath');
+                        createAnimations.textPathAnimation(homeSectionsSchoolPaths, '2s');
+
+                        var homeSectionsWebsitesPath = $('.homePageFeaturedSectionsWebsitesPath');
+                        createAnimations.textPathAnimation(homeSectionsWebsitesPath, '2s');
+
+                        // Animations for filling three sections action words
+                        setTimeout(function() {
+                            createAnimations.fillPathAnimation(homeSectionsFeaturedPaths, '3s');
+                            createAnimations.fillPathAnimation(homeSectionsSchoolPaths, '3s');
+                            createAnimations.fillPathAnimation(homeSectionsWebsitesPath, '3s');
+                        }, 2000);
+                    }, 2000);
+                }; // homeActionSections
+
+                // /////// When user scrolls to homeAnimationArea Dream Not of Today SVG
                 var homeAnimationAreaAnimations = function() {
                     var homeAnimationArea = $('.homeAnimationArea');
                     function isScrolledIntoView(elem) {
@@ -394,7 +416,7 @@
                             }, 1000); // end headerSmallHexagon
 
                             // sub lines and hexagons(bulletPoints) in homeAnimationArea
-                            setInterval(function () {
+                            setInterval(function() {
                                 // bulletPoints animations
                                 var bulletPoints = document.getElementsByClassName('bulletPoints');
                                 createAnimations.fadeClassAnimation(bulletPoints, '2s');
@@ -408,23 +430,23 @@
 
                             ///////////////////// Text Animations in homeAnimationArea
                             // delaying small text animation so it waits for the header to animate in
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 // animation for Web Development text
-                                setTimeout(function () {
+                                setTimeout(function() {
                                     var webDevelopmentPath = document.getElementsByClassName('webDevelopmentPath');
                                     createAnimations.textPathAnimation(webDevelopmentPath, '2s');
                                     // console.log(webDevelopmentPath);
                                 }, 1000);
 
                                 // animation for Text UI Development in homeAnimationArea
-                                setTimeout(function () {
+                                setTimeout(function() {
                                     var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
                                     createAnimations.textPathAnimation(UIDevelopmentPath, '2s');
                                     // console.log(UIDevelopmentPath);
                                 }, 2000);
 
                                 // animation for WordPress Development text in homeAnimationArea
-                                setTimeout(function () {
+                                setTimeout(function() {
                                     var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
                                     createAnimations.textPathAnimation(wordpressDevelopmentPath, '2s');
                                     // console.log(wordpressDevelopmentPath);
@@ -432,7 +454,8 @@
                             }, 2500); // small text animation
 
                             // sets the timing/delay of the animation for text fills in homeAnimationArea
-                            setTimeout(function () {
+                            // at the end of the text path animation
+                            setTimeout(function() {
                                 var dreamNotOfTodayPaths = $('.dreamNotOfTodayPath');
                                 var webDevelopmentPaths = $('.webDevelopmentPath');
                                 var UIDevelopmentPaths = $('.UIDevelopmentPath');
@@ -442,6 +465,10 @@
                                 createAnimations.fillPathAnimation(webDevelopmentPaths, '4s');
                                 createAnimations.fillPathAnimation(UIDevelopmentPaths, '5s');
                                 createAnimations.fillPathAnimation(wordpressDevelopmentPaths, '6s');
+
+                                setTimeout(function() {
+                                    homeActionSections();
+                                }, 1000);
                             }, 8000);
                         } // end if statement homeAnimationArea
                     }); // end scroll event callback
@@ -491,28 +518,8 @@
                     }, 4000); // end wait for path stroke animations - fill animation
                 };
 
-                ///////////// Three Sections call to action Featured, School, and Website SVGs
-                var homeActionSections = function() {
-                    // called from homePageHeaderAnimations() in timeout
-                    setTimeout(function() {
-                        var homeSectionsFeaturedPaths = $('.homePageFeaturedSectionsFeaturedPath');
-                        createAnimations.textPathAnimation(homeSectionsFeaturedPaths, '2s');
 
-                        var homeSectionsSchoolPaths = $('.homePageFeaturedSectionsSchoolPath');
-                        createAnimations.textPathAnimation(homeSectionsSchoolPaths, '2s');
 
-                        var homeSectionsWebsitesPath = $('.homePageFeaturedSectionsWebsitesPath');
-                        createAnimations.textPathAnimation(homeSectionsWebsitesPath, '2s');
-
-                        // Animations for filling three sections action words
-                        setTimeout(function() {
-                            createAnimations.fillPathAnimation(homeSectionsFeaturedPaths, '3s');
-                            createAnimations.fillPathAnimation(homeSectionsSchoolPaths, '3s');
-                            createAnimations.fillPathAnimation(homeSectionsWebsitesPath, '3s');
-                        }, 2000);
-                    }, 2000);
-                }; // homeActionSections
-                homeActionSections();
                 //////////// Home Page header animations
                 var homePageHeaderAnimations = function() {
                     // animating Nomad Mystic letters in home page header
@@ -545,13 +552,13 @@
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS
             }
-        },
+        }, // end home
         // About us page, note the change from about-us to about_us.
         'about_us': {
             init: function() {
                 // JavaScript to be fired on the about us page
             }
-        },
+        }, // end about us
         'individual': {
             init: function() {
                 // get folder contents init function
@@ -571,7 +578,7 @@
                 // file types: path fileSystem/
                 // html, css, development,
             }
-        },
+        }, // end individual
         'featured': {
             init: function() {
                 // click code to submit hidden form to build content Refactor!!!
@@ -617,7 +624,7 @@
             finalize: function() {
                 
             }
-        },
+        }, // end school
         'school_projects': {
             init: function () {
                 // click code to submit hidden form to build content Refactor!!!

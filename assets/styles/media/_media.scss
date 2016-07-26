@@ -9,6 +9,13 @@
       .homePageThreeFeaturePiece {
 
       }
+      .homeAboutThisSite {
+
+        h2 {
+          font-size: 2em;
+          margin-bottom: 1%;
+        }
+      }
     }
   } // end body.home
 
@@ -73,9 +80,15 @@
       }
     }
   } // end main
-  .homePage {
+  body.home {
     .squareButtonPrimaryColor {
       margin: 10% 0 35%;
+    }
+    .homeAboutThisSite {
+      padding-bottom: 5%;
+      .aboutThisSiteIcons {
+        width: 100%;
+      }
     }
   } // end homePage
   .about {
@@ -84,7 +97,7 @@
     }
   }
   footer {
-    margin: 2% 0;
+    margin: 0;
   }
 
 } // end media medium

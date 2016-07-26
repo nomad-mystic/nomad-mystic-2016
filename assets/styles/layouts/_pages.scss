@@ -35,6 +35,7 @@ body.home {
       .headerMysticTextPath {
         fill: transparent;
         stroke-miterlimit: 10;
+        stroke-width: 3;
       }
     }
   }
@@ -102,9 +103,27 @@ body.home {
   } // homeAnimationArea
 
   .homeAboutThisSite {
+    //background: $main-teal;
+    font-family: $font-stack;
+    position: relative;
     P {
+      color: #fff;
       text-align: center;
       font-size: 1.25em;
+    }
+    h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    //> div.row > div {
+    //  //background: $main-teal;
+    //  background: $secondary-purple;
+    //
+    //}
+    h4 {
+      font-size: 2em;
+      transform: translateY(60%);
     }
     a {
       @include underlineText();
@@ -115,6 +134,24 @@ body.home {
         @include underlineTextHoverAfter();
       }
     }
+
+    .aboutThisSiteIcons {
+      text-align: center;
+      color: #fff;
+      width: 50%;
+      margin: 0 auto;
+      > div {
+        //height: 20vh;
+        //border: 1px solid #fff;
+      }
+      div:nth-child(odd) {
+        //background: $main-teal-light;
+        //background: $secondary-purple;
+      }
+      div:nth-child(even) {
+        //background: $secondary-purple-light;
+      }
+    } // end aboutThisSiteIcons
   } // end .homeAboutThisSite
 
   .homePageThreeSVG {
@@ -158,6 +195,7 @@ body.home {
 
 
   .homePageThreeFeatures {
+    margin: 3px auto;
     .homePageThreeFeaturePiece {
       margin: 1px auto;
       position: relative;
@@ -170,7 +208,7 @@ body.home {
       .homePageFeaturedSectionsSchoolPath,
       .homePageFeaturedSectionsFeaturedPath {
         fill: transparent;
-        stroke: #fff;
+        //stroke: #fff;
         stroke-width: 2;
         stroke-miterlimit: 10;
       }
@@ -182,24 +220,8 @@ body.home {
     } // end homePageThreeFeaturePiece
     // featured Div
     > div > div > a:nth-child(1) > div {
-      background: rgba(60, 192, 204, 0.61);
-      &:after {
-        content: '';
-        display: block;
-        margin: auto;
-        height: 30vh;
-        width: 0px;
-        background: transparent;
-        transition: width 1s ease, background-color 1s ease;
-      }
-      &:hover:after {
-        width: 100%;
-        background: $main-teal;
-      }
-    } // end Featured Projects
-
-    // School Projects Div
-    > div > div > a:nth-child(2) > div {
+      //background: rgba(60, 192, 204, 0.6;
+      //background: $secondary-purple-light;
       background: $main-teal;
       &:after {
         content: '';
@@ -212,13 +234,15 @@ body.home {
       }
       &:hover:after {
         width: 100%;
-        background: rgba(0, 147, 160, 1);
+        //background: $secondary-purple;
+        background: $dark-grey;
       }
-    } // end School Projects
+    } // end Featured Projects
 
-    // freelance Projects Div
-    > div > div > a:nth-child(3) > div {
-      background: rgba(60, 192, 204, 0.61);
+    // School Projects Div
+    > div > div > a:nth-child(2) > div {
+      //background: $secondary-purple;
+      background: $main-teal-light;
       &:after {
         content: '';
         display: block;
@@ -230,7 +254,30 @@ body.home {
       }
       &:hover:after {
         width: 100%;
-        background: $main-teal;
+        //background: $secondary-purple-light;
+        background: $dark-grey;
+      }
+    } // end School Projects
+
+    // freelance Projects Div
+    > div > div > a:nth-child(3) > div {
+      //background: rgba(60, 192, 204, 0.61);
+      //background: $secondary-purple-light;
+      background: $main-teal;
+      &:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 30vh;
+        width: 0px;
+        background: transparent;
+        transition: width 1s ease, background-color 1s ease;
+      }
+      &:hover:after {
+        width: 100%;
+        //background: $main-teal;
+        //background: $secondary-purple;
+        background: $dark-grey;
       }
     } // end freelance Projects
   } //  end homePageThreeFeatures
