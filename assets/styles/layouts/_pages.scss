@@ -126,12 +126,12 @@ body.home {
       transform: translateY(60%);
     }
     a {
-      @include underlineText();
+      //@include underlineText();
       &:after {
-        @include underlineTextAfter(.5s);
+        //@include underlineTextAfter(.5s);
       }
       &:hover:after {
-        @include underlineTextHoverAfter();
+        //@include underlineTextHoverAfter();
       }
     }
 
