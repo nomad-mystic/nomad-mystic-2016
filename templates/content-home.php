@@ -361,7 +361,7 @@
 <!--<img src="wordpress/wp-content/themes/nomadmystic/dist/images/dividerBanner_1.jpg" class="img-responsive" alt="Image">-->
 
 
-<section class="homePageThreeFeatures">
+<section class="homePageThreeFeatures startAnimation">
     <div class="container-fluid">
         <div class="row">
             <a href="http://localhost:3000/nomadmystic/featured/">
