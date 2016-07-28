@@ -82,12 +82,12 @@ if ($sliced_location_pathname === 'credits') {
     echo '<article class="aboutTheNomadResume">';
     echo '<div class="row whiteCard">';
     echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">';
-    echo '<img src="http://nomadmystic.com/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/resume.jpg"
+    echo '<img src="http://nomadmystic.com/wordpress/wp-content/themes/nomadmystic/dist/images/resume.jpg"
                  class="img-responsive nomadResume"
                  title="Nomad Mystic Resume current as of 5-15-2016"
                  alt="Nomad Mystic Resume current as of 5-15-2016">';
     echo '<div class="squareButtonPrimaryColor center-block">';
-    echo '<a href="http://nomadmystic.com/nomadmystic/wordpress/wp-content/themes/nomadmystic/dist/images/resume.pdf" download><span class="fa fa-download"></span>Download Resume</a>';
+    echo '<a href="http://nomadmystic.com/wordpress/wp-content/themes/nomadmystic/dist/images/resume.pdf" download><span class="fa fa-download"></span>Download Resume</a>';
     echo '</div>';
     echo '</div><!--end col-->';
     echo '</div><!--end row-->';
