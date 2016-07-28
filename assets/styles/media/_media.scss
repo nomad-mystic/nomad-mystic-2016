@@ -71,7 +71,7 @@
 
 } // end Small devices
 
-/* Medium devices (desktops, 992px and up) */
+/* small devices (desktops, 768px and up) */
 @media (min-width: 768px) {
   .main {
     header {
@@ -85,7 +85,8 @@
       margin: 10% 0 35%;
     }
     .homeAboutThisSite {
-      padding-bottom: 5%;
+      padding-top: 3%;
+      padding-bottom: 2%;
       .aboutThisSiteIcons {
         width: 100%;
       }
