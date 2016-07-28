@@ -1,9 +1,4 @@
-
 // Pages general
-//.postThumb {
-//  @include aspect-ratio(16, 9);
-//}
-
 
 // Home Page
 body.home {
@@ -27,7 +22,7 @@ body.home {
       #homePageHeaderTriangle {
         opacity: 0;
         fill: transparent;
-        stroke:#fff;
+        stroke: #fff;
         stroke-width: 10;
         stroke-miterlimit: 10;
 
@@ -35,7 +30,7 @@ body.home {
       .headerMysticTextPath {
         fill: transparent;
         stroke-miterlimit: 10;
-        stroke-width: 3;
+        stroke-width: 2.5;
       }
     }
   }
@@ -85,19 +80,19 @@ body.home {
       fill: transparent;
     }
 
-    #homeSVGPolygons,
-    #homeSVGLines,
-    #homeSVGText {
+    #dreamSVGPolygons,
+    #dreamSVGLines,
+    #dreamSVGText {
       font-family: $font-stack;
       fill: transparent;
     }
-    #headerTriangle {
+    #dreamTriangle {
       opacity: 0;
     }
-    #headerLargeHexagon {
+    #dreamLargeHexagon {
       opacity: 0;
     }
-    #headerSmallHexagon {
+    #dreamSmallHexagon {
       opacity: 0;
     }
   } // homeAnimationArea
@@ -116,11 +111,6 @@ body.home {
       text-align: center;
       font-size: 1.5em;
     }
-    //> div.row > div {
-    //  //background: $main-teal;
-    //  background: $secondary-purple;
-    //
-    //}
     h4 {
       font-size: 2em;
       transform: translateY(60%);
@@ -140,17 +130,6 @@ body.home {
       color: #fff;
       width: 50%;
       margin: 0 auto;
-      > div {
-        //height: 20vh;
-        //border: 1px solid #fff;
-      }
-      div:nth-child(odd) {
-        //background: $main-teal-light;
-        //background: $secondary-purple;
-      }
-      div:nth-child(even) {
-        //background: $secondary-purple-light;
-      }
     } // end aboutThisSiteIcons
   } // end .homeAboutThisSite
 
@@ -282,27 +261,23 @@ body.home {
     } // end freelance Projects
   } //  end homePageThreeFeatures
 
-  // New home page square animations under "Dream not of Today" SVG
-  //.homePageThreeSections {
-  //  .square {
-  //    width: 100%;
-  //    background: red;
-  //    position: relative;
-  //  }
-  //  .homePageWebsiteSectionLinks {
-  //    position: absolute;
-  //    width: 100%;
-  //    height: 100%;
-  //    .sectionLinks {
-  //      position: relative;
-  //    }
-  //  }
-  //  .square:after {
-  //    content: "";
-  //    display: block;
-  //    padding-bottom: 100%;
-  //  }
-  //}
+  // for the static home page
+  .staticPath {
+    fill: #fff;
+    stroke: #fff;
+  }
+  .staticLine {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 10;
+    stroke-miterlimit: 10;
+  }
+  .staticHexagon {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 10;
+    stroke-miterlimit: 10;
+  }
 } // end homePage
 
 // featured post page

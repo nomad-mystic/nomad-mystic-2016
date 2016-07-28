@@ -332,7 +332,7 @@ var Nomad = {
                         path[i].getBoundingClientRect();
                         // Define our transition
                         path[i].style.transition = path[i].style.webkitTransition = 'stroke-dashoffset ' + duration + ' ease-in-out';
-                        path[i].style.transition = path[i].style.transition = 'stroke-dashoffset ' + duration + ' ease-in-out';
+                        // path[i].style.transition = path[i].style.transition = 'stroke-dashoffset ' + duration + ' ease-in-out';
                         path[i].style.strokeDashoffset = '0';
 
                     }
@@ -361,7 +361,7 @@ var Nomad = {
             ///////////// Three Sections call to action Featured, School, and Website SVGs
             var homeActionSections = function() {
                 // called from homePageHeaderAnimations() in timeout
-                setTimeout(function() {
+                // setTimeout(function() {
                     var homeSectionsFeaturedPaths = $('.homePageFeaturedSectionsFeaturedPath');
                     createAnimations.textPathAnimation(homeSectionsFeaturedPaths, '3s');
 
@@ -376,14 +376,14 @@ var Nomad = {
                         createAnimations.fillPathAnimation(homeSectionsFeaturedPaths, '3s');
                         createAnimations.fillPathAnimation(homeSectionsSchoolPaths, '3s');
                         createAnimations.fillPathAnimation(homeSectionsWebsitesPath, '3s');
-                    }, 2000);
-                }, 1000);
+                    }, 3000);
+                // }, 1000);
             }; // homeActionSections
 
             // /////// When user scrolls to homeAnimationArea Dream Not of Today SVG
             var homeAnimationAreaAnimations = function() {
-                var homeAnimationArea = $('.homeAnimationArea');
-                var homeFeaturedSchoolWebsites = $('.homePageThreeFeatures');
+                var isNotStaticHomePage = $('.isNotStaticHomePage');
+
                 function isScrolledIntoView(elem) {
                     var docViewTop = $(window).scrollTop();
                     var docViewBottom = docViewTop + $(window).height();
@@ -391,103 +391,108 @@ var Nomad = {
                     var elemBottom = elemTop + $(elem).height();
                     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
                 }
-                $(window).scroll(0);
-                $(window).scroll(function(evnt) {
-                    if (isScrolledIntoView(homeAnimationArea)) {
-                        $(window).unbind('scroll');
-                        // If the user scrolls to Featured, School, and Website link before
-                        // Dream not of today animation finishes
-                        $(window).scroll(function() {
-                            if(isScrolledIntoView(homeFeaturedSchoolWebsites)) {
-                                $(window).unbind('scroll');
-                                homeFeaturedSchoolWebsites.removeClass('startAnimation');
-                                homeActionSections();
-                                // console.log('Scrolled past');
-                            }
-                        });
-                        //////////////////// header in homeAnimationArea shapes animations
-                        // triangle
-                        var headerTriangle = document.getElementById('headerTriangle');
-                        createAnimations.fadeIdAnimation(headerTriangle, '1.5s');
-                        // headerLargeHexagon
-                        var headerLargeHexagon = document.getElementById('headerLargeHexagon');
-                        createAnimations.fadeIdAnimation(headerLargeHexagon, '1s');
 
-                        // headerSmallHexagon in homeAnimationArea
-                        setTimeout(function () {
-                            var headerSmallHexagon = document.getElementById('headerSmallHexagon');
-                            createAnimations.fadeIdAnimation(headerSmallHexagon, '1s');
-                            // animation for header text Dream Not of Today
-                            setTimeout(function () {
-                                var dreamNotOfTodayPath = document.getElementsByClassName('dreamNotOfTodayPath');
-                                createAnimations.textPathAnimation(dreamNotOfTodayPath, '3s');
-                                // console.log(dreamNotOfTodayPath);
-                            }, 500); // end Dream Not of Today
-                        }, 1000); // end headerSmallHexagon
-
-                        // sub lines and hexagons(bulletPoints) in homeAnimationArea
-                        setInterval(function() {
-                            // bulletPoints animations
-                            var bulletPoints = document.getElementsByClassName('bulletPoints');
-                            createAnimations.fadeClassAnimation(bulletPoints, '2s');
-                            // console.log(bulletPoints);
-
-                            // subLine animations
-                            var subLines = document.getElementsByClassName('subLine');
-                            createAnimations.fadeClassAnimation(subLines, '2s');
-                            // console.log(subLines);
-                        }, 2000); // end lines and bulletPoints
-
-                        ///////////////////// Text Animations in homeAnimationArea
-                        // delaying small text animation so it waits for the header to animate in
-                        setTimeout(function() {
-                            // animation for Web Development text
-                            setTimeout(function() {
-                                var webDevelopmentPath = document.getElementsByClassName('webDevelopmentPath');
-                                createAnimations.textPathAnimation(webDevelopmentPath, '2s');
-                                // console.log(webDevelopmentPath);
-                            }, 1000);
-
-                            // animation for Text UI Development in homeAnimationArea
-                            setTimeout(function() {
-                                var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
-                                createAnimations.textPathAnimation(UIDevelopmentPath, '2s');
-                                // console.log(UIDevelopmentPath);
-                            }, 2000);
-
-                            // animation for WordPress Development text in homeAnimationArea
-                            setTimeout(function() {
-                                var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
-                                createAnimations.textPathAnimation(wordpressDevelopmentPath, '2s');
-                                // console.log(wordpressDevelopmentPath);
-                            }, 3000);
-                        }, 2500); // small text animation
-
-                        // sets the timing/delay of the animation for text fills in homeAnimationArea
-                        // at the end of the text path animation
-                        setTimeout(function() {
-                            var dreamNotOfTodayPaths = $('.dreamNotOfTodayPath');
-                            var webDevelopmentPaths = $('.webDevelopmentPath');
-                            var UIDevelopmentPaths = $('.UIDevelopmentPath');
-                            var wordpressDevelopmentPaths = $('.wordpressDevelopmentPath');
-
-                            createAnimations.fillPathAnimation(dreamNotOfTodayPaths, '3s');
-                            createAnimations.fillPathAnimation(webDevelopmentPaths, '4s');
-                            createAnimations.fillPathAnimation(UIDevelopmentPaths, '5s');
-                            createAnimations.fillPathAnimation(wordpressDevelopmentPaths, '6s');
-
-                            // When user has scrolled past Dream not of today section remove animation
-                            setTimeout(function() {
-                                if (homeFeaturedSchoolWebsites.hasClass('startAnimation')) {
+                if (isNotStaticHomePage.length) {
+                    var homeAnimationArea = $('.homeAnimationArea');
+                    var homeFeaturedSchoolWebsites = $('.homePageThreeFeatures');
+                    $(window).scroll(0);
+                    $(window).scroll(function(evnt) {
+                        if (isScrolledIntoView(homeAnimationArea)) {
+                            $(window).unbind('scroll');
+                            // If the user scrolls to Featured, School, and Website link before
+                            // Dream not of today animation finishes
+                            $(window).scroll(function() {
+                                if(isScrolledIntoView(homeFeaturedSchoolWebsites)) {
                                     $(window).unbind('scroll');
+                                    homeFeaturedSchoolWebsites.removeClass('startAnimation');
                                     homeActionSections();
-                                    // console.log('Featured, School and Websites Animation not stopped');
+                                    // console.log('Scrolled past');
                                 }
-                            }, 1000);
-                        }, 8000);
-                    } // end if statement homeAnimationArea
-                }); // end scroll event callback
+                            });
+                            //////////////////// header in homeAnimationArea shapes animations
+                            // triangle
+                            var dreamTriangle = document.getElementById('dreamTriangle');
+                            createAnimations.fadeIdAnimation(dreamTriangle, '1.5s');
+                            // headerLargeHexagon
+                            var dreamLargeHexagon = document.getElementById('dreamLargeHexagon');
+                            createAnimations.fadeIdAnimation(dreamLargeHexagon, '1s');
 
+                            // dreamSmallHexagon in homeAnimationArea
+                            setTimeout(function () {
+                                var dreamSmallHexagon = document.getElementById('dreamSmallHexagon');
+                                createAnimations.fadeIdAnimation(dreamSmallHexagon, '1s');
+                                // animation for header text Dream Not of Today
+                                setTimeout(function () {
+                                    var dreamNotOfTodayPath = document.getElementsByClassName('dreamNotOfTodayPath');
+                                    createAnimations.textPathAnimation(dreamNotOfTodayPath, '3s');
+                                    // console.log(dreamNotOfTodayPath);
+                                }, 500); // end Dream Not of Today
+                            }, 1000); // end headerSmallHexagon
+
+                            // sub lines and hexagons(bulletPoints) in homeAnimationArea
+                            setInterval(function() {
+                                // bulletPoints animations
+                                var bulletPoints = document.getElementsByClassName('bulletPoints');
+                                createAnimations.fadeClassAnimation(bulletPoints, '2s');
+                                // console.log(bulletPoints);
+
+                                // subLine animations
+                                var subLines = document.getElementsByClassName('subLine');
+                                createAnimations.fadeClassAnimation(subLines, '2s');
+                                // console.log(subLines);
+                            }, 2000); // end lines and bulletPoints
+
+                            ///////////////////// Text Animations in homeAnimationArea
+                            // delaying small text animation so it waits for the header to animate in
+                            setTimeout(function() {
+                                // animation for Web Development text
+                                setTimeout(function() {
+                                    var webDevelopmentPath = document.getElementsByClassName('webDevelopmentPath');
+                                    createAnimations.textPathAnimation(webDevelopmentPath, '2s');
+                                    // console.log(webDevelopmentPath);
+                                }, 1000);
+
+                                // animation for Text UI Development in homeAnimationArea
+                                setTimeout(function() {
+                                    var UIDevelopmentPath = document.getElementsByClassName('UIDevelopmentPath');
+                                    createAnimations.textPathAnimation(UIDevelopmentPath, '2s');
+                                    // console.log(UIDevelopmentPath);
+                                }, 2000);
+
+                                // animation for WordPress Development text in homeAnimationArea
+                                setTimeout(function() {
+                                    var wordpressDevelopmentPath = document.getElementsByClassName('wordpressDevelopmentPath');
+                                    createAnimations.textPathAnimation(wordpressDevelopmentPath, '2s');
+                                    // console.log(wordpressDevelopmentPath);
+                                }, 3000);
+                            }, 2500); // small text animation
+
+                            // sets the timing/delay of the animation for text fills in homeAnimationArea
+                            // at the end of the text path animation
+                            setTimeout(function() {
+                                var dreamNotOfTodayPaths = $('.dreamNotOfTodayPath');
+                                var webDevelopmentPaths = $('.webDevelopmentPath');
+                                var UIDevelopmentPaths = $('.UIDevelopmentPath');
+                                var wordpressDevelopmentPaths = $('.wordpressDevelopmentPath');
+
+                                createAnimations.fillPathAnimation(dreamNotOfTodayPaths, '2s');
+                                createAnimations.fillPathAnimation(webDevelopmentPaths, '3s');
+                                createAnimations.fillPathAnimation(UIDevelopmentPaths, '4s');
+                                createAnimations.fillPathAnimation(wordpressDevelopmentPaths, '5s');
+
+
+                                setTimeout(function() {
+                                    // if the user waits for th dream not of today animation start animation
+                                    if (homeFeaturedSchoolWebsites.hasClass('startAnimation')) {
+                                        $(window).unbind('scroll');
+                                        homeActionSections();
+                                        // console.log('Featured, School and Websites Animation not stopped');
+                                    }
+                                }, 2000);
+                            }, 8000);
+                        } // end if statement homeAnimationArea
+                    }); // end scroll event callback
+                } // end is static home page
 
             }; // homeAnimationAreaAnimations
             // class animations for home page animation area "Dream not of Today"
