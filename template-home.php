@@ -24,6 +24,12 @@ $referrer = $_SERVER['HTTP_REFERER'];
             // call home page with animation if the user refreshes page
             get_template_part('templates/content', 'home');
             // var_dump('Page was refreshed and was the home page');
+        } else if (!isset($referrer)) {
+            // call this if user is on the home page for the first time
+            get_template_part('templates/content', 'home');
+        } else if ($referrer === NULL) {
+            // call this if user is on the home page for the first time
+            get_template_part('templates/content', 'home');
         } else {
             // call static home page if user comes from any other page
             // besides a refresh
