@@ -9,10 +9,10 @@
 
 class EndangeredSpeciesSet
 {
-     protected $mRecords;
+    protected $mRecords;
 
-     function getRecords()
-     {
-          return $this->mRecords;
-     }
+    function getRecords()
+    {
+        return $this->mRecords;
+    }
 }

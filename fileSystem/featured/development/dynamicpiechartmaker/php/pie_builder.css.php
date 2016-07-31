@@ -10,43 +10,39 @@ header('Content-Type: text/css');
  ?>
 
 fieldset {
-     padding: 20px;
+    padding: 20px;
 }
 fieldset input {
-     display: block;
-     margin-bottom: 12px;
+    display: block;
+    margin-bottom: 12px;
 }
 legend {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 .label {
-	color: #34495E;
+    color: #34495E;
 }
 .form-control {
-	margin-bottom: 0;
-	height: 30px;
-	padding: 6px 12px;
+    margin-bottom: 0;
+    height: 30px;
+    padding: 6px 12px;
 }
 .form-group {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 .ui-widget input {
-	font-size: 12px;
+    font-size: 12px;
 }
 .chart_title {
-	text-align: center;
+    text-align: center;
 }
 #introductionToProjectSection {
-	text-align: center;
+    text-align: center;
 }
 #pie_chart_dialog {
-/*     display: none;*/
+/*  display: none;*/
 }
 
 .ui-dialog-titlebar-close {
      display: none;
-}
-
-#chart_inputs {
-/*     float: left;*/
 }
