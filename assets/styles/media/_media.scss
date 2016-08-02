@@ -22,7 +22,7 @@
   .main {
     header {
       .home-jumbotron {
-        margin: 7% 0 0 0;
+        margin: 5% 0 0 0;
       }
       .navbar-default {
         #navigationNavbar {
@@ -57,10 +57,10 @@
     h2 {
       font-size: 1.25em;
       padding: .25em;
-      text-align: left;
+      //text-align: left;
     }
     p {
-      text-align: left;
+      //text-align: left;
       padding: .25em;
     }
   } // end school / featured / websites
@@ -73,6 +73,17 @@
 
 /* small devices (desktops, 768px and up) */
 @media (min-width: 768px) {
+  body.featured,
+  body.school-projects,
+  body.school,
+  body.websites {
+
+    .postThumb {
+      position: relative;
+      transform: translateY(15%);
+    }
+  }
+
   .main {
     header {
       .home-jumbotron {
@@ -101,7 +112,23 @@
     margin: 0;
   }
 
-} // end media medium
+} // end media small
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body.featured,
+  body.school-projects,
+  body.school,
+  body.websites {
+
+    .postThumb {
+      position: relative;
+      transform: translateY(13%);
+    }
+  }
+
+} // end medium
+
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -120,6 +147,18 @@
     h2 {
       font-size: 1.75em;
     }
+    .postThumb {
+      transform: translateY(0);
+    }
   } // end school / featured / websites
 
 } // end large
+
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}

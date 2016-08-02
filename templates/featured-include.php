@@ -29,23 +29,52 @@
         </div><!--end col-->
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 postContent">
             <!--// getting the content of the post by category-->
-            <h2><?php echo get_the_title(); ?></h2>
-            <!--//                    <share-button>Share</share-button>-->
-            <?php the_content(); ?>
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 codeButtonDiv">
-                    <div class="squareButtonPrimaryColor center-block code_button">
-                        <a href="http://localhost:3000/nomadmystic/individual/"
-                                                    title="<?php echo $title; ?>"
-                                                    class="<?php echo $lower_modified_title; ?>">Code</a>
-                    </div><!--squareButtonPrimaryColor-->
-                </div><!--end col-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 productionButtonDiv">
-                    <div class="squareButtonPrimaryColor center-block">
-                        <a href="<?php echo $production_link; ?>">Production</a>
-                    </div><!--squareButtonPrimaryColor-->
-                </div><!--end col-->
-            </div><!--end row buttons-->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="featuredPostTitle">
+                        <?php echo get_the_title(); ?>
+                        <span><share-button
+                                class="featuredShareButton"
+                                data-productionLink="<?php echo $production_link; ?>"
+                                data-title="<?php echo get_the_title(); ?>"
+                                data-description="<?php echo get_the_title(); ?>"
+                            ></share-button></span>
+                    </h2>
+                </div>
+            </div>
+
+            <?php the_content(); ?>
+
+<!--            <section class="featuredShareSection">-->
+<!--                <article>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--                            <share-button-->
+<!--                                class="featuredShareButton"-->
+<!--                                data-productionLink="--><?php //echo $production_link; ?><!--"-->
+<!--                                data-title="--><?php //echo get_the_title(); ?><!--"-->
+<!--                                data-description="--><?php //echo get_the_title(); ?><!--"-->
+<!--                            ></share-button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </article>-->
+<!--            </section><!--featuredShareSection-->
+            <section>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 codeButtonDiv">
+                        <div class="squareButtonPrimaryColor center-block code_button">
+                            <a href="http://localhost:3000/nomadmystic/individual/"
+                               title="<?php echo $title; ?>"
+                               class="<?php echo $lower_modified_title; ?>">Code</a>
+                        </div><!--squareButtonPrimaryColor-->
+                    </div><!--end col-->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 productionButtonDiv">
+                        <div class="squareButtonPrimaryColor center-block">
+                            <a href="<?php echo $production_link; ?>" class="featuredProductionButton">Production</a>
+                        </div><!--squareButtonPrimaryColor-->
+                    </div><!--end col-->
+                </div><!--end row buttons-->
+            </section>
         </div><!--end col postContent-->
     </div><!--end row for text thumb and content-->
 <!--// hidden for to pass on to individual page for file system-->

@@ -603,20 +603,219 @@ var Nomad = {
         init: function() {
             // click code to submit hidden form to build content Refactor!!!
             var codeButton = $('.code_button a');
-            codeButton.on('click', function(evnt) {
+            codeButton.on('click', function (evnt) {
                 var findClassOfEvent = evnt.target.classList[0];
                 $('form#' + findClassOfEvent).submit();
                 evnt.preventDefault();
             }); // end codeButton Click
 
-            // initializing share buttons for featured posts
-            new ShareButton({
-                networks: {
-                    facebook: {
-                        appId: "abc123"
+
+
+
+
+
+            // var shareConfig = {
+            //     featuredPostTitles: featuredPostTitles,
+            //     featuredProductionButtons: featuredProductionButtons,
+            //     featuredShareButtonsGroups: featuredShareButtonsGroups
+            // };
+            // // console.log(shareConfig);
+            // // looping through each post on the featured page and added corresponding sharing buttons
+            // // for (var shareFeatures in shareConfig) {
+            // $.each(shareConfig.featuredShareButtonsGroups, function (key, value) {
+            //     // console.log('Key: ' + key + ' value: ' + value);
+            //     // console.log('featuredShareButtonsGroups: ' + value);
+            //     var testingURL = '';
+            //
+            //     var individualSocialConfig = {};
+            //     individualSocialConfig.shares = ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon"];
+            //     individualSocialConfig.showLabel = false;
+            //     individualSocialConfig.showCount = false;
+            //     individualSocialConfig.shareIn = 'popup';
+            //     individualSocialConfig.text = 'Testing text in the description of the share object';
+            //
+            //     $(value).jsSocials(individualSocialConfig);
+            //     console.log($(value).jsSocials(individualSocialConfig));
+            //     // $(value).jsSocials({
+            //     //
+            //     //     ,
+            //     //     showCount: false,
+            //     //     shareIn: "popup",
+            //     //     text: 'Testing text in the description of the share object' //,
+            //     //     // url: stringURL
+            //     // });
+            //
+            // });
+
+
+            // make images responsive
+            var responsivePostImages = function() {
+                $(".postImageFigureContainer").each(function () {
+                    // Uncomment the following if you need to make this dynamic
+                    // var refH = $(this).height();
+                    // var refW = $(this).width();
+                    // var refRatio = refW/refH;
+
+                    // Hard coded value...
+                    var refRatio = 500 / 325;
+
+                    var imgH = $(this).children("img").height();
+                    var imgW = $(this).children("img").width();
+
+                    if ((imgW / imgH) < refRatio) {
+                        $(this).addClass("portrait");
+                    } else {
+                        $(this).addClass("landscape");
+
                     }
-                }
+                });
+            };
+            // responsivePostImages();
+
+            $(window).on('resize', function() {
+                console.log('resized');
+                // responsivePostImages();
             });
+
+            // This is an array of Titles from the featured template
+            var featuredPostTitles = $('.featuredPostTitle');
+            // console.log(featuredPostTitles);
+
+            // production links array
+            // var featuredProductionButtons = $('.featuredProductionButton');
+            var featuredProductionButtons = $('.featuredProductionButton');
+            // console.log(featuredProductionButtons);
+
+
+
+            // this is an array of share buttons on the featured posts
+            var featuredShareButtonGroup = document.querySelectorAll('.featuredShareButton');
+            // var featuredShareButtonsGroups = document.getElementsByClassName('featuredShareButtonsGroup');
+            console.log(featuredShareButtonGroup);
+
+            new ShareButton(".featuredShareButton", {
+                networks: {
+                    // image: 'http://nomadmystic.com/wordpress/wp-content/uploads/2016/08/logoSquareShare.png',
+                    ui: {
+                        buttonText: '',
+                        flyout: 'bottom center'
+                    },
+
+                    facebook: {
+                        before: function(element) {
+                            console.log(element);
+                            this.url = element.getAttribute('data-productionLink');
+                            this.title = element.getAttribute('data-title');
+                            this.description = element.getAttribute('data-description');
+                        },
+                        after: function() {
+                            console.log("User shared:", this.url);
+                        }
+                    },
+                    twitter: {
+                        before: function(element) {
+                            console.log(element);
+                            this.url = element.getAttribute('data-productionLink');
+                            this.description = element.getAttribute('data-description');
+                        },
+                        after: function() {
+                            console.log("User shared:", this.url);
+                        }
+                    },
+                    pinterest: {
+                        before: function(element) {
+                            console.log(element);
+                            this.url = element.getAttribute('data-productionLink');
+                            this.description = element.getAttribute('data-description');
+                        },
+                        after: function() {
+                            console.log("User shared:", this.url);
+                        }
+                    },
+                    reddit: {
+                        before: function(element) {
+                            console.log(element);
+                            this.url = element.getAttribute('data-productionLink');
+                            this.title = element.getAttribute('data-title');
+                        },
+                        after: function() {
+                            console.log("User shared:", this.url);
+                        }
+                    },
+                    linkedin: {
+                        before: function(element) {
+                            console.log(element);
+                            this.url = element.getAttribute('data-productionLink');
+                            this.title = element.getAttribute('data-title');
+                        },
+                        after: function() {
+                            console.log("User shared:", this.url);
+                        }
+                    },
+                    email: {
+                        before: function(element) {
+                            console.log(element);
+                            this.url = element.getAttribute('data-productionLink');
+                            this.title = element.getAttribute('data-title');
+                        },
+                        after: function() {
+                            console.log("User shared:", this.url);
+                        }
+                    },
+                    whatsapp: {
+                        enabled: false    // Enable WhatsApp. [Default: true]
+                    }
+                } // end networks
+            }); // end ShareButton function
+
+            // for (var i=0; i < featuredShareButtonGroup.length; i++) {
+            //     // console.log(featuredShareButtonGroup[i].className);
+            //     var targetShareButton = featuredShareButtonGroup[i].className;
+            //
+            //
+            //     console.log(targetShareButton);
+            //     var targetShareButtonString = targetShareButton.toString();
+            //     // get the production link
+            //     var productionLink = featuredShareButtonGroup[i].dataset.productionlink;
+            //
+            //     console.log(productionLinkString);
+            //
+            //     // get the description of the post
+            //     var description = featuredShareButtonGroup[i].dataset.description;
+            //     var descriptionString = description.toString();
+            //     console.log(descriptionString);
+            //
+            //     // // set up the config object with individuals looping through
+            //     var config = {};
+            //     // config.url = encodeURI(productionLinkString);
+            //     config.networks = {
+            //         twitter: {
+            //             before: function(element) {
+            //                 this.url = element.;
+            //             },
+            //             // url: encodeURI(productionLinkString),     // the url you'd like to share to Twitter [Default: config.url]
+            //             description: descriptionString // text to be shared alongside your link to Twitter [Default: config.description]
+            //         }
+            //     }; // config.networks
+            //
+            //     var share = new ShareButton('.' + targetShareButtonString + '', config);
+            //     console.log(config);
+            //
+            //     // .div.sb-social > ul > li > a
+            //     //.childNodes[1].childNodes[0].childNodes[0].childNodes[0]
+            //     // var targetShareButtonPinterest = featuredShareButtonGroup[i].childNodes[1].childNodes[0].childNodes[0].childNodes[0];
+            //     // Twitter li a
+            //     // var targetShareButtonTwitterLi = featuredShareButtonGroup[i].childNodes[1].childNodes[0].childNodes[1].childNodes[0];
+            //
+            //
+            //     // console.log(targetShareButtonLi);
+            //     // targetShareButtonPinterest.href = '';
+            //     // targetShareButtonPinterest.href = config.url;
+            //     // targetShareButtonTwitterLi.href = '';
+            //     // targetShareButtonTwitterLi.href = config.url;
+            //
+            // }
+
         },
         finalize: function() {
 

@@ -1,0 +1,12 @@
+
+
+// for each post
+.postImageFigureContainer {
+  overflow: hidden;
+  .portrait img {
+    width: 100%;
+  }
+  .landscape img {
+    height: 100%;
+  }
+}

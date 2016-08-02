@@ -11,7 +11,8 @@
     "components-font-awesome": "^4.6.1",
     "google-code-prettify": "^1.0.4",
     "share-button": "^1.0.3",
-    "Chart.js": "^2.1.6"
+    "Chart.js": "^2.1.6",
+    "jssocials": "^1.2.1"
   },
   "overrides": {
     "bootstrap-sass": {
